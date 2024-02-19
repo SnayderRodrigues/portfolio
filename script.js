@@ -19,7 +19,9 @@ check.addEventListener('change', () => {
   document.querySelector('.header-ul').classList.toggle('dark')
   // document.querySelector('.scroll-down-icon').classList.toggle('dark')
   // document.querySelector('.close-icon').classList.toggle('dark')
+  document.querySelector('.de-hero-5').classList.toggle('dark')
   document.querySelector('.author-photo').classList.toggle('dark')
+  document.querySelector('.services-dropdown').classList.toggle('dark')
   
 
   
@@ -31,6 +33,18 @@ check.addEventListener('change', () => {
   });
   
   var elementos = document.getElementsByClassName('button');
+  var arrayDeElementos = Array.from(elementos);
+  arrayDeElementos.forEach(function(elemento) {
+      elemento.classList.toggle('dark');
+  });
+  
+  var elementos = document.getElementsByClassName('services-dropdown-div');
+  var arrayDeElementos = Array.from(elementos);
+  arrayDeElementos.forEach(function(elemento) {
+      elemento.classList.toggle('dark');
+  });
+  
+  var elementos = document.getElementsByClassName('scroll-down-icon');
   var arrayDeElementos = Array.from(elementos);
   arrayDeElementos.forEach(function(elemento) {
       elemento.classList.toggle('dark');
@@ -199,6 +213,41 @@ window.onscroll = () => {
     };
   });
 };
+
+// OPAQUE HEADER ---------------------------------------------------//
+
+document.addEventListener('DOMContentLoaded', function () {
+  var menu = document.querySelector('.header');
+  var origOffsetY = document.querySelector('.section-hero').offsetHeight;
+
+  function scroll() {
+      if (window.scrollY >= origOffsetY) {
+          menu.classList.add('opaque');
+      } else {
+          menu.classList.remove('opaque');
+      }
+  }
+
+  document.addEventListener('scroll', scroll);
+});
+
+// SERVICES DROPDOWN ---------------------------------------------------//
+
+const services = document.querySelectorAll('.services-title');
+
+services.forEach((sv) => {
+
+    sv.addEventListener('click', () => {
+
+        services.forEach((item) => {
+            if (item !== sv) {
+                item.classList.remove('opened');
+            }
+        });
+        
+        sv.classList.toggle('opened');
+    });
+});
 
 // REAL TIME ---------------------------------------------------//
 

@@ -199,10 +199,12 @@ button {
     color: #fff;
     background-color: var(--purple-shade);
     /* border-radius: 999px; */
+    box-shadow: 4px 4px 0 0 var(--purple-shade);
     padding: 12px 26px;
     font-size: clamp(1.125rem, 1.0340909090909092rem + 0.45454545454545453vw, 1.375rem);
     font-weight: 400;
     overflow: hidden;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .button::after {
@@ -232,6 +234,7 @@ button {
 
 .button.dark {
     background-color: var(--purple-shade-dk);
+    box-shadow: 4px 4px 0 0 var(--purple-shade-dk);
 }
 
 .button.dark::after {
@@ -1041,7 +1044,7 @@ button {
 .scroll-down-icon {
     width: 16px;
     height: 16px;
-    background-color: var(--accent-color);
+    background-color: var(--purple-shade);
     /* border-right: 2px solid #000;
     border-bottom: 2px solid #000; */
     transform: rotate(45deg);
@@ -1051,7 +1054,7 @@ button {
 }
 
 .scroll-down-icon.dark {
-    background-color: var(--accent-color-dk);
+    background-color: var(--purple-shade-dk);
 }
 
 .services-text {
@@ -1073,8 +1076,25 @@ button {
     /* padding: 0px 10px calc(0px + 5%) 10px; */
 }
 
+.services-title:hover > .scroll-down-icon {
+    background-color: var(--accent-color);
+}
+
 .services-title.opened > .scroll-down-icon {
     /* transform: scaleY(-1) rotate(-45deg); */
+    background-color: var(--accent-color);
+    transform: rotate(0deg);
+    border: none;
+    border-radius: 50%;
+}
+
+.services-title:hover > .scroll-down-icon.dark {
+    background-color: var(--accent-color-dk);
+}
+
+.services-title.opened > .scroll-down-icon.dark {
+    /* transform: scaleY(-1) rotate(-45deg); */
+    background-color: var(--accent-color-dk);
     transform: rotate(0deg);
     border: none;
     border-radius: 50%;

@@ -193,6 +193,10 @@ function init() {
 
 window.onload = init;
 
+window.addEventListener('resize', function() {
+  init();
+});
+
 // HEADER ITEM ACTIVE ---------------------------------------------------//
 
 let sections = document.querySelectorAll('section');

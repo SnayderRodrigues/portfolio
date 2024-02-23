@@ -96,7 +96,7 @@ body.dark {
 }
 
 .h1,h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: clamp(3rem, 1.3636363636363638rem + 8.181818181818182vw, 7.5rem);
 }
 
@@ -107,7 +107,7 @@ body.dark {
 }
 
 .h2,h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
     line-height: 55px;
     font-weight: 700;
@@ -121,7 +121,7 @@ body.dark {
 } */
 
 .h3,h3 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: clamp(2rem, 1.6363636363636362rem + 1.8181818181818181vw, 3rem);
     margin-bottom: 1rem;
     font-weight: 600;
@@ -515,7 +515,7 @@ button {
 
 .author-name {
     height: fit-content;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: clamp(1.25rem, 1.1590909090909092rem + 0.45454545454545453vw, 1.5rem);
     font-weight: bold;
     pointer-events: none;
@@ -751,7 +751,7 @@ button {
 
 .section-hero .container1 {
     /* min-height: 100vh; */
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -782,7 +782,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
     cursor: default;
     /* line-height: 40px; */
 }
@@ -1101,9 +1101,12 @@ button {
 }
 
 .section-projects {
-    background-color: var(--bg-light1);
-    background-image: linear-gradient(#bcc0ff .05em, transparent .05em), linear-gradient(90deg, #bcc0ff .05em, transparent .05em);
-    background-size: 1.5em 1.5em;
+    background-color: #fff;
+    /* background-image: linear-gradient(var(--bg-light2) 2px, transparent 2px), linear-gradient(90deg, var(--bg-light2) 2px, transparent 2px);
+    background-size: 2rem 2rem; */
+
+  
+      
     transition: background 0.4s linear;
     position: relative;
     z-index: 2;
@@ -1111,8 +1114,8 @@ button {
 }
 
 .section-projects.dark {
-    background-color: #000;
-    background-image: linear-gradient(#27263d .05em, transparent .05em), linear-gradient(90deg, #27263d .05em, transparent .05em);
+    background-color: var(--bg-night1);
+    /* background-image: linear-gradient(var(--bg-night2) 2px, transparent 2px), linear-gradient(90deg, var(--bg-night2) 2px, transparent 2px); */
 }
 
 .container3 {
@@ -1144,7 +1147,7 @@ button {
     /* border-radius: 0.375rem; */
     gap: 40px;
     box-shadow: 8px 8px 0 0 var(--purple-shade);
-    transition: all 0.3 linear;
+    transition: background-color 0.3s linear, box-shadow 0.3s linear;
 }
 
 .block-wrapper-4.dark {
@@ -1543,11 +1546,25 @@ button {
         width: 710px;
         min-width: 390px;
     }
-    .container4 {
-        align-items: center;
+    .container4-responsive {
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column!important;
+        align-items: center!important;
+        gap: 4rem;
     }
-    .container4 .h2 {
-        align-self: flex-start;
+    .block-wrapper-6, .block-wrapper-7 {
+        width: 100%;
+    }
+    .bw7-info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: left;
+        gap: 2rem;
+    }
+    .info-div {
+        width: 100%;
     }
     /* .container4-responsive {
         width: 100%;
@@ -1707,7 +1724,7 @@ button {
     }
     .container5-responsive {
         flex-direction: column;
-        align-items: center!important;
+        align-items: flex-start!important;
         gap: 2rem;
     }
     .footer-nav-div-wrapper {
@@ -1721,8 +1738,14 @@ button {
     .de-footer-1 {
         width: 60px;
         height: 60px;
-        top: 76%;
+        top: 56%;
         left: 78%;
+    }
+    .de-footer-2 {
+        width: 40px;
+        height: 40px;
+        top: 76%;
+        left: 40%;
     }
 }
 
@@ -1778,5 +1801,6 @@ button {
         width: 40px;
         height: 40px;
         top: 86%;
+        left: 5%;
     }
 }

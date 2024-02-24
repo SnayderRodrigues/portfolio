@@ -11,15 +11,14 @@ check.addEventListener('change', () => {
   document.querySelector('.section-about').classList.toggle('dark')
   document.querySelector('.section-contact').classList.toggle('dark')
   document.querySelector('.footer').classList.toggle('dark')
+  document.querySelector('.author-name').classList.toggle('dark')
   document.querySelector('.label').classList.toggle('dark')
   document.querySelector('.ball').classList.toggle('dark')
   document.querySelector('.tooltip-text').classList.toggle('dark')
   document.querySelector('.navbar-button').classList.toggle('dark')
   document.querySelector('.navbar-button2').classList.toggle('dark')
   document.querySelector('.header-ul').classList.toggle('dark')
-  // document.querySelector('.scroll-down-icon').classList.toggle('dark')
   // document.querySelector('.close-icon').classList.toggle('dark')
-  document.querySelector('.de-hero-5').classList.toggle('dark')
   document.querySelector('.author-photo').classList.toggle('dark')
   document.querySelector('.services-dropdown').classList.toggle('dark')
   
@@ -140,69 +139,6 @@ nvh.onclick = function(){
 
 // ANIMATIONS ---------------------------------------------------//
 
-
-// STARRY SKY ---------------------------------------------------//
-
-function init() {
-
-  // Estrelas
-  var style = ["style1", "style2", "style3", "style4"];
-  var tam = ["tam1", "tam1", "tam1", "tam2", "tam3"];
-  var opacity = ["opacity1", "opacity1", "opacity1", "opacity2", "opacity2", "opacity3"];
-
-  function getRandomArbitrary(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-
-  function createStars(className, qtdeEstrelas) {
-    var estrela = "";
-    var noite = document.querySelector("." + className);
-    var widthWindow = window.innerWidth;
-    var heightWindow = window.innerHeight;
-
-    for (var i = 0; i < qtdeEstrelas; i++) {
-      estrela += "<span class='estrela " + style[getRandomArbitrary(0, 4)] + " " + opacity[getRandomArbitrary(0, 6)] + " "
-        + tam[getRandomArbitrary(0, 5)] + "' style='animation-delay: ." + getRandomArbitrary(0, 9) + "s; left: "
-        + getRandomArbitrary(0, widthWindow) + "px; top: " + getRandomArbitrary(0, heightWindow) + "px;'></span>";
-    }
-
-    noite.innerHTML = estrela;
-  }
-
-  createStars("constelacao", 130);
-  createStars("constelacao2", 180);
-
-  // Meteoros
-  var numeroAleatorio = 5000;
-
-  setTimeout(function () {
-    carregarMeteoro();
-  }, numeroAleatorio);
-
-  function carregarMeteoro() {
-    setTimeout(carregarMeteoro, numeroAleatorio);
-    numeroAleatorio = getRandomArbitrary(5000, 10000);
-    var meteoro = "<div class='meteoro "+ style[getRandomArbitrary(0, 4)] +"'></div>";
-
-    var chuvaElements = document.querySelectorAll(".chuvaMeteoro, .chuvaMeteoro2");
-    chuvaElements.forEach(function (chuva) {
-      chuva.innerHTML = meteoro;
-    });
-
-    setTimeout(function () {
-      chuvaElements.forEach(function (chuva) {
-        chuva.innerHTML = "";
-      });
-    }, 1000);
-  }
-}
-
-window.onload = init;
-
-window.addEventListener('resize', function() {
-  init();
-});
-
 // HEADER ITEM ACTIVE ---------------------------------------------------//
 
 let sections = document.querySelectorAll('section');
@@ -228,7 +164,7 @@ window.onscroll = () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   var menu = document.querySelector('.header');
-  var origOffsetY = document.querySelector('.section-hero').offsetHeight;
+  var origOffsetY = document.querySelector('.section-hero').offsetHeight - 200;
 
   function scroll() {
       if (window.scrollY >= origOffsetY) {

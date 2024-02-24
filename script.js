@@ -80,6 +80,12 @@ check.addEventListener('change', () => {
       elemento.classList.toggle('dark');
   });
   
+  var elementos = document.getElementsByClassName('project-description');
+  var arrayDeElementos = Array.from(elementos);
+  arrayDeElementos.forEach(function(elemento) {
+      elemento.classList.toggle('dark');
+  });
+  
   var elementos = document.getElementsByClassName('form-control');
   var arrayDeElementos = Array.from(elementos);
   arrayDeElementos.forEach(function(elemento) {

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- ICON -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/Captura_de_tela_2024-01-07_212430-removebg-preview.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo-planet.png">
 
     <title>Snayder Rodrigues — Desenvolvedor Front-End & Web Designer</title>
 </head>
@@ -24,7 +24,7 @@
                 <div class="container">
                     <a class="logo" href="#">
                         <span class="h1 author-name">Snayder <br>Rodrigues</span>
-                        <img class="logo-img" src="./assets/img/Captura_de_tela_2024-01-07_212430-removebg-preview.png" alt="">
+                        <img class="logo-img" src="./assets/img/logo-planet.png" alt="">
                     </a>
                     <ul class="header-ul">
                         <li class="header-li"><a class="nav-link-header active" href="#Inicio">Início</a></li>
@@ -102,7 +102,7 @@
                         <h2 class="h2">Sobre Mim</h2>
                         <div class="container2-responsive row d-flex align-items-start">
                             <div class="block-wrapper-2">
-                                <img class="author-photo" src="./assets/img/1695420795597-011111111.jpeg" alt="Author's Photo">
+                                <img class="author-photo" src="./assets/img/author-photo.jpeg" alt="Author's Photo">
                             </div>
                             <div class="block-wrapper-3">
                                 <h3 class="h3">Uma breve introdução</h3>
@@ -166,7 +166,7 @@
                         <div class="projects-container">
                             <div class="block-wrapper-4 work-1">
                                 <div class="project-img-wrapper">
-                                    <img class="project-img" src="./assets/img/Safari • Dark Mode ON.png" alt="Projeto 01">
+                                    <img class="project-img" src="./assets/img/example-agency-project.png" alt="Projeto 01">
                                     <div class="project-description">
                                         <p class="text-body">A Example é uma agência de marketing digital fictícia, desenvolvida como projeto pessoal para testar minhas habilidades de design e desenvolvimento.</p>
                                         <p class="text-body">Criei um design minimalista e cartunesco, priorizando a clareza e a funcionalidade. O design facilita a navegação e cria um ambiente amigável e convidativo. Redigi o conteúdo do website de forma clara e profissional, para que o usuário possa encontrar as informações que precisa de maneira rápida e fácil.</p>
@@ -287,15 +287,21 @@
                             <div class="block-wrapper-7">
                                 <div class="bw7-info">
                                     <div class="info-div">
-                                        <span class="info-title">Outros Contatos</span>
-                                        <a target="_blank" href="mailto:snayderrodrigues@gmail.com" class="info-link">E-mail</a>
-                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5585987234991&text=Ol%C3%A1,%20Snayder.%20Vim%20atrav%C3%A9s%20do%20seu%20Portif%C3%B3lio." class="info-link">Whatsapp</a>
-                                    </div>
-                                    <div class="info-div">
                                         <span class="info-title">Redes Sociais</span>
                                         <a target="_blank" href="https://linkedin.com/in/snayder" class="info-link">LinkedIn</a>
                                         <a target="_blank" href="https://github.com/SnayderRodrigues" class="info-link">GitHub</a>
                                         <a target="_blank" href="https://www.instagram.com/snayder.rodrigues/" class="info-link">Instagram</a>
+                                    </div>
+                                    <div class="info-div">
+                                        <span class="info-title">Outros Contatos</span>
+                                        <div class="info-email">
+                                            <a target="_blank" href="mailto:snayderrodrigues@gmail.com" class="info-link" id="copy-email">snayderrodrigues@gmail.com</a>
+                                            <button class="copy-button" onclick="copiarTexto()" title="copiar"></button>
+                                        </div>
+                                        <div class="info-number">
+                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=5585987234991&text=Ol%C3%A1,%20Snayder.%20Vim%20atrav%C3%A9s%20do%20seu%20Portif%C3%B3lio." class="info-link" id="copy-phone">+55 85 987234991</a>
+                                            <button class="copy-button" onclick="copiarNumero()" title="copiar"></button>
+                                        </div>
                                     </div>
                                     <div class="info-div">
                                         <span class="info-title">Localização</span>

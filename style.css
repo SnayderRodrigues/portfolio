@@ -15,7 +15,7 @@
     overflow-x: hidden;
 }
 
-*, ::after, ::before{
+*, ::after, ::before {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -1373,6 +1373,52 @@ button {
     color: var(--accent-color-dk);
     box-shadow: inset -16px 0px 0 hsla(248, 100%, 69%, 0.3);
     transition: all 0.2s linear;
+}
+
+.info-email {
+    margin-bottom: 0.5rem;
+}
+
+.copy-button {
+    width: 12px;
+    height: 16px;
+    background-color: transparent;
+    border: 2px solid var(--purple-shade);
+    position: relative;
+    padding-block: 0;
+    padding-inline: 0;
+    padding-top: 12px;
+    margin-left: 4px;
+    transition: border 0.2s linear;
+}
+
+.copy-button.dark {
+    border: 2px solid var(--purple-shade-dk);
+}
+
+.copy-button:hover, .copy-button:hover::before {
+    border: 2px solid var(--accent-color);
+}
+
+.copy-button.dark:hover, .copy-button.dark:hover::before {
+    border: 2px solid var(--accent-color-dk);
+}
+
+.copy-button::before {
+    content: '';
+    width: 12px;
+    height: 16px;
+    background-color: #fff;
+    border: 2px solid var(--purple-shade);
+    position: absolute;
+    right: -90%;
+    top: -50%;
+    transition: border 0.2s linear, background-color 0.4s linear;
+}
+
+.copy-button.dark::before {
+    background-color: var(--bg-night1);
+    border: 2px solid var(--purple-shade-dk);
 }
 
 /*  --------------------------------------------------------------------------- */

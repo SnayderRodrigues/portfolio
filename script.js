@@ -49,6 +49,19 @@ check.addEventListener('change', () => {
       elemento.classList.toggle('dark');
   });
   
+  
+  var elementos = document.getElementsByClassName('block-wrapper-4');
+  var arrayDeElementos = Array.from(elementos);
+  arrayDeElementos.forEach(function(elemento) {
+      elemento.classList.toggle('dark');
+    });
+    
+    var elementos = document.getElementsByClassName('project-description');
+    var arrayDeElementos = Array.from(elementos);
+    arrayDeElementos.forEach(function(elemento) {
+      elemento.classList.toggle('dark');
+  });
+  
   var elementos = document.getElementsByClassName('mini-card');
   var arrayDeElementos = Array.from(elementos);
   arrayDeElementos.forEach(function(elemento) {
@@ -72,19 +85,13 @@ check.addEventListener('change', () => {
   arrayDeElementos.forEach(function(elemento) {
       elemento.classList.toggle('dark');
   });
-  
-  var elementos = document.getElementsByClassName('block-wrapper-4');
+
+  var elementos = document.getElementsByClassName('copy-button');
   var arrayDeElementos = Array.from(elementos);
   arrayDeElementos.forEach(function(elemento) {
       elemento.classList.toggle('dark');
   });
-  
-  var elementos = document.getElementsByClassName('project-description');
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function(elemento) {
-      elemento.classList.toggle('dark');
-  });
-  
+
   var elementos = document.getElementsByClassName('form-control');
   var arrayDeElementos = Array.from(elementos);
   arrayDeElementos.forEach(function(elemento) {
@@ -216,3 +223,39 @@ function atualizarRelogio() {
 atualizarRelogio();
 
 setInterval(atualizarRelogio, 20000);
+
+// COPY BUTTONS ---------------------------------------------------//
+
+function copiarTexto() {
+
+  var texto = document.getElementById("copy-email");
+
+  var textoSelecionado = window.getSelection();
+  var intervalo = document.createRange();
+  intervalo.selectNodeContents(texto);
+  textoSelecionado.removeAllRanges();
+  textoSelecionado.addRange(intervalo);
+
+  document.execCommand("copy");
+
+  textoSelecionado.removeAllRanges();
+
+  alert("E-mail copiado.");
+}
+
+function copiarNumero() {
+
+  var numero = document.getElementById("copy-phone");
+
+  var textoSelecionado = window.getSelection();
+  var intervalo = document.createRange();
+  intervalo.selectNodeContents(numero);
+  textoSelecionado.removeAllRanges();
+  textoSelecionado.addRange(intervalo);
+
+  document.execCommand("copy");
+
+  textoSelecionado.removeAllRanges();
+
+  alert("Número copiado.");
+}

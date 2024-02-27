@@ -19,7 +19,11 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
 }
 
 .d-flex {
@@ -339,6 +343,10 @@ button {
     }
 }
 
+.tilting {
+    animation: tilting 4s infinite linear;
+}
+
 @keyframes tilting {
     0% {
         transform: rotate(0);
@@ -436,7 +444,6 @@ button {
 }
 
 .logo:hover > .logo-img {
-    animation: tilting 4s infinite linear;
     scale: 1;
 }
 
@@ -450,7 +457,7 @@ button {
     color: #000;
     height: fit-content;
     font-family: "Outfit", sans-serif;
-    font-size: clamp(1.25rem, 1.1590909090909092rem + 0.45454545454545453vw, 1.5rem);
+    font-size: clamp(1.25rem, 1.1590909090909092rem + 0.45454545454545453vw, 1.375rem);
     font-weight: bold;
     cursor: pointer;;
     user-select: none;

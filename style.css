@@ -92,6 +92,15 @@ body.dark {
     color: #ffffff;
 }
 
+.visually-hidden {
+    position: absolute;
+    left:     -10000px;
+    top:      auto;
+    width:    1px;
+    height:   1px;
+    overflow: hidden;
+}
+
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
     margin-top: 0;
     margin-bottom: 0;
@@ -506,12 +515,12 @@ button {
 
 .active {
     color: var(--accent-color)!important;
-    transition: color 0.2s linear;
+    transition: color 0.2s linear, box-shadow 0.2s linear;
 }
 
 .active.dark {
     color: var(--accent-color-dk)!important;
-    transition: color 0.2s linear;
+    transition: color 0.2s linear, box-shadow 0.2s linear;
 }
 
 .checkbox {

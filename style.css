@@ -587,11 +587,11 @@ button {
 }
 
 .custom-tooltip:hover .tooltip-text {
-    display: block;
+    opacity: 1;
 }
 
 .tooltip-text {
-    display: none;
+    opacity: 0;
     position: absolute;
     background-color: var(--lightdetail2);
     color: #333;
@@ -604,7 +604,7 @@ button {
     transform: translateX(-50%);
     pointer-events: none;
     user-select: none;
-    transition: background-color 0.3s linear, color 0.3s linear;
+    transition: background-color 0.3s linear, color 0.3s linear, opacity 0.2s linear;
 }
 
 .tooltip-text.dark {

@@ -85,10 +85,11 @@ body {
     transition: color 0.2s linear;
     margin: 0;
     overflow-x: hidden;
+    background-color: var(--bg-light1);
 }
 
 body.dark {
-    background-color: #111111;
+    background-color: var(--bg-night2);
     color: #ffffff;
 }
 
@@ -576,7 +577,7 @@ button {
 }
 
 .checkbox:checked + .label .ball {
-    transform: translateX(24px);
+    transform: translateX(24    px);
 }
 
 .custom-tooltip {

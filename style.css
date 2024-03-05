@@ -726,7 +726,7 @@ button {
     width: 100%;
 } */
 
-.hello {
+.hero-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -735,7 +735,7 @@ button {
     /* line-height: 40px; */
 }
 
-.hello-name {
+.hero-name {
     width: 100%;
     font-size: clamp(3rem, 1.3636363636363638rem + 8.181818181818182vw, 7.5rem);
     font-weight: 600;
@@ -745,7 +745,7 @@ button {
     text-shadow: 2px 2px 0 var(--accent-color), 4px 4px 0 #741b97;
 }
 
-.hello-last-name {
+.hero-last-name {
     width: 100%;
     font-size: clamp(3rem, 1.3636363636363638rem + 8.181818181818182vw, 7.5rem);
     font-weight: 600;
@@ -755,7 +755,7 @@ button {
     text-shadow: 2px 2px 0 var(--accent-color), 4px 4px 0 #741b97;
 }
 
-.hello-function {
+.hero-duty {
     max-width: 420px;
     font-size: clamp(1.5rem, 0.75rem + 4vw, 2rem);
     font-weight: 400;

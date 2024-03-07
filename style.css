@@ -1643,6 +1643,13 @@ button {
     .container {
         width: min(100% - 16px);
     }
+    .header {
+        background-color: var(--bg-light1);
+        height: 8vh;
+    }
+    .header.dark {
+        background-color: var(--bg-night2);
+    }
     .navbar>.container {
         width: min(100% - 16px)!important;
     }
@@ -1656,7 +1663,6 @@ button {
         background: rgba(0, 0, 0, 0.4);
         opacity: 0;
         transition: opacity 0.3s linear;
-        transition-delay: 0.2s;
         user-select: none;
         pointer-events: none;
     }
@@ -1697,7 +1703,6 @@ button {
         opacity: 0;
         scale: .3;
         transition: opacity 0.3s linear, scale 0.3s linear, background-color 0.3s linear, gap 0.3s linear;
-        transition-delay: 0.2s;
         user-select: none;
         pointer-events: none;
         /* visibility: hidden; */

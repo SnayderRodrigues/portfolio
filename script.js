@@ -15,7 +15,6 @@ check.addEventListener('change', () => {
   document.querySelector('.toggle-label').classList.toggle('dark');
   document.querySelector('.tooltip-text').classList.toggle('dark');
   document.querySelector('.navbar-button').classList.toggle('dark');
-  document.querySelector('.navbar-button2').classList.toggle('dark');
   document.querySelector('.header-ul').classList.toggle('dark');
   // document.querySelector('.close-icon').classList.toggle('dark');
   document.querySelector('.author-photo').classList.toggle('dark');
@@ -122,6 +121,9 @@ nv.onclick = function(){
   nv.classList.toggle('open-nav');
   nvh.classList.toggle('open-nav');
   uls.classList.toggle('open-nav');
+
+  nvh.removeAttribute('style');
+  uls.removeAttribute('style');
 }
 
 links.forEach(link => {
@@ -137,6 +139,13 @@ uls.onclick = function(){
   nvh.classList.remove('open-nav');
   uls.classList.remove('open-nav');
 }
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth < 768) {
+    nvh.style.transition = 'none';
+    uls.style.transition = 'none';
+  }
+});
 
 // ANIMATIONS ---------------------------------------------------//
 

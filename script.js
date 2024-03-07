@@ -3,23 +3,23 @@
 const check = document.getElementById('check')
 
 check.addEventListener('change', () => {
-  document.body.classList.toggle('dark')
+  document.body.classList.toggle('dark');
 
-  document.querySelector('.header').classList.toggle('dark')
-  document.querySelector('.section-hero').classList.toggle('dark')
-  document.querySelector('.section-projects').classList.toggle('dark')
-  document.querySelector('.section-about').classList.toggle('dark')
-  document.querySelector('.section-contact').classList.toggle('dark')
-  document.querySelector('.footer').classList.toggle('dark')
-  document.querySelector('.author-name').classList.toggle('dark')
-  document.querySelector('.toggle-label').classList.toggle('dark')
-  document.querySelector('.tooltip-text').classList.toggle('dark')
-  document.querySelector('.navbar-button').classList.toggle('dark')
-  document.querySelector('.navbar-button2').classList.toggle('dark')
-  document.querySelector('.header-ul').classList.toggle('dark')
-  // document.querySelector('.close-icon').classList.toggle('dark')
-  document.querySelector('.author-photo').classList.toggle('dark')
-  document.querySelector('.services-dropdown').classList.toggle('dark')
+  document.querySelector('.header').classList.toggle('dark');
+  document.querySelector('.section-hero').classList.toggle('dark');
+  document.querySelector('.section-projects').classList.toggle('dark');
+  document.querySelector('.section-about').classList.toggle('dark');
+  document.querySelector('.section-contact').classList.toggle('dark');
+  document.querySelector('.footer').classList.toggle('dark');
+  document.querySelector('.author-name').classList.toggle('dark');
+  document.querySelector('.toggle-label').classList.toggle('dark');
+  document.querySelector('.tooltip-text').classList.toggle('dark');
+  document.querySelector('.navbar-button').classList.toggle('dark');
+  document.querySelector('.navbar-button2').classList.toggle('dark');
+  document.querySelector('.header-ul').classList.toggle('dark');
+  // document.querySelector('.close-icon').classList.toggle('dark');
+  document.querySelector('.author-photo').classList.toggle('dark');
+  document.querySelector('.services-dropdown').classList.toggle('dark');
   
 
   

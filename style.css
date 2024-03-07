@@ -573,7 +573,7 @@ button {
 
 .toggle-container {
     position: relative;
-    display: inline-block;
+    display: flex;
     cursor: pointer;
     text-align: center;
 }
@@ -602,6 +602,10 @@ button {
 .tooltip-text.dark {
     background-color: var(--bg-night1);
     color: #ffffff;
+}
+
+.dark-mode-text {
+    display: none;
 }
 
 .navbuttons {
@@ -638,40 +642,12 @@ button {
     background-color: #fff;
 }
 
-.navbuttons.open-nav > .navbar-button{
-    transform:  rotate(-45deg);
-}
-
-.navbuttons.open-nav > .navbar-button2{
-    transform:  rotate(45deg);
-    width: 100%;
-    top: 0;
-}
-
 .navbuttons:hover > .navbar-button, .navbuttons:hover > .navbar-button2 {
     background-color: var(--accent-color);
 }
 
 .navbuttons:hover > .navbar-button.dark, .navbuttons:hover > .navbar-button2.dark {
     background-color: var(--accent-color);
-}
-
-.header-ul.open-nav {
-    gap: 40px;
-    width: 340px;
-    height: 500px;
-    color: #000;
-    background-color: var(--bg-light1);
-    opacity: 1;
-    scale: 1;
-    pointer-events: all;
-    visibility: visible;
-    z-index: 300;
-}
-
-.header-ul.open-nav.dark {
-    background-color: var(--bg-night1);
-    color: #fff;
 }
 
 /*  --------------------------------------------------------------------------- */
@@ -1664,37 +1640,75 @@ button {
     .navbar>.container {
         width: min(100% - 16px)!important;
     }
+    .ul-shadow {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 299;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        user-select: none;
+        pointer-events: none;
+    }
+    .ul-shadow.open-nav {
+        opacity: 1;
+        user-select: all;
+        pointer-events: all;
+    }
+    .de-navbar-1 {
+        content: '';
+        width: 40vw;
+        max-width: 400px;
+        height: 40vw;
+        max-height: 400px;
+        border-radius: 50%;
+        background: linear-gradient(25deg, #ebf2fd, #8E8FFA, #7752FE, #190482);
+        position: absolute;
+        top: 100%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: background 0.4s linear;
+        opacity: 0.1;
+    }
     .header-ul {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         justify-content: center;
-        gap: 20px;
-        width: 240px;
-        height: 400px;
-        font-size: 1rem;
+        width: 50vw;
+        height: 50vh;
         color: #000;
         background-color: var(--bg-light1);
         position: absolute;
         top: 0;
         right: 0;
-        padding-left: 4rem;
+        padding-left: 3rem;
         opacity: 0;
         scale: .3;
-        transition: all 0.3s ease-in-out;
+        transition: opacity 0.3s linear, scale 0.3s linear, background-color 0.3s linear, gap 0.3s linear;
         user-select: none;
         pointer-events: none;
-        visibility: hidden;
+        /* visibility: hidden; */
         transform-origin: top right;
         z-index: 300;
         overflow: hidden;
-
     }
     .header-ul.dark {
         background-color: var(--bg-night1);
     }
     .header-li {
-        transform: scale(1.3);
+        width: fit-content;
+    }
+    .tooltip-text {
+        display: none;
+    }
+    .dark-mode-text {
+        display: inline-block;
+        margin-right: 1rem;
+        font-weight: 700;
     }
     .navbuttons {
         display: inline-flex;
@@ -1703,6 +1717,30 @@ button {
     }
     .navbar-button, .navbar-button2 {
         display: block;
+    }
+    .navbuttons.open-nav > .navbar-button {
+        transform:  rotate(-45deg);
+    }
+    .navbuttons.open-nav > .navbar-button2 {
+        transform:  rotate(45deg);
+        width: 100%;
+        top: 0;
+    }
+    .header-ul.open-nav {
+        gap: 40px;
+        width: 50vw;
+        height: 50vh;
+        color: #000;
+        background-color: var(--bg-light1);
+        opacity: 1;
+        scale: 1;
+        pointer-events: all;
+        visibility: visible;
+        z-index: 300;
+    }
+    .header-ul.open-nav.dark {
+        background-color: var(--bg-night1);
+        color: #fff;
     }
     /* .constelacao, .chuvaMeteoro, .constelacao2, .chuvaMeteoro2 {
          display: none;
@@ -1831,7 +1869,14 @@ button {
         left: 40%;
     }
 }
-
+@media (width <= 500px) {
+    .header-ul {
+        width: 75vw;
+    }
+    .header-ul.open-nav {
+        width: 75vw;
+    }
+}
 @media (width <= 425px) {
     h2, .h2 {
         margin-bottom: 40px;

@@ -114,16 +114,28 @@ function show(anything){
 
 let nv = document.querySelector('.navbuttons');
 let nvh = document.querySelector('.header-ul');
+let links = document.querySelectorAll('.header-li');
+let uls = document.querySelector('.ul-shadow');
 let bd = document.querySelector('body');
 
 nv.onclick = function(){
   nv.classList.toggle('open-nav');
   nvh.classList.toggle('open-nav');
+  uls.classList.toggle('open-nav');
 }
 
-nvh.onclick = function(){
-  nvh.classList.remove('open-nav');
+links.forEach(link => {
+  link.addEventListener('click', function() {
+    nv.classList.remove('open-nav');
+    nvh.classList.remove('open-nav');
+    uls.classList.remove('open-nav');
+  });
+});
+
+uls.onclick = function(){
   nv.classList.remove('open-nav');
+  nvh.classList.remove('open-nav');
+  uls.classList.remove('open-nav');
 }
 
 // ANIMATIONS ---------------------------------------------------//

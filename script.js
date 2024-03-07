@@ -106,23 +106,6 @@ check.addEventListener('change', () => {
 
 })
 
-// DROPDOWN PT-EN ---------------------------------------------------//
-
-// function show(anything){
-//     document.querySelector('.dropdown').value = anything;
-// }
-
-// let dropdown = document.querySelector('.language-div');
-// dropdown.onclick = function(){
-//   dropdown.classList.toggle('open');
-// }
-
-// document.addEventListener('click', function(event) {
-//   if (!dropdown.contains(event.target)) {
-//     dropdown.classList.remove('open');
-//   }
-// });
-
 // HIDDEN NAVBAR ---------------------------------------------------//
 
 function show(anything){

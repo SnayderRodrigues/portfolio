@@ -140,6 +140,7 @@ uls.onclick = function(){
   nv.classList.remove('open-nav');
   nvh.classList.remove('open-nav');
   uls.classList.remove('open-nav');
+  html.classList.remove('open-nav');
 }
 
 window.addEventListener('resize', function() {

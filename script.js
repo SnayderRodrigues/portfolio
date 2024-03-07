@@ -115,12 +115,13 @@ let nv = document.querySelector('.navbuttons');
 let nvh = document.querySelector('.header-ul');
 let links = document.querySelectorAll('.header-li');
 let uls = document.querySelector('.ul-shadow');
-let bd = document.querySelector('body');
+let html = document.querySelector('html');
 
 nv.onclick = function(){
   nv.classList.toggle('open-nav');
   nvh.classList.toggle('open-nav');
   uls.classList.toggle('open-nav');
+  html.classList.toggle('open-nav');
 
   nvh.removeAttribute('style');
   uls.removeAttribute('style');
@@ -131,6 +132,7 @@ links.forEach(link => {
     nv.classList.remove('open-nav');
     nvh.classList.remove('open-nav');
     uls.classList.remove('open-nav');
+    html.classList.remove('open-nav');
   });
 });
 

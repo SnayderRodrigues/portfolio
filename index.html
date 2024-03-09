@@ -1,361 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- META -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Snayder Rodrigues, desenvolvedor frontend e web designer portifólio.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Snayder Rodrigues, desenvolvedor frontend e web designer portifólio."
+    />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- ICON -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo-planet.webp">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/logo-planet.webp"
+    />
 
     <title>Snayder Rodrigues — Desenvolvedor Front-End & Web Designer</title>
-</head>
-<body>   
+  </head>
+  <body>
+    <!-- HEADER AREA -->
+    <header class="header" id="header">
+      <nav class="navbar">
+        <div class="container">
+          <a class="logo" href="#">
+            <span class="h1 author-name">Snayder <br />Rodrigues</span>
+            <img
+              class="logo-img tilting"
+              src="./assets/img/logo-planet.webp"
+              alt=""
+            />
+          </a>
+          <div class="ul-shadow"></div>
+          <ul class="header-ul">
+            <li class="header-li">
+              <a class="nav-link-header active" href="#Inicio">Início</a>
+            </li>
+            <li class="header-li">
+              <a class="nav-link-header" href="#Sobre">Sobre</a>
+            </li>
+            <li class="header-li">
+              <a class="nav-link-header" href="#Projetos">Projetos</a>
+            </li>
+            <li class="header-li">
+              <a class="nav-link-header" href="#Contato">Contato</a>
+            </li>
+            <li class="header-li">
+              <div class="toggle-container">
+                <div id="tooltip-text" class="tooltip-text">Dark Mode</div>
+                <span class="dark-mode-text">Dark mode</span>
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  id="check"
+                  name="dark mode"
+                />
+                <label class="toggle-label" for="check">
+                  <div class="toggle-ball"></div>
+                </label>
+              </div>
+            </li>
+            <div class="design-elements">
+              <div class="de-navbar-1"></div>
+            </div>
+          </ul>
 
-        <!-- HEADER AREA -->
-        <header class="header" id="header">
-            <nav class="navbar">
-                <div class="container">
-                    <a class="logo" href="#">
-                        <span class="h1 author-name">Snayder <br>Rodrigues</span>
-                        <img class="logo-img tilting" src="./assets/img/logo-planet.webp" alt="">
-                    </a>
-                    <div class="ul-shadow"></div>
-                    <ul class="header-ul">
-                        <li class="header-li"><a class="nav-link-header active" href="#Inicio">Início</a></li>
-                        <li class="header-li"><a class="nav-link-header" href="#Sobre">Sobre</a></li>
-                        <li class="header-li"><a class="nav-link-header" href="#Projetos">Projetos</a></li>
-                        <li class="header-li"><a class="nav-link-header" href="#Contato">Contato</a></li>
-                        <li class="header-li">
-                            <div class="toggle-container">
-                                <div id="tooltip-text" class="tooltip-text">Dark Mode</div>
-                                <span class="dark-mode-text">Dark mode</span>
-                                <input type="checkbox" class="checkbox" id="check" name="dark mode"/>
-                                <label class="toggle-label" for="check">
-                                    <div class="toggle-ball"></div>
-                                </label>
-                            </div>
-                        </li>
-                        <div class="design-elements">
-                            <div class="de-navbar-1"></div>
-                        </div>
-                    </ul>
-                    
-                    <div class="navbuttons">
-                        <div class="navbar-button"></div>
-                    </div>
+          <div class="navbuttons">
+            <div class="navbar-button"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- .HEADER AREA -->
 
-                </div>       
-            </nav>  
-            
-        </header> <!-- .HEADER AREA -->
-
-        <!-- HERO AREA -->
-        <main>
-            <section class="section-hero" id="Inicio">
-                <div class="container">
-                    <div class="container1 d-flex">
-                        <div class="block-wrapper-1 d-flex align-items-center justify-content-center">
-            
-                                
-                            <h1 class="hero-text">
-                                <span class="hero-name">Snayder</span>
-                                <span class="hero-last-name">Rodrigues</span>
-                                <span class="hero-duty">Dev. Front-End & Web Designer</span>
-                            </h1>
-                                
-                        </div>
-                    </div>
-                </div>
-                <div class="design-elements">
-                    <!-- <div class="de-hero-1"></div>
+    <!-- HERO AREA -->
+    <main>
+      <section class="section-hero" id="Inicio">
+        <div class="container">
+          <div class="container1 d-flex">
+            <div
+              class="block-wrapper-1 d-flex align-items-center justify-content-center"
+            >
+              <h1 class="hero-text">
+                <span class="hero-name">Snayder</span>
+                <span class="hero-last-name">Rodrigues</span>
+                <span class="hero-duty">Dev. Front-End & Web Designer</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="design-elements">
+          <!-- <div class="de-hero-1"></div>
                     <div class="de-hero-2"></div>
                     <div class="de-hero-3"></div> -->
-                    <!-- <div class="de-hero-4"></div> -->
-                    <div class="de-hero-5"></div>
-                    <div class="de-hero-6"></div>
-                    <div class="de-hero-7"></div>
-                </div>
-                
-            
-            </section><!-- .HERO AREA -->
-            <!-- SOBRE AREA -->
-            <section class="section-about" id="Sobre">
-                <div class="container">
-                    <div class="container2">
-                        <h2 class="h2">Sobre Mim</h2>
-                        <div class="container2-responsive row d-flex align-items-start">
-                            <div class="block-wrapper-2">
-                                <img class="author-photo" src="./assets/img/author-photo.jpeg" alt="Author's Photo">
-                            </div>
-                            <div class="block-wrapper-3">
-                                <h3 class="h3">Uma breve introdução</h3>
-                                <p class="text-body">Estudante de <strong>Ciência da Computação</strong>, estou sempre em busca de aprimorar meus conhecimentos na área de <strong>Desenvolvimento Web</strong>. Tenho proficiência com as principais tecnologias <strong>Front-End</strong> e também em outras áreas de desenvolvimento, como <strong>Back-End</strong>.</p>
-                                <p class="text-body">Tenho o objetivo de projetar e manter sites responsivos que ofereçam uma boa experiência ao usuário, além de criar <strong>interfaces dinâmicas</strong> e <strong>intuitivas</strong> por meio da escrita de <strong>código limpo</strong> e otimizado. Também sou uma pessoa que visa o bom desempenho e <strong>colaboração em equipe</strong> para produzir excelentes aplicações web.</p>
-                                <div class="bw3-button-div">
-                                    <div class="d-flex">
-                                        <a class="button" target="_blank" href="./assets/pdf/Snayder Antonio Rodrigues Rocha - Currículo.pdf">Currículo</a>
-            
-                                    </div>
-                                    <!-- <div class="d-flex">
+          <!-- <div class="de-hero-4"></div> -->
+          <div class="de-hero-5"></div>
+          <div class="de-hero-6"></div>
+          <div class="de-hero-7"></div>
+        </div>
+      </section>
+      <!-- .HERO AREA -->
+      <!-- SOBRE AREA -->
+      <section class="section-about" id="Sobre">
+        <div class="container">
+          <div class="container2">
+            <h2 class="h2">Sobre Mim</h2>
+            <div class="container2-responsive row d-flex align-items-start">
+              <div class="block-wrapper-2">
+                <img
+                  class="author-photo"
+                  src="./assets/img/author-photo.jpeg"
+                  alt="Author's Photo"
+                />
+              </div>
+              <div class="block-wrapper-3">
+                <h3 class="h3">Uma breve introdução</h3>
+                <p class="text-body">
+                  Estudante de <strong>Ciência da Computação</strong>, estou
+                  sempre em busca de aprimorar meus conhecimentos na área de
+                  <strong>Desenvolvimento Web</strong>. Tenho proficiência com
+                  as principais tecnologias <strong>Front-End</strong> e também
+                  em outras áreas de desenvolvimento, como
+                  <strong>Back-End</strong>.
+                </p>
+                <p class="text-body">
+                  Tenho o objetivo de projetar e manter sites responsivos que
+                  ofereçam uma boa experiência ao usuário, além de criar
+                  <strong>interfaces dinâmicas</strong> e
+                  <strong>intuitivas</strong> por meio da escrita de
+                  <strong>código limpo</strong> e otimizado. Também sou uma
+                  pessoa que visa o bom desempenho e
+                  <strong>colaboração em equipe</strong> para produzir
+                  excelentes aplicações web.
+                </p>
+                <div class="bw3-button-div">
+                  <div class="d-flex">
+                    <a
+                      class="button"
+                      target="_blank"
+                      href="./assets/pdf/Snayder Antonio Rodrigues Rocha - Currículo.pdf"
+                      >Currículo</a
+                    >
+                  </div>
+                  <!-- <div class="d-flex">
                                         <a class="button" target="_blank" href="./assets/pdf/Snayder Antonio Rodrigues Rocha - Certificados.pdf">Certificados</a>
             
                                     </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container-services row d-flex align-items-start">
-                            <div class="services-headline-wrapper">
-                                <h2 class="services-h2">Meus Serviços</h2>
-                                <p class="text-body">Como desenvolvedor front-end, ofereço uma ampla gama de serviços especializados em desenvolvimento web e design para criar experiências digitais envolventes e funcionais.</p>
-                                <p class="text-body">Minha expertise abrange desde a implementação de interfaces de usuário visualmente atrativas até a criação de sites responsivos e acessíveis.</p>
-                            </div>
-                            <div class="services-dropdown-wrapper">
-                                <ul class="services-dropdown">
-                                    <li class="services-dropdown-div">
-                                        <h3 class="services-title">Desenvolvimento Web<div class="scroll-down-icon"></div></h3>
-                                        <div class="services-text text-body">
-                                            <p>Eu crio sites únicos, com código personalizado e otimizado. Minha abordagem é centrada na escalabilidade, desempenho, acessibilidade e animações envolventes para uma proporcionar uma boa experiência de usuário.</p>
-                                        </div>
-                                    </li>
-                                    <li class="services-dropdown-div">
-                                        <h3 class="services-title">Web Design<div class="scroll-down-icon"></div></h3>
-                                        <div class="services-text text-body">
-                                            <p>Crio experiências online que atraem e engajam o público, impulsionando melhores resultados. Com uma compreensão profunda das últimas tendências e tecnologias, estou empenhado em desenvolver sites que sejam verdadeiramente únicos, desde designs minimalistas com tipografia impecável, até grandes sites exuberantes e complexos.</p>
-                                        </div>
-                                    </li>
-                                    <li class="services-dropdown-div">
-                                        <h3 class="services-title">UI/UX Design<div class="scroll-down-icon"></div></h3>
-                                        <div class="services-text text-body">
-                                            <p>Minha missão é transformar ideias em realidade, desde a criação de wireframes até a seleção meticulosa de elementos visuais e interativos. Combinando criatividade e expertise técnica, estou comprometido a desenvolver interfaces que não apenas encantem visualmente, mas também impulsionem o engajamento e a fidelidade do usuário.</p>
-                                        </div>
-                                    </li>
-                                    <li class="services-dropdown-div">
-                                        <h3 class="services-title">SEO<div class="scroll-down-icon"></div></h3>
-                                        <div class="services-text text-body">
-                                            <p>Tenho como obejtivo implementar estratégias de SEO para ampliar a presença online do produto/serviço. Utilizando métodos de Copywriting, Sitemaps, Meta tags e tags Open Graph otimizadas, eu melhoro a visibilidade nas classificações de pesquisa.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </section> <!-- .SOBRE AREA -->
-            <!-- PROJETOS AREA -->
-            <section class="section-projects" id="Projetos">
-                <div class="container">
-                    <div class="container3">
-                        <h2 class="h2">Projetos</h2>
-                        <div class="projects-container">
-                            <div class="block-wrapper-4 work-1">
-                                <div class="project-img-wrapper">
-                                    <img class="project-img" src="./assets/img/ivc-project.webp" alt="Projeto 02">
-                                    <div class="project-description">
-                                    </div>
-                                </div>
-                                <div class="project-title-wrapper">
-                                    <h3 class="h3">Iniciativa Viver e Crescer (IVC)</h3>
-                                    <div class="mini-cards-div">
-                                        <span class="mini-card">HTML</span>
-                                        <span class="mini-card">SASS</span>
-                                        <span class="mini-card">JavaScript</span>
-                                        <span class="mini-card">Figma</span>
-                                    </div>
-                                    <div class="bw4-button-div d-flex align-items-center">
-                                        <div class="d-flex">
-                                            <a class="button" target="_blank" href="https://ivcconsultorio.vercel.app/">Site</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <a class="button" target="_blank" href="https://github.com/SnayderRodrigues/ivc-psychology-clinic">GitHub</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-wrapper-4 work-2">
-                                <div class="project-img-wrapper">
-                                    <img class="project-img" src="./assets/img/example-agency-project.webp" alt="Projeto 01">
-                                    <div class="project-description">
-                                        <p class="text-body">A Example é uma agência de marketing digital fictícia, desenvolvida como projeto pessoal para testar minhas habilidades de design e desenvolvimento.</p>
-                                        <p class="text-body">Criei um design minimalista e cartunesco, priorizando a clareza e a funcionalidade. O design facilita a navegação e cria um ambiente amigável e convidativo. Redigi o conteúdo do website de forma clara e profissional, para que o usuário possa encontrar as informações que precisa de maneira rápida e fácil.</p>
-                                    </div>
-                                </div>
-                                <div class="project-title-wrapper">
-                                    <h3 class="h3">Example - Marketing Digital</h3>
-                                    <div class="mini-cards-div">
-                                        <span class="mini-card">HTML</span>
-                                        <span class="mini-card">SASS</span>
-                                        <span class="mini-card">JavaScript</span>
-                                        <span class="mini-card">Figma</span>
-                                    </div>
-                                    <div class="bw4-button-div d-flex align-items-center">
-                                        <div class="d-flex">
-                                            <a class="button" target="_blank" href="https://example-agency.vercel.app/">Site</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <a class="button" target="_blank" href="https://github.com/SnayderRodrigues/digital-marketing-agency-example">GitHub</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-wrapper-4 work-3">
-                                <!-- <img class="project-img" src="./assets/img/Captura de Tela (44).png" alt=""> -->
-                                <div class="project-title-wrapper">
-                                    <h3 class="h3">Projeto 03 - ⌛...</h3>
-                                    <div class="mini-cards-div">
-                                        <p class="mini-card">React</p>
-                                        <p class="mini-card">Tailwind</p>
-                                        <p class="mini-card">Next.JS</p>
-                                        <p class="mini-card">Node.JS</p>
-                                        <p class="mini-card">Figma</p>
-                                    </div>
-                                    <!-- <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, doloremque quaerat mollitia eveniet assumenda adipisci quisquam nemo repellat accusantium provident laborum facilis excepturi laudantium, molestias autem deleniti, quas fuga et!</p> -->
-                                    <div class="bw4-button-div d-flex align-items-center">
-                                        <div class="d-flex">
-                                            <a class="button disable" href="">Site</a>
-            
-                                        </div>
-                                        <div class="d-flex">
-                                            <a class="button disable" href="">GitHub</a>
-            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-wrapper-4 work-4">
-                                <!-- <img class="project-img" src="./assets/img/Captura de Tela (44).png" alt=""> -->
-                                <div class="project-title-wrapper">
-                                    <h3 class="h3">Projeto 04 - ⌛...</h3>
-                                    <div class="mini-cards-div">
-                                        <p class="mini-card">React</p>
-                                        <p class="mini-card">Tailwind</p>
-                                        <p class="mini-card">Gatsby</p>
-                                        <p class="mini-card">Figma</p>
-                                    </div>
-                                    <!-- <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, doloremque quaerat mollitia eveniet assumenda adipisci quisquam nemo repellat accusantium provident laborum facilis excepturi laudantium, molestias autem deleniti, quas fuga et!</p> -->
-                                    <div class="bw4-button-div d-flex align-items-center">
-                                        <div class="d-flex">
-                                            <a class="button disable" href="">Site</a>
-            
-                                        </div>
-                                        <div class="d-flex">
-                                            <a class="button disable" href="">GitHub</a>
-            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </div>
-                </div>
-            </section> <!-- .PROJETOS AREA -->
-            
-            <!-- CONTATO AREA -->
-            <section class="section-contact" id="Contato">
-                <div class="container">
-                    <div class="container4">
-                        <h2 class="h2">Contato</h2>
-                        <div class="container4-responsive row d-flex align-items-center">
-                            <div class="block-wrapper-6">
-                                <p class="text-body"><strong>QUER TRABALHAR COMIGO?</strong> <br>Entre em contato por meio do fomulário abaixo ou através das minhas redes sociais.</p>
-                                <form class="form" type="contact-email" name="contact-email" action="https://formsubmit.co/d6dd0bfa0f0586c656b000470faee276" method="POST" target="_blank">
-                                    <div class="form-div-1 d-flex align-items-center">
-                                        <label for="inputName" class="visually-hidden">Nome</label><input type="text" class="form-control" id="inputName" placeholder="Nome*" name="inputName" required>
-                                        <label for="inputEmail" class="visually-hidden">Email</label><input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="E-mail*" required>
-                                    </div>
-                                    <label for="inputMessage" class="visually-hidden">Mensagem</label><textarea class="form-control message" id="inputMessage" name="inputMessage" placeholder="Sua mensagem aqui*" required></textarea>
-                                    <button class="button" type="submit">Enviar</button>
-                                </form>
-                            </div>
-                            <div class="block-wrapper-7">
-                                <div class="bw7-info">
-                                    <div class="info-div">
-                                        <span class="info-title">Redes Sociais</span>
-                                        <a target="_blank" href="https://linkedin.com/in/snayder" class="info-link">LinkedIn</a>
-                                        <a target="_blank" href="https://github.com/SnayderRodrigues" class="info-link">GitHub</a>
-                                        <a target="_blank" href="https://www.instagram.com/snayder.rodrigues/" class="info-link">Instagram</a>
-                                    </div>
-                                    <div class="info-div">
-                                        <span class="info-title">Outros Contatos</span>
-                                        <div class="info-email">
-                                            <a target="_blank" href="mailto:snayderrodrigues@gmail.com" class="info-link" id="copy-email">snayderrodrigues@gmail.com</a>
-                                            <button class="copy-button" onclick="copiarTexto()" title="copiar"></button>
-                                        </div>
-                                        <div class="info-number">
-                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=5585987234991&text=Ol%C3%A1,%20Snayder.%20Vim%20atrav%C3%A9s%20do%20seu%20Portif%C3%B3lio." class="info-link" id="copy-phone">+55 85 98723 4991</a>
-                                            <button class="copy-button" onclick="copiarNumero()" title="copiar"></button>
-                                        </div>
-                                    </div>
-                                    <div class="info-div">
-                                        <span class="info-title">Localização</span>
-                                        <a target="_blank" href="https://www.google.com/maps/place/Maranguape+-+Fazenda+Coit%C3%A9,+Maranguape+-+CE/@-3.9022533,-38.6754541,13z/data=!3m1!4b1!4m6!3m5!1s0x7c0ab6a38bc35a9:0x11b4ab0b067e89f3!8m2!3d-3.8917126!4d-38.6841701!16s%2Fg%2F11bc5rd9tn?entry=ttu" class="info-link">Maranguape, Ceará - Brasil.</a>
-                                        <div id="hora-local" class=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> <!-- .CONTATO AREA -->
-        </main>
-        
-        <!-- FOOTER AREA -->
-        <footer class="footer" id="footer">
-            
-            <div class="container">
-                <div class="container5">
-                    <div class="container5-responsive d-flex align-items-center justify-content-space-between">
-                        <div class="d-flex flex-direction-column">
-                            <span class="h1 author-name-footer">Snayder <br>Rodrigues</span>
-                            <span class="copyright">© 2024.</span>
-                        </div>
-                        <div class="footer-nav-div-wrapper d-flex gap-2rem">
-                            <div class="footer-nav-div d-flex flex-direction-column">
-                                <span class="info-title">Navegação</span>
-                                <a class="footer-nav-link" href="#">
-                                    <span>Início</span>
-                                </a>
-                                <a class="footer-nav-link" href="#Sobre">
-                                    <span>Sobre</span>
-                                </a>
-                                <a class="footer-nav-link" href="#Projetos">
-                                    <span>Projetos</span>
-                                </a>
-                                <a class="footer-nav-link" href="#Contato">
-                                    <span>Contato</span>
-                                </a>
-                            </div>
-                            <div class="footer-nav-div d-flex flex-direction-column">
-                                <span class="info-title">Redes Sociais</span>
-                                <a target="_blank" href="https://linkedin.com/in/snayder" class="footer-nav-link">
-                                    <span>LinkedIn</span>
-                                </a>
-                                <a target="_blank" href="https://github.com/SnayderRodrigues" class="footer-nav-link">
-                                    <span>GitHub</span>
-                                </a>
-                                <a target="_blank" href="https://www.instagram.com/snayder.rodrigues/" class="footer-nav-link">
-                                    <span>Instagram</span>
-                                </a>
-                            </div>
-                        </div>   
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="design-elements">
-                <!-- <div class="de-footer-1"></div> -->
-                <!-- <div class="de-footer-2"></div> -->
-                <div class="de-footer-3"></div>
+            <div class="container-services row d-flex align-items-start">
+              <div class="services-headline-wrapper">
+                <h2 class="services-h2">Meus Serviços</h2>
+                <p class="text-body">
+                  Como desenvolvedor front-end, ofereço uma ampla gama de
+                  serviços especializados em desenvolvimento web e design para
+                  criar experiências digitais envolventes e funcionais.
+                </p>
+                <p class="text-body">
+                  Minha expertise abrange desde a implementação de interfaces de
+                  usuário visualmente atrativas até a criação de sites
+                  responsivos e acessíveis.
+                </p>
+              </div>
+              <div class="services-dropdown-wrapper">
+                <ul class="services-dropdown">
+                  <li class="services-dropdown-div">
+                    <h3 class="services-title">
+                      Desenvolvimento Web
+                      <div class="scroll-down-icon"></div>
+                    </h3>
+                    <div class="services-text text-body">
+                      <p>
+                        Eu crio sites únicos, com código personalizado e
+                        otimizado. Minha abordagem é centrada na escalabilidade,
+                        desempenho, acessibilidade e animações envolventes para
+                        uma proporcionar uma boa experiência de usuário.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="services-dropdown-div">
+                    <h3 class="services-title">
+                      Web Design
+                      <div class="scroll-down-icon"></div>
+                    </h3>
+                    <div class="services-text text-body">
+                      <p>
+                        Crio experiências online que atraem e engajam o público,
+                        impulsionando melhores resultados. Com uma compreensão
+                        profunda das últimas tendências e tecnologias, estou
+                        empenhado em desenvolver sites que sejam verdadeiramente
+                        únicos, desde designs minimalistas com tipografia
+                        impecável, até grandes sites exuberantes e complexos.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="services-dropdown-div">
+                    <h3 class="services-title">
+                      UI/UX Design
+                      <div class="scroll-down-icon"></div>
+                    </h3>
+                    <div class="services-text text-body">
+                      <p>
+                        Minha missão é transformar ideias em realidade, desde a
+                        criação de wireframes até a seleção meticulosa de
+                        elementos visuais e interativos. Combinando criatividade
+                        e expertise técnica, estou comprometido a desenvolver
+                        interfaces que não apenas encantem visualmente, mas
+                        também impulsionem o engajamento e a fidelidade do
+                        usuário.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="services-dropdown-div">
+                    <h3 class="services-title">
+                      SEO
+                      <div class="scroll-down-icon"></div>
+                    </h3>
+                    <div class="services-text text-body">
+                      <p>
+                        Tenho como obejtivo implementar estratégias de SEO para
+                        ampliar a presença online do produto/serviço. Utilizando
+                        métodos de Copywriting, Sitemaps, Meta tags e tags Open
+                        Graph otimizadas, eu melhoro a visibilidade nas
+                        classificações de pesquisa.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </footer><!-- .FOOTER AREA  -->    
+          </div>
+        </div>
+      </section>
+      <!-- .SOBRE AREA -->
+      <!-- PROJETOS AREA -->
+      <section class="section-projects" id="Projetos">
+        <div class="container">
+          <div class="container3">
+            <h2 class="h2">Projetos</h2>
+            <div class="projects-container">
+              <div class="block-wrapper-4 work-1">
+                <div class="project-img-wrapper">
+                  <img
+                    class="project-img"
+                    src="./assets/img/ivc-project.webp"
+                    alt="Projeto 02"
+                  />
+                  <div class="project-description"></div>
+                </div>
+                <div class="project-title-wrapper">
+                  <h3 class="h3">Iniciativa Viver e Crescer (IVC)</h3>
+                  <div class="mini-cards-div">
+                    <span class="mini-card">HTML</span>
+                    <span class="mini-card">SASS</span>
+                    <span class="mini-card">JavaScript</span>
+                    <span class="mini-card">Figma</span>
+                  </div>
+                  <div class="bw4-button-div d-flex align-items-center">
+                    <div class="d-flex">
+                      <a
+                        class="button"
+                        target="_blank"
+                        href="https://ivcconsultorio.vercel.app/"
+                        >Site</a
+                      >
+                    </div>
+                    <div class="d-flex">
+                      <a
+                        class="button"
+                        target="_blank"
+                        href="https://github.com/SnayderRodrigues/ivc-psychology-clinic"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-wrapper-4 work-2">
+                <div class="project-img-wrapper">
+                  <img
+                    class="project-img"
+                    src="./assets/img/example-agency-project.webp"
+                    alt="Projeto 01"
+                  />
+                  <div class="project-description">
+                    <p class="text-body">
+                      A Example é uma agência de marketing digital fictícia,
+                      desenvolvida como projeto pessoal para testar minhas
+                      habilidades de design e desenvolvimento.
+                    </p>
+                    <p class="text-body">
+                      Criei um design minimalista e cartunesco, priorizando a
+                      clareza e a funcionalidade. O design facilita a navegação
+                      e cria um ambiente amigável e convidativo. Redigi o
+                      conteúdo do website de forma clara e profissional, para
+                      que o usuário possa encontrar as informações que precisa
+                      de maneira rápida e fácil.
+                    </p>
+                  </div>
+                </div>
+                <div class="project-title-wrapper">
+                  <h3 class="h3">Example - Marketing Digital</h3>
+                  <div class="mini-cards-div">
+                    <span class="mini-card">HTML</span>
+                    <span class="mini-card">SASS</span>
+                    <span class="mini-card">JavaScript</span>
+                    <span class="mini-card">Figma</span>
+                  </div>
+                  <div class="bw4-button-div d-flex align-items-center">
+                    <div class="d-flex">
+                      <a
+                        class="button"
+                        target="_blank"
+                        href="https://example-agency.vercel.app/"
+                        >Site</a
+                      >
+                    </div>
+                    <div class="d-flex">
+                      <a
+                        class="button"
+                        target="_blank"
+                        href="https://github.com/SnayderRodrigues/digital-marketing-agency-example"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-wrapper-4 work-3">
+                <!-- <img class="project-img" src="./assets/img/Captura de Tela (44).png" alt=""> -->
+                <div class="project-title-wrapper">
+                  <h3 class="h3">Projeto 03 - ⌛...</h3>
+                  <div class="mini-cards-div">
+                    <p class="mini-card">React</p>
+                    <p class="mini-card">Tailwind</p>
+                    <p class="mini-card">Next.JS</p>
+                    <p class="mini-card">Node.JS</p>
+                    <p class="mini-card">Figma</p>
+                  </div>
+                  <!-- <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, doloremque quaerat mollitia eveniet assumenda adipisci quisquam nemo repellat accusantium provident laborum facilis excepturi laudantium, molestias autem deleniti, quas fuga et!</p> -->
+                  <div class="bw4-button-div d-flex align-items-center">
+                    <div class="d-flex">
+                      <a class="button disable" href="">Site</a>
+                    </div>
+                    <div class="d-flex">
+                      <a class="button disable" href="">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-wrapper-4 work-4">
+                <!-- <img class="project-img" src="./assets/img/Captura de Tela (44).png" alt=""> -->
+                <div class="project-title-wrapper">
+                  <h3 class="h3">Projeto 04 - ⌛...</h3>
+                  <div class="mini-cards-div">
+                    <p class="mini-card">React</p>
+                    <p class="mini-card">Styled Components</p>
+                    <p class="mini-card">Gatsby</p>
+                    <p class="mini-card">Figma</p>
+                  </div>
+                  <!-- <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, doloremque quaerat mollitia eveniet assumenda adipisci quisquam nemo repellat accusantium provident laborum facilis excepturi laudantium, molestias autem deleniti, quas fuga et!</p> -->
+                  <div class="bw4-button-div d-flex align-items-center">
+                    <div class="d-flex">
+                      <a class="button disable" href="">Site</a>
+                    </div>
+                    <div class="d-flex">
+                      <a class="button disable" href="">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- .PROJETOS AREA -->
+
+      <!-- CONTATO AREA -->
+      <section class="section-contact" id="Contato">
+        <div class="container">
+          <div class="container4">
+            <h2 class="h2">Contato</h2>
+            <div class="container4-responsive row d-flex align-items-center">
+              <div class="block-wrapper-6">
+                <p class="text-body">
+                  <strong>QUER TRABALHAR COMIGO?</strong> <br />Entre em contato
+                  por meio do fomulário abaixo ou através das minhas redes
+                  sociais.
+                </p>
+                <form
+                  class="form"
+                  type="contact-email"
+                  name="contact-email"
+                  action="https://formsubmit.co/d6dd0bfa0f0586c656b000470faee276"
+                  method="POST"
+                  target="_blank"
+                >
+                  <div class="form-div-1 d-flex align-items-center">
+                    <label for="inputName" class="visually-hidden">Nome</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      id="inputName"
+                      placeholder="Nome*"
+                      name="inputName"
+                      required
+                    />
+                    <label for="inputEmail" class="visually-hidden">Email</label
+                    ><input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail"
+                      name="inputEmail"
+                      placeholder="E-mail*"
+                      required
+                    />
+                  </div>
+                  <label for="inputMessage" class="visually-hidden"
+                    >Mensagem</label
+                  ><textarea
+                    class="form-control message"
+                    id="inputMessage"
+                    name="inputMessage"
+                    placeholder="Sua mensagem aqui*"
+                    required
+                  ></textarea>
+                  <button class="button" type="submit">Enviar</button>
+                </form>
+              </div>
+              <div class="block-wrapper-7">
+                <div class="bw7-info">
+                  <div class="info-div">
+                    <span class="info-title">Redes Sociais</span>
+                    <a
+                      target="_blank"
+                      href="https://linkedin.com/in/snayder"
+                      class="info-link"
+                      >LinkedIn</a
+                    >
+                    <a
+                      target="_blank"
+                      href="https://github.com/SnayderRodrigues"
+                      class="info-link"
+                      >GitHub</a
+                    >
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/snayder.rodrigues/"
+                      class="info-link"
+                      >Instagram</a
+                    >
+                  </div>
+                  <div class="info-div">
+                    <span class="info-title">Outros Contatos</span>
+                    <div class="info-email">
+                      <a
+                        target="_blank"
+                        href="mailto:snayderrodrigues@gmail.com"
+                        class="info-link"
+                        id="copy-email"
+                        >snayderrodrigues@gmail.com</a
+                      >
+                      <button
+                        class="copy-button"
+                        onclick="copiarTexto()"
+                        title="copiar"
+                      ></button>
+                    </div>
+                    <div class="info-number">
+                      <a
+                        target="_blank"
+                        href="https://api.whatsapp.com/send?phone=5585987234991&text=Ol%C3%A1,%20Snayder.%20Vim%20atrav%C3%A9s%20do%20seu%20Portif%C3%B3lio."
+                        class="info-link"
+                        id="copy-phone"
+                        >+55 85 98723 4991</a
+                      >
+                      <button
+                        class="copy-button"
+                        onclick="copiarNumero()"
+                        title="copiar"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="info-div">
+                    <span class="info-title">Localização</span>
+                    <a
+                      target="_blank"
+                      href="https://www.google.com/maps/place/Maranguape+-+Fazenda+Coit%C3%A9,+Maranguape+-+CE/@-3.9022533,-38.6754541,13z/data=!3m1!4b1!4m6!3m5!1s0x7c0ab6a38bc35a9:0x11b4ab0b067e89f3!8m2!3d-3.8917126!4d-38.6841701!16s%2Fg%2F11bc5rd9tn?entry=ttu"
+                      class="info-link"
+                      >Maranguape, Ceará - Brasil.</a
+                    >
+                    <div id="hora-local" class=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- .CONTATO AREA -->
+    </main>
+
+    <!-- FOOTER AREA -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="container5">
+          <div
+            class="container5-responsive d-flex align-items-center justify-content-space-between"
+          >
+            <div class="d-flex flex-direction-column">
+              <span class="h1 author-name-footer">Snayder <br />Rodrigues</span>
+              <span class="copyright">© 2024.</span>
+            </div>
+            <div class="footer-nav-div-wrapper d-flex gap-2rem">
+              <div class="footer-nav-div d-flex flex-direction-column">
+                <span class="info-title">Navegação</span>
+                <a class="footer-nav-link" href="#">
+                  <span>Início</span>
+                </a>
+                <a class="footer-nav-link" href="#Sobre">
+                  <span>Sobre</span>
+                </a>
+                <a class="footer-nav-link" href="#Projetos">
+                  <span>Projetos</span>
+                </a>
+                <a class="footer-nav-link" href="#Contato">
+                  <span>Contato</span>
+                </a>
+              </div>
+              <div class="footer-nav-div d-flex flex-direction-column">
+                <span class="info-title">Redes Sociais</span>
+                <a
+                  target="_blank"
+                  href="https://linkedin.com/in/snayder"
+                  class="footer-nav-link"
+                >
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/SnayderRodrigues"
+                  class="footer-nav-link"
+                >
+                  <span>GitHub</span>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/snayder.rodrigues/"
+                  class="footer-nav-link"
+                >
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="design-elements">
+        <!-- <div class="de-footer-1"></div> -->
+        <!-- <div class="de-footer-2"></div> -->
+        <div class="de-footer-3"></div>
+      </div>
+    </footer>
+    <!-- .FOOTER AREA  -->
     <!-- SCRIPTS -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -413,7 +413,7 @@ button {
   /* display: flex;
     flex-direction: column;
     align-items: center; */
-  width: min(100% - 64px, 1540px);
+  width: min(100% - 64px, 1440px);
   margin-inline: auto;
 }
 
@@ -743,6 +743,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -942,7 +943,6 @@ button {
 
 .block-wrapper-2 {
   width: 40%;
-  align-self: center;
 }
 
 .author-photo {
@@ -1997,5 +1997,30 @@ button {
     height: 40px;
     top: 86%;
     left: 5%;
+  }
+}
+@media (height <= 425px) {
+  .header,
+  .header.opaque,
+  .header.dark,
+  .header.opaque.dark {
+    height: 18vh;
+  }
+  .block-wrapper-1 {
+    justify-content: flex-end;
+  }
+  .hero-duty {
+    max-width: fit-content;
+  }
+  .de-hero-5,
+  .de-hero-6,
+  .de-hero-7 {
+    transform: translate(-50%, -30%);
+  }
+  .de-hero-6 {
+    transform: translate(-90%, -30%);
+  }
+  .de-hero-7 {
+    transform: translate(-10%, -30%);
   }
 }

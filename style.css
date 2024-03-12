@@ -1737,7 +1737,7 @@ button {
   }
 }
 
-@media (width <= 767px) {
+@media (width <= 768px) {
   .button {
     min-width: 100.34px;
     padding: 12px 12px;

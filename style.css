@@ -207,11 +207,12 @@ p {
 }
 
 .text-body {
-  font-size: clamp(
+  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+  /* font-size: clamp(
     1.125rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.375rem
-  );
+  ); */
   line-height: 1.78;
   text-wrap: pretty;
 }
@@ -935,6 +936,7 @@ button {
 .container2 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   /* height: 100vh; */
   padding: 100px 0 100px 0;
@@ -1279,6 +1281,7 @@ button {
 .container4 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   /* height: 85vh; */
   padding: 100px 0;
@@ -1295,11 +1298,12 @@ button {
 }
 
 .block-wrapper-6 > p {
-  font-size: clamp(
+  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+  /* font-size: clamp(
     1.125rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.375rem
-  );
+  ); */
 }
 
 .form {
@@ -1318,11 +1322,12 @@ button {
   display: block;
   width: 100%;
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: clamp(
+  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+  /* font-size: clamp(
     1.125rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.375rem
-  );
+  ); */
   font-weight: 400;
   line-height: 1.5;
   color: #292121;
@@ -1397,22 +1402,24 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: clamp(
+  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+  /* font-size: clamp(
     1.125rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.375rem
-  );
+  ); */
 }
 
 .info-link {
   width: fit-content;
   cursor: pointer;
   transition: all 0.2s linear;
-  font-size: clamp(
+  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+  /* font-size: clamp(
     1.125rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.375rem
-  );
+  ); */
   margin-bottom: 0.5rem;
 }
 
@@ -1533,11 +1540,12 @@ button {
 
 .footer-nav-div {
   width: 50%;
-  font-size: clamp(
+  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+  /* font-size: clamp(
     1.125rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.25rem
-  );
+  ); */
 }
 
 .footer-nav-link {
@@ -1611,14 +1619,36 @@ button {
 
 /*  --------------------------------------------------------------------------- */
 
-@media (768px <= width <= 1100px) {
+@media (900px <= width <= 1440px) {
+  .projects-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .work-1,
+  .work-2,
+  .work-3,
+  .work-4 {
+    grid-column: span 1 / span 1;
+  }
+  .container3-responsive {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .block-wrapper-4 {
+    width: 100%;
+    /* margin-bottom: 2rem; */
+    padding: 60px 40px;
+  }
+}
+@media (768px <= width <= 900px) {
   .container {
     width: min(100% - 64px);
   }
-  /* .row>* {
-        padding-right: 0;
-        padding-left: 0;
-    } */
+  .row > * {
+    padding-right: 0;
+    padding-left: 0;
+  }
   .container2 {
     align-items: center;
   }
@@ -1641,12 +1671,13 @@ button {
     padding-left: 0;
   }
   .author-photo {
-    width: 98%;
-    max-width: 527.14px;
+    width: 100%;
+    max-width: 457.14px;
     min-width: 390px;
     align-self: center;
   }
   .container-services {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -1673,12 +1704,18 @@ button {
     justify-content: center;
   }
   .block-wrapper-4 {
-    width: 98%;
+    width: 100%;
     /* margin-bottom: 2rem; */
     padding: 60px 40px;
   }
+  .container4 {
+    align-items: center;
+  }
+  .container4 .h2 {
+    align-self: flex-start;
+  }
   .container4-responsive {
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     flex-direction: column !important;
     align-items: center !important;
@@ -1836,8 +1873,9 @@ button {
   }
   .author-photo {
     width: 98%;
-    max-width: 527.14px;
+    max-width: 457.14px;
     /* min-width: 390px; */
+    align-self: center;
   }
   .container-services {
     display: flex;

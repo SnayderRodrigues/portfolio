@@ -1389,10 +1389,10 @@ button {
   width: 100%;
   font-weight: 700;
   line-height: 1.78;
-  text-transform: uppercase;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid var(--bg-light2);
   transition: border 0.3s linear;
+  opacity: 0.7;
 }
 
 .info-title.dark {

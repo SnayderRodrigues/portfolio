@@ -253,14 +253,20 @@ button {
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.button::after {
+.button:hover {
+  background-color: var(--accent-color);
+}
+.button.dark:hover {
+  background-color: var(--accent-color-dk);
+}
+
+/* .button::after {
   content: "";
   position: absolute;
   top: 0;
   display: block;
   height: 100%;
   background: var(--accent-color);
-  /* right: -50%; */
   left: 0;
   z-index: -1;
   width: 0%;
@@ -270,22 +276,22 @@ button {
   transform-origin: 100% 0;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
-}
+} */
 
-.button:hover::after {
+/* .button:hover::after {
   left: 0;
   right: auto;
   width: 150%;
-}
+} */
 
 .button.dark {
   background-color: var(--purple-shade-dk);
   box-shadow: 4px 4px 0 0 var(--purple-shade-dk);
 }
 
-.button.dark::after {
+/* .button.dark::after {
   background: var(--accent-color-dk);
-}
+} */
 
 /* --------------------------------- ANIMATIONS -------------------------------- */
 

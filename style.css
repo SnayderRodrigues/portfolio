@@ -22,13 +22,34 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 60px;
+  /* scroll-behavior: smooth; */
+  /* scroll-padding-top: 60px; */
+  overscroll-behavior: none;
   overflow-x: hidden;
 }
 
 html.open-nav {
   overflow-y: hidden;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 .d-flex {
@@ -851,7 +872,6 @@ button {
   left: 20%;
   z-index: 1;
   transform-style: preserve-3d;
-  transition: background 0.4s linear;
 }
 
 .de-hero-4::before {
@@ -895,7 +915,6 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  transition: background 0.4s linear;
   opacity: 0.2;
 }
 
@@ -912,7 +931,6 @@ button {
   left: 35%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  transition: background 0.4s linear;
   opacity: 0.1;
 }
 .de-hero-7 {
@@ -928,13 +946,12 @@ button {
   left: 65%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  transition: background 0.4s linear;
   opacity: 0.1;
 }
 
 .section-about {
   background-color: #fff;
-  transition: background 0.4s linear;
+  transition: background-color 0.4s linear;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -1123,7 +1140,7 @@ button {
   /* background-image: linear-gradient(var(--bg-light2) 2px, transparent 2px), linear-gradient(90deg, var(--bg-light2) 2px, transparent 2px);
     background-size: 2rem 2rem; */
 
-  transition: background 0.4s linear;
+  transition: background-color 0.4s linear;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -1279,7 +1296,7 @@ button {
 
 .section-contact {
   background-color: #ffffff;
-  transition: background 0.4s linear;
+  transition: background-color 0.4s linear;
   position: relative;
   z-index: 1;
   /* overflow: hidden; */
@@ -1505,7 +1522,7 @@ button {
 .footer {
   /* background: linear-gradient(45deg, #c5edff, #96ccff, #5f92ff, #7B66FF); */
   background-color: var(--bg-light1);
-  transition: background 0.4s linear;
+  transition: background-color 0.4s linear;
   position: relative;
   z-index: 3;
   overflow: hidden;
@@ -1595,7 +1612,6 @@ button {
   top: 60%;
   left: 58%;
   z-index: 1;
-  transition: background 0.4s linear;
 }
 
 .de-footer-2 {
@@ -1608,7 +1624,6 @@ button {
   top: 78%;
   left: 7%;
   z-index: 1;
-  transition: background 0.4s linear;
 }
 
 .de-footer-3 {
@@ -1624,7 +1639,6 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  transition: background 0.4s linear;
   opacity: 0.1;
 }
 
@@ -1810,7 +1824,6 @@ button {
     left: 80%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    transition: background 0.4s linear;
     opacity: 0.1;
   }
   .header-ul {

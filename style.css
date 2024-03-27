@@ -179,7 +179,7 @@ h2 {
 .h3,
 h3 {
   font-family: "Outfit", sans-serif;
-  font-size: clamp(2rem, 1.6363636363636362rem + 1.8181818181818181vw, 3rem);
+  font-size: clamp(2rem, 1.6363636363636362rem + 1.8181818181818181vw, 2.625rem);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -1318,7 +1318,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   justify-self: center;
-  width: 55%;
+  width: 60%;
   /* height: 395px; */
   text-overflow: clip;
 }
@@ -1394,7 +1394,7 @@ button {
 }
 
 .block-wrapper-7 {
-  width: 45%;
+  width: 40%;
 }
 
 /* .map {
@@ -1642,21 +1642,12 @@ button {
 
 /*  --------------------------------------------------------------------------- */
 
-@media (900px <= width <= 1440px) {
+@media (1024px <= width <= 1440px) {
   .container2-responsive {
     gap: 2rem;
   }
   .container-services {
     gap: 2rem;
-  }
-  .projects-container {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .work-1,
-  .work-2,
-  .work-3,
-  .work-4 {
-    grid-column: span 1 / span 1;
   }
   .container3-responsive {
     width: 100%;
@@ -1664,10 +1655,46 @@ button {
     flex-direction: column;
     justify-content: center;
   }
+  .projects-container {
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
   .block-wrapper-4 {
     width: 100%;
-    /* margin-bottom: 2rem; */
     padding: 60px 40px;
+  }
+  .h3 {
+    font-size: 2rem;
+  }
+  .container4-responsive {
+    gap: 4rem;
+  }
+}
+@media (900px <= width <= 1024px) {
+  .container2-responsive {
+    gap: 2rem;
+  }
+  .container-services {
+    gap: 2rem;
+  }
+  .container3-responsive {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .projects-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .block-wrapper-4 {
+    width: 100%;
+    padding: 60px 40px;
+  }
+  .work-1,
+  .work-2,
+  .work-3,
+  .work-4 {
+    grid-column: span 1 / span 1;
   }
   .container4-responsive {
     gap: 2rem;
@@ -1987,6 +2014,13 @@ button {
   }
   .footer-nav-div {
     width: 50%;
+  }
+  .info-title {
+    font-size: 1.125rem;
+  }
+  .footer-nav-link {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
   }
   .de-footer-1 {
     width: 60px;

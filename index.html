@@ -27,13 +27,16 @@
     />
 
     <title>Snayder Rodrigues — Desenvolvedor Front-End & Web Designer</title>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   </head>
   <body>
     <!-- HEADER AREA -->
     <header class="header" id="header">
       <nav class="navbar">
         <div class="container">
-          <a class="logo" href="#">
+          <a class="logo" href="#" onclick="lenis.scrollTo('#')">
             <span class="h1 author-name">Snayder <br />Rodrigues</span>
             <img
               class="logo-img rotating"
@@ -47,16 +50,36 @@
               <div class="de-navbar-1"></div>
             </div>
             <li class="header-li">
-              <a class="nav-link-header active" href="#Inicio">Início</a>
+              <a
+                class="nav-link-header active"
+                href="#Inicio"
+                onclick="lenis.scrollTo('#Inicio')"
+                >Início</a
+              >
             </li>
             <li class="header-li">
-              <a class="nav-link-header" href="#Sobre">Sobre</a>
+              <a
+                class="nav-link-header"
+                href="#Sobre"
+                onclick="lenis.scrollTo('#Sobre')"
+                >Sobre</a
+              >
             </li>
             <li class="header-li">
-              <a class="nav-link-header" href="#Projetos">Projetos</a>
+              <a
+                class="nav-link-header"
+                href="#Projetos"
+                onclick="lenis.scrollTo('#Projetos')"
+                >Projetos</a
+              >
             </li>
             <li class="header-li">
-              <a class="nav-link-header" href="#Contato">Contato</a>
+              <a
+                class="nav-link-header"
+                href="#Contato"
+                onclick="lenis.scrollTo('#Contato')"
+                >Contato</a
+              >
             </li>
             <li class="header-li">
               <div class="toggle-container">
@@ -593,8 +616,7 @@
     <!-- .FOOTER AREA  -->
     <!-- SCRIPTS -->
     <script src="script.js"></script>
-    <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script>
+    <!-- <script>
       if (window.innerWidth > 768) {
         const lenis = new Lenis({
           duration: 1.2,

@@ -6,6 +6,7 @@ class App {
 
   _initialize() {
     this._createLenis();
+    
     document.querySelectorAll('a[href^="#"]').forEach((el) => {
       el.addEventListener("click", (e) => {
         e.preventDefault();

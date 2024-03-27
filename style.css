@@ -1336,7 +1336,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 99%;
+  width: 100%;
   margin-bottom: 2rem;
 }
 
@@ -1413,9 +1413,9 @@ button {
 .info-title {
   width: 100%;
   font-weight: 700;
-  line-height: 1.78;
+  padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
-  border-bottom: 1px solid var(--bg-light2);
+  border-bottom: 1.5px solid var(--bg-light2);
   transition: border 0.3s linear;
   opacity: 0.7;
 }
@@ -1773,13 +1773,13 @@ button {
   .button {
     min-width: 100.34px;
     padding: 12px 12px;
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
   }
-  .button.dark {
+  /* .button.dark {
     background-color: var(--accent-color-dk);
-  }
+  } */
   .container {
-    width: min(100% - 16px);
+    width: min(100% - 32px);
   }
   .header {
     background-color: var(--bg-light1);
@@ -1787,9 +1787,6 @@ button {
   }
   .header.dark {
     background-color: var(--bg-night2);
-  }
-  .navbar > .container {
-    width: min(100% - 16px) !important;
   }
   .ul-shadow {
     width: 100vw;
@@ -1905,7 +1902,7 @@ button {
     width: 100%;
   }
   .author-photo {
-    width: 98%;
+    width: 100%;
     max-width: 457.14px;
     /* min-width: 390px; */
     align-self: center;
@@ -1950,7 +1947,7 @@ button {
     background-color: #888;
   }
   .block-wrapper-4 {
-    width: 98%;
+    width: 100%;
     /* margin-bottom: 2rem; */
     padding: 40px 30px;
   }
@@ -2011,8 +2008,15 @@ button {
   .header-ul.open-nav {
     width: 75vw;
   }
+  .de-footer-3 {
+    width: 60vw;
+    height: 60vw;
+  }
 }
 @media (width <= 425px) {
+  .container {
+    width: min(100% - 16px);
+  }
   h2,
   .h2 {
     margin-bottom: 40px;
@@ -2038,7 +2042,7 @@ button {
     word-break: break-word;
   }
   .block-wrapper-4 {
-    width: 98%;
+    width: 100%;
     /* margin-bottom: 2rem; */
     padding: 40px 12px;
   }
@@ -2053,9 +2057,18 @@ button {
   .footer-nav-div-wrapper {
     order: -1;
     min-width: 328px;
+    gap: 2rem;
   }
   .footer-nav-div {
     width: fit-content;
+    min-width: calc(50% - 1rem);
+  }
+  .info-title {
+    font-size: 1.125rem;
+  }
+  .footer-nav-link {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
   }
   .de-footer-1 {
     width: 60px;
@@ -2068,6 +2081,10 @@ button {
     height: 40px;
     top: 86%;
     left: 5%;
+  }
+  .de-footer-3 {
+    width: 60vw;
+    height: 60vw;
   }
 }
 @media (height <= 425px) {

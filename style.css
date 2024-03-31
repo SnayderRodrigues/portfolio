@@ -179,7 +179,11 @@ h2 {
 .h3,
 h3 {
   font-family: "Outfit", sans-serif;
-  font-size: clamp(2rem, 1.6363636363636362rem + 1.8181818181818181vw, 2.625rem);
+  font-size: clamp(
+    2rem,
+    1.6363636363636362rem + 1.8181818181818181vw,
+    2.625rem
+  );
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -264,6 +268,7 @@ button {
   color: #fff;
   background-color: var(--purple-shade);
   /* border-radius: 999px; */
+  border-radius: 0.375rem;
   box-shadow: 4px 4px 0 0 var(--purple-shade);
   padding: 12px 26px;
   font-size: clamp(
@@ -976,7 +981,7 @@ button {
 .author-photo {
   width: 100%;
   /* user-select: none; */
-  /* border-radius: 0.375rem; */
+  border-radius: 0.375rem;
   box-shadow: 8px 8px 0 0 var(--purple-shade);
   transition: filter 0.3s linear;
 }
@@ -1177,7 +1182,7 @@ button {
   position: relative; /* important */
   z-index: 1;
   background-color: var(--bg-light2);
-  /* border-radius: 0.375rem; */
+  border-radius: 0.375rem;
   gap: 40px;
   box-shadow: 8px 8px 0 0 var(--purple-shade);
   transition: background-color 0.3s linear, box-shadow 0.3s linear;
@@ -1361,6 +1366,7 @@ button {
   background-clip: padding-box;
   padding: 12px 16px;
   border: none;
+  border-radius: 0.375rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1566,7 +1572,11 @@ button {
 
 .footer-nav-div {
   width: 50%;
-  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+  font-size: clamp(
+    1.125rem,
+    0.3846153846153846rem + 0.9615384615384616vw,
+    1.25rem
+  );
   /* font-size: clamp(
     1.125rem,
     1.0340909090909092rem + 0.45454545454545453vw,
@@ -1899,6 +1909,7 @@ button {
     height: 50vh;
     color: #000;
     background-color: var(--bg-light1);
+    border-radius: 0.375rem;
     opacity: 1;
     scale: 1;
     pointer-events: all;
@@ -1962,7 +1973,7 @@ button {
     grid-column: span 1 / span 1;
   }
   .project-img-wrapper {
-    border-radius: 0;
+    border-radius: 0.375rem;
   }
   .container3-responsive {
     display: flex;
@@ -1976,7 +1987,7 @@ button {
   .block-wrapper-4 {
     width: 100%;
     /* margin-bottom: 2rem; */
-    padding: 40px 30px;
+    padding: 40px 32px;
   }
   .container4-responsive {
     /* width: 100%; */
@@ -2078,7 +2089,7 @@ button {
   .block-wrapper-4 {
     width: 100%;
     /* margin-bottom: 2rem; */
-    padding: 40px 12px;
+    padding: 40px 20px;
   }
   .form-div-1 {
     flex-direction: column;

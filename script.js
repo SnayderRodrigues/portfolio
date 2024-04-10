@@ -1,3 +1,5 @@
+// LENIS SCROLLING ---------------------------------------------------//
+
 class App {
   constructor() {
     this._initialize();
@@ -6,7 +8,7 @@ class App {
 
   _initialize() {
     this._createLenis();
-    
+
     document.querySelectorAll('a[href^="#"]').forEach((el) => {
       el.addEventListener("click", (e) => {
         e.preventDefault();
@@ -246,6 +248,48 @@ services.forEach((sv) => {
     sv.classList.toggle("opened");
   });
 });
+
+// FORM VALIDATION -------------------------------------------------//
+
+function validateForm() {
+  var name = document.getElementById("inputName").value;
+  var email = document.getElementById("inputEmail").value;
+  var message = document.getElementById("inputMessage").value;
+  var isValid = true;
+
+  if (name === "") {
+    document.getElementById("nameError").innerHTML = "*Por favor, insira o seu nome.";
+    isValid = false;
+  } else {
+    document.getElementById("nameError").innerHTML = "";
+  }
+
+  if (email === "") {
+    document.getElementById("emailError").innerHTML = "*Por favor, insira o seu e-mail.";
+    isValid = false;
+  } else if (!isValidEmail(email)) {
+    document.getElementById("emailError").innerHTML =
+      "Please enter a valid email address";
+    isValid = false;
+  } else {
+    document.getElementById("emailError").innerHTML = "";
+  }
+
+  if (message === "") {
+    document.getElementById("messageError").innerHTML =
+      "*Por favor, insira a sua mensagem.";
+    isValid = false;
+  } else {
+    document.getElementById("messageError").innerHTML = "";
+  }
+
+  return isValid;
+}
+
+function isValidEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
 
 // REAL TIME ---------------------------------------------------//
 

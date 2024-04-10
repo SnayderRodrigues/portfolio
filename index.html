@@ -115,7 +115,10 @@
               <h1 class="hero-text">
                 <span class="hero-name">Snayder</span>
                 <span class="hero-last-name">Rodrigues</span>
-                <span class="hero-duty">Desenvolvedor Front-End <br> & Web Designer</span>
+                <span class="hero-duty"
+                  >Desenvolvedor Front-End <br />
+                  & Web Designer</span
+                >
               </h1>
             </div>
           </div>
@@ -198,16 +201,19 @@
                 <ul class="services-dropdown">
                   <li class="services-dropdown-div">
                     <h3 class="services-title">
-                      <span class="services-title-span">Desenvolvimento Web</span>
+                      <span class="services-title-span"
+                        >Desenvolvimento Web</span
+                      >
                       <div class="scroll-down-icon"></div>
                     </h3>
                     <div class="services-text text-body">
                       <div>
                         <p>
                           Eu crio sites únicos, com código personalizado e
-                          otimizado. Minha abordagem é centrada na escalabilidade,
-                          desempenho, acessibilidade e animações envolventes para
-                          uma proporcionar uma boa experiência de usuário.
+                          otimizado. Minha abordagem é centrada na
+                          escalabilidade, desempenho, acessibilidade e animações
+                          envolventes para uma proporcionar uma boa experiência
+                          de usuário.
                         </p>
                       </div>
                     </div>
@@ -220,12 +226,13 @@
                     <div class="services-text text-body">
                       <div>
                         <p>
-                          Crio experiências online que atraem e engajam o público,
-                          impulsionando melhores resultados. Com uma compreensão
-                          profunda das últimas tendências e tecnologias, estou
-                          empenhado em desenvolver sites que sejam verdadeiramente
-                          únicos, desde designs minimalistas com tipografia
-                          impecável, até grandes sites exuberantes e complexos.
+                          Crio experiências online que atraem e engajam o
+                          público, impulsionando melhores resultados. Com uma
+                          compreensão profunda das últimas tendências e
+                          tecnologias, estou empenhado em desenvolver sites que
+                          sejam verdadeiramente únicos, desde designs
+                          minimalistas com tipografia impecável, até grandes
+                          sites exuberantes e complexos.
                         </p>
                       </div>
                     </div>
@@ -238,13 +245,13 @@
                     <div class="services-text text-body">
                       <div>
                         <p>
-                          Minha missão é transformar ideias em realidade, desde a
-                          criação de wireframes até a seleção meticulosa de
-                          elementos visuais e interativos. Combinando criatividade
-                          e expertise técnica, estou comprometido a desenvolver
-                          interfaces que não apenas encantem visualmente, mas
-                          também impulsionem o engajamento e a fidelidade do
-                          usuário.
+                          Minha missão é transformar ideias em realidade, desde
+                          a criação de wireframes até a seleção meticulosa de
+                          elementos visuais e interativos. Combinando
+                          criatividade e expertise técnica, estou comprometido a
+                          desenvolver interfaces que não apenas encantem
+                          visualmente, mas também impulsionem o engajamento e a
+                          fidelidade do usuário.
                         </p>
                       </div>
                     </div>
@@ -257,11 +264,11 @@
                     <div class="services-text text-body">
                       <div>
                         <p>
-                          Tenho como obejtivo implementar estratégias de SEO para
-                          ampliar a presença online do produto/serviço. Utilizando
-                          métodos de Copywriting, Sitemaps, Meta tags e tags Open
-                          Graph otimizadas, eu melhoro a visibilidade nas
-                          classificações de pesquisa.
+                          Tenho como obejtivo implementar estratégias de SEO
+                          para ampliar a presença online do produto/serviço.
+                          Utilizando métodos de Copywriting, Sitemaps, Meta tags
+                          e tags Open Graph otimizadas, eu melhoro a
+                          visibilidade nas classificações de pesquisa.
                         </p>
                       </div>
                     </div>
@@ -454,37 +461,49 @@
                   action="https://formsubmit.co/d6dd0bfa0f0586c656b000470faee276"
                   method="POST"
                   target="_blank"
+                  onsubmit="return validateForm()"
                 >
-                  <div class="form-div-1 d-flex align-items-center">
-                    <label for="inputName" class="visually-hidden">Nome</label
-                    ><input
-                      type="text"
-                      class="form-control"
-                      id="inputName"
-                      placeholder="Nome*"
-                      name="inputName"
-                      required
-                    />
-                    <label for="inputEmail" class="visually-hidden">Email</label
-                    ><input
-                      type="email"
-                      class="form-control"
-                      id="inputEmail"
-                      name="inputEmail"
-                      placeholder="E-mail*"
-                      required
-                    />
+                  <div class="form-div-1">
+                    <div class="form-div-name">
+                      <label for="inputName" class="visually-hidden">Nome</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputName"
+                        placeholder="Nome*"
+                        name="inputName"
+                      />
+                      <span id="nameError" class="form-error"></span>
+                    </div>
+                    <div class="form-div-email">
+                      <label for="inputEmail" class="visually-hidden"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="inputEmail"
+                        name="inputEmail"
+                        placeholder="E-mail*"
+                      />
+                      <span id="emailError" class="form-error"></span>
+                    </div>
                   </div>
-                  <label for="inputMessage" class="visually-hidden"
-                    >Mensagem</label
-                  ><textarea
-                    class="form-control message"
-                    id="inputMessage"
-                    name="inputMessage"
-                    placeholder="Sua mensagem aqui*"
-                    required
-                  ></textarea>
-                  <button class="button" type="submit">Enviar</button>
+                  <div class="form-div-2">
+                    <label for="inputMessage" class="visually-hidden"
+                      >Mensagem</label
+                    >
+                    <textarea
+                      class="form-control message"
+                      id="inputMessage"
+                      name="inputMessage"
+                      placeholder="Sua mensagem aqui*"
+                    ></textarea>
+                    <span id="messageError" class="form-error"></span>
+                  </div>
+                  <button class="button" type="submit" value="Submit">
+                    Enviar
+                  </button>
                 </form>
               </div>
               <div class="block-wrapper-7">

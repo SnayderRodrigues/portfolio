@@ -321,6 +321,11 @@ button {
   background: var(--accent-color-dk);
 } */
 
+.form-error {
+  color: red;
+  margin-left: 16px;
+}
+
 /* --------------------------------- ANIMATIONS -------------------------------- */
 
 .slide-up {
@@ -1357,13 +1362,31 @@ button {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   width: 100%;
-  margin-bottom: 2rem;
 }
 
 .form-div-1 {
-  gap: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.form-div-1 input {
+  margin-bottom: 1rem;
+}
+
+.form-div-name, .form-div-email {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.form-div-2 {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-control {

@@ -77,6 +77,12 @@ check.addEventListener("change", () => {
     elemento.classList.toggle("dark");
   });
 
+  var elementos = document.getElementsByClassName("services-title-span");
+  var arrayDeElementos = Array.from(elementos);
+  arrayDeElementos.forEach(function (elemento) {
+    elemento.classList.toggle("dark");
+  });
+
   var elementos = document.getElementsByClassName("scroll-down-icon");
   var arrayDeElementos = Array.from(elementos);
   arrayDeElementos.forEach(function (elemento) {

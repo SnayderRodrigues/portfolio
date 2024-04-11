@@ -2059,6 +2059,9 @@ button {
   .form-div-1 {
     flex-direction: column;
   }
+  .form-div-name, .form-div-email {
+  width: 100%;
+}
   .container5-responsive {
     flex-direction: column;
     align-items: flex-start !important;

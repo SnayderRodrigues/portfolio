@@ -322,8 +322,14 @@ button {
 } */
 
 .form-error {
+  font-size: 18px;
   color: red;
   margin-left: 16px;
+}
+
+.form-valid {
+  font-size: 18px;
+  color: rgb(0, 205, 0);
 }
 
 /* --------------------------------- ANIMATIONS -------------------------------- */

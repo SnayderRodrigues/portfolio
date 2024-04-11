@@ -269,7 +269,7 @@ function validateForm() {
     isValid = false;
   } else if (!isValidEmail(email)) {
     document.getElementById("emailError").innerHTML =
-      "Please enter a valid email address";
+      "*Por favor, insira um e-mail válido.";
     isValid = false;
   } else {
     document.getElementById("emailError").innerHTML = "";
@@ -283,12 +283,22 @@ function validateForm() {
     document.getElementById("messageError").innerHTML = "";
   }
 
+  if (isValid) {
+    document.getElementById("form").reset();
+    document.getElementById("formSent").innerHTML =
+      "Mensagem enviada.";
+  }
+
   return isValid;
 }
 
 function isValidEmail(email) {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
+}
+
+function clearFormSent() {
+  document.getElementById("formSent").innerHTML = "";
 }
 
 // REAL TIME ---------------------------------------------------//

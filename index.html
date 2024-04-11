@@ -456,6 +456,7 @@
                 </p>
                 <form
                   class="form"
+                  id="form"
                   type="contact-email"
                   name="contact-email"
                   action="https://formsubmit.co/d6dd0bfa0f0586c656b000470faee276"
@@ -472,6 +473,7 @@
                         id="inputName"
                         placeholder="Nome*"
                         name="inputName"
+                        oninput="clearFormSent()"
                       />
                       <span id="nameError" class="form-error"></span>
                     </div>
@@ -485,6 +487,7 @@
                         id="inputEmail"
                         name="inputEmail"
                         placeholder="E-mail*"
+                        oninput="clearFormSent()"
                       />
                       <span id="emailError" class="form-error"></span>
                     </div>
@@ -498,12 +501,14 @@
                       id="inputMessage"
                       name="inputMessage"
                       placeholder="Sua mensagem aqui*"
+                      oninput="clearFormSent()"
                     ></textarea>
                     <span id="messageError" class="form-error"></span>
                   </div>
                   <button class="button" type="submit" value="Submit">
                     Enviar
                   </button>
+                  <span id="formSent" class="form-valid"></span>
                 </form>
               </div>
               <div class="block-wrapper-7">

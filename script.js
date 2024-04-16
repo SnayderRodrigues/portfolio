@@ -218,19 +218,34 @@ window.onscroll = () => {
 
 // OPAQUE HEADER ---------------------------------------------------//
 
-document.addEventListener("DOMContentLoaded", function () {
-  var menu = document.querySelector(".header");
-  var origOffsetY = document.querySelector(".section-hero").offsetHeight - 200;
+// document.addEventListener("DOMContentLoaded", function () {
+//   var menu = document.querySelector(".header");
+//   var origOffsetY = document.querySelector(".section-hero").offsetHeight - 200;
 
-  function scroll() {
-    if (window.scrollY >= origOffsetY) {
-      menu.classList.add("opaque");
-    } else {
-      menu.classList.remove("opaque");
-    }
+//   function scroll() {
+//     if (window.scrollY >= origOffsetY) {
+//       menu.classList.add("opaque");
+//     } else {
+//       menu.classList.remove("opaque");
+//     }
+//   }
+
+//   document.addEventListener("scroll", scroll);
+// });
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollTop) {
+    header.classList.add("opaque");
+  } else {
+    header.classList.remove("opaque");
   }
 
-  document.addEventListener("scroll", scroll);
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
 // SERVICES DROPDOWN ---------------------------------------------------//

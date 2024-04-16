@@ -482,21 +482,19 @@ button {
   top: 0;
   width: 100%;
   z-index: 1001;
-  background-color: transparent;
-  transition: background-color 0.4s linear, height 0.2s linear;
-  height: 12vh;
+  background-color: var(--bg-light1);
+  padding: 12px 0;
+  transition: background-color 0.4s linear, height 0.2s linear, transform 0.3s linear;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, .19); */
 }
 
-.header.opaque {
-  background-color: var(--bg-light1);
-  height: 8vh;
+.header.dark {
+  background-color: var(--bg-night2);
+  color: #ffffff;
 }
 
-.header.opaque.dark {
-  background-color: var(--bg-night2);
-  height: 8vh;
-  color: #ffffff;
+.header.opaque {
+  transform: translateY(-100%);
 }
 
 .navbar {

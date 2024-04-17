@@ -2135,6 +2135,9 @@ button {
     background-color: var(--bg-night2);
     /* box-shadow: 0 0 10px rgba(0, 0, 0, .19); */
   }
+  .hero-name, .hero-duty {
+    margin-bottom: 2rem;
+  }
   .container2,
   .container3,
   .container4 {

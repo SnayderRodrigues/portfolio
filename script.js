@@ -39,111 +39,58 @@ class App {
 
 new App();
 
+// PRELOADER ---------------------------------------------------//
+
+// var loader = document.getElementById("preloader");
+
+// window.addEventListener("load", function () {
+//   // loader.style.display = "none";
+//   loader.classList.add("loading-animation");
+// });
+
+
 // DARK MODE ---------------------------------------------------//
+
+function toggleDarkClass(className) {
+  var elementos = document.getElementsByClassName(className);
+  var arrayDeElementos = Array.from(elementos);
+  arrayDeElementos.forEach(function (elemento) {
+    elemento.classList.toggle("dark");
+  });
+}
 
 const check = document.getElementById("check");
 
 check.addEventListener("change", () => {
+
   document.body.classList.toggle("dark");
 
-  document.querySelector(".header").classList.toggle("dark");
-  document.querySelector(".section-hero").classList.toggle("dark");
-  document.querySelector(".section-projects").classList.toggle("dark");
-  document.querySelector(".section-about").classList.toggle("dark");
-  document.querySelector(".section-contact").classList.toggle("dark");
-  document.querySelector(".footer").classList.toggle("dark");
-  document.querySelector(".author-name").classList.toggle("dark");
-  document.querySelector(".toggle-label").classList.toggle("dark");
-  document.querySelector(".tooltip-text").classList.toggle("dark");
-  document.querySelector(".navbar-button").classList.toggle("dark");
-  document.querySelector(".header-ul").classList.toggle("dark");
-  // document.querySelector('.close-icon').classList.toggle('dark');
-  document.querySelector(".author-photo").classList.toggle("dark");
-  document.querySelector(".services-dropdown").classList.toggle("dark");
-
-  var elementos = document.getElementsByClassName("nav-link-header");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("button");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("services-dropdown-div");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("services-title-span");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("scroll-down-icon");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("block-wrapper-4");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("project-description");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("mini-card");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("disable");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("info-title");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("info-link");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("copy-button");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("form-control");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
-
-  var elementos = document.getElementsByClassName("footer-nav-link");
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
+  toggleDarkClass("header");
+  toggleDarkClass("section-hero");
+  toggleDarkClass("section-projects");
+  toggleDarkClass("section-about");
+  toggleDarkClass("section-contact");
+  toggleDarkClass("footer");
+  toggleDarkClass("author-name");
+  toggleDarkClass("toggle-label");
+  toggleDarkClass("tooltip-text");
+  toggleDarkClass("navbar-button");
+  toggleDarkClass("header-ul");
+  toggleDarkClass("author-photo");
+  toggleDarkClass("services-dropdown");
+  toggleDarkClass("nav-link-header");
+  toggleDarkClass("button");
+  toggleDarkClass("services-dropdown-div");
+  toggleDarkClass("services-title-span");
+  toggleDarkClass("scroll-down-icon");
+  toggleDarkClass("block-wrapper-4");
+  toggleDarkClass("mini-card");
+  toggleDarkClass("disable");
+  toggleDarkClass("info-title");
+  toggleDarkClass("info-link");
+  toggleDarkClass("copy-button");
+  toggleDarkClass("form-control");
+  toggleDarkClass("footer-nav-link");
 });
 
 // HIDDEN NAVBAR ---------------------------------------------------//
@@ -191,8 +138,6 @@ window.addEventListener("resize", function () {
   }
 });
 
-// ANIMATIONS ---------------------------------------------------//
-
 // HEADER ITEM ACTIVE ---------------------------------------------------//
 
 let sections = document.querySelectorAll("section");
@@ -217,21 +162,6 @@ window.onscroll = () => {
 };
 
 // OPAQUE HEADER ---------------------------------------------------//
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   var menu = document.querySelector(".header");
-//   var origOffsetY = document.querySelector(".section-hero").offsetHeight - 200;
-
-//   function scroll() {
-//     if (window.scrollY >= origOffsetY) {
-//       menu.classList.add("opaque");
-//     } else {
-//       menu.classList.remove("opaque");
-//     }
-//   }
-
-//   document.addEventListener("scroll", scroll);
-// });
 
 let lastScrollTop = 0;
 

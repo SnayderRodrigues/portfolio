@@ -1113,13 +1113,14 @@ button {
 }
 
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   row-gap: 4rem;
   column-gap: 4rem;
 }
 
 .block-wrapper-4 {
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1138,6 +1139,19 @@ button {
 .block-wrapper-4.dark {
   background-color: var(--bg-night2);
   box-shadow: 8px 8px 0 0 var(--purple-shade-dk);
+}
+
+.projects-work{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.projects-work-pagination {
+  font-family: "Outfit", sans-serif;
+  font-size: 16vw;
+  line-height: 1;
 }
 
 .work-1 {
@@ -1187,7 +1201,7 @@ button {
   position: relative;
   width: 100%;
   border-radius: 0.65rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   overflow: hidden;
 }
 

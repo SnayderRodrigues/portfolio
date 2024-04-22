@@ -767,129 +767,20 @@ button {
   gap: 2rem;
 }
 
-.de-hero-1 {
-  content: "";
-  width: 100vw;
-  height: 30px;
-  background-color: var(--bg-light2);
-  position: absolute;
-  top: calc(100% - 90px);
-  left: -40%;
-  z-index: 1;
-  transform: rotate(25deg);
-}
-
-.de-hero-2 {
-  content: "";
-  width: 100vw;
-  height: 30px;
-  background-color: var(--accent-color-dk);
-  position: absolute;
-  top: calc(100% - 60px);
-  left: -40%;
-  z-index: 1;
-  transform: rotate(25deg);
-}
-
-.de-hero-3 {
-  content: "";
-  width: 100vw;
-  height: 30px;
-  background-color: var(--bg-night2);
-  position: absolute;
-  top: calc(100% - 30px);
-  left: -40%;
-  z-index: 1;
-  transform: rotate(25deg);
-}
-
-.de-hero-4 {
-  display: block;
-  content: "";
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: linear-gradient(25deg, #ebf2fd, #8e8ffa, #7752fe, #190482);
-  position: absolute;
-  top: 70%;
-  left: 20%;
-  z-index: 1;
-  transform-style: preserve-3d;
-}
-
-.de-hero-4::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 24px solid #7173e6;
-  /* border-top-width: 0; */
-  border-radius: 50%;
-  /* animation: ring1 4s infinite linear; */
-  transform: rotateX(70deg) rotateY(25deg) rotateZ(0deg) scale(1.75);
-}
-
-.de-hero-4::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 14px solid #5d48c9;
-  border-radius: 50%;
-  outline: 6px solid #7173e6;
-  /* animation: ring2 4s infinite linear; */
-  transform: rotateX(70deg) rotateY(25deg) rotateZ(0deg) scale(1.75);
-}
-
-.de-hero-5 {
+.hero-design-element {
   content: "";
   width: 60vw;
-  max-width: 500px;
+  max-width: 700px;
   height: 60vw;
-  max-height: 500px;
+  max-height: 700px;
   border-radius: 50%;
   background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 70%;
   transform: translate(-50%, -50%);
   z-index: 1;
   opacity: 0.2;
-}
-
-.de-hero-6 {
-  content: "";
-  width: 40vw;
-  max-width: 300px;
-  height: 40vw;
-  max-height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
-  position: absolute;
-  top: 65%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0.1;
-}
-.de-hero-7 {
-  content: "";
-  width: 40vw;
-  max-width: 300px;
-  height: 40vw;
-  max-height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
-  position: absolute;
-  top: 35%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0.1;
 }
 
 .section-about {
@@ -955,11 +846,22 @@ button {
 }
 
 .container-services {
+  display: flex;
+  flex-direction: column;
   margin-top: 160px;
 }
 
+.services-wrapper {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+}
+
 .services-headline-wrapper {
-  width: 50%;
+  width: 40%;
+}
+.services-headline-wrapper > p:first-of-type {
+  padding-top: 24px;
 }
 
 .services-dropdown-wrapper {
@@ -982,7 +884,6 @@ button {
     1.375rem
   );
   line-height: 1.78;
-  transition: border 0.3s linear;
 }
 
 .services-dropdown.dark {
@@ -993,6 +894,10 @@ button {
   width: 100%;
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.services-dropdown > .services-dropdown-div:last-of-type {
+  border-bottom: 0px;
 }
 
 .services-dropdown-div.dark {
@@ -1484,7 +1389,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 0;
+  padding: 80px 0;
   position: relative;
   z-index: 1;
 }
@@ -1544,31 +1449,7 @@ button {
   color: var(--accent-color-dk);
 }
 
-.de-footer-1 {
-  content: "";
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: linear-gradient(25deg, #ebf2fd, #8e8ffa, #7752fe, #190482);
-  position: absolute;
-  top: 60%;
-  left: 58%;
-  z-index: 1;
-}
-
-.de-footer-2 {
-  content: "";
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: linear-gradient(25deg, #ebf2fd, #8e8ffa, #7752fe, #190482);
-  position: absolute;
-  top: 78%;
-  left: 7%;
-  z-index: 1;
-}
-
-.de-footer-3 {
+.footer-design-element {
   content: "";
   width: 40vw;
   max-width: 400px;
@@ -1581,7 +1462,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 /*  --------------------------------------------------------------------------- */

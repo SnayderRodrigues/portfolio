@@ -92,7 +92,7 @@ html.lenis body {
 
 body {
   font-family: "Hanken Grotesk", sans-serif;
-  transition: color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.4s linear;
   margin: 0;
   overflow-x: hidden;
   background-color: var(--bg-light1);
@@ -895,6 +895,8 @@ button {
 .section-about {
   background-color: #fff;
   transition: background-color 0.4s linear;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -1239,6 +1241,8 @@ button {
 .section-contact {
   background-color: #ffffff;
   transition: background-color 0.4s linear;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
   position: relative;
   z-index: 1;
 }

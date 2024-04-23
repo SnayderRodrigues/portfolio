@@ -372,8 +372,8 @@ button {
 
 .container {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-left: auto;
   margin-right: auto;
   position: inherit;
@@ -960,7 +960,7 @@ button {
   position: relative;
   background-color: var(--bg-light2);
   border-radius: 0.375rem;
-  gap: 40px;
+  gap: 2rem;
   box-shadow: 0px 8px 0 0 var(--purple-shade);
   transition: background-color 0.3s linear, box-shadow 0.3s linear;
 }
@@ -1375,7 +1375,6 @@ button {
 
 @media (max-width: 1024px) {
   .block-wrapper-4 {
-    gap: 2rem;
     padding: 40px;
   }
   .project-title-wrapper {
@@ -1583,7 +1582,7 @@ button {
   }
   .block-wrapper-4 {
     width: 100%;
-    padding: 40px 20px;
+    padding: 40px 24px;
   }
   .disable,
   .disable.dark {
@@ -1646,15 +1645,6 @@ button {
   .header-ul.open-nav {
     width: 75vw;
   }
-  .footer-design-element {
-    width: 60vw;
-    height: 60vw;
-  }
-}
-@media (max-width: 430px) {
-  .container {
-    width: min(100% - 16px);
-  }
   .block-wrapper-1 {
     justify-content: flex-end;
     padding-bottom: 2.5rem;
@@ -1664,6 +1654,15 @@ button {
     left: 50%;
     width: 90vw;
     height: 90vw;
+  }
+  .footer-design-element {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+@media (max-width: 430px) {
+  .container {
+    width: min(100% - 16px);
   }
   .block-wrapper-4 {
     gap: 1.5rem;

@@ -223,7 +223,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   position: relative;
   z-index: 2;
   color: #fff;
@@ -238,16 +237,23 @@ button {
   );
   font-weight: 400;
   overflow: hidden;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .button:hover {
   background-color: var(--accent-color);
-  box-shadow: 0px 4px 0 0 var(--purple-shade);
+  box-shadow: 0px 6px 0 0 var(--purple-shade);
 }
 .button.dark:hover {
   background-color: var(--accent-color-dk);
-  box-shadow: 0px 4px 0 0 var(--purple-shade-dk);
+  box-shadow: 0px 6px 0 0 var(--purple-shade-dk);
 }
 
 .button.dark {
@@ -456,7 +462,7 @@ button {
   cursor: pointer;
   user-select: none;
   margin-right: 1rem;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s linear;
 }
 
 .author-name.dark {
@@ -484,7 +490,7 @@ button {
 .nav-link-header {
   color: #000;
   font-weight: 700;
-  transition: 0.3s ease-in-out;
+  transition: color 0.2s linear;
 }
 
 .nav-link-header.dark {
@@ -493,13 +499,13 @@ button {
 
 .nav-link-header:hover {
   color: var(--accent-color);
-  box-shadow: inset -16px 0px 0 hsla(248, 93%, 62%, 0.3);
+  box-shadow: inset -20px 0px 0 hsla(248, 93%, 62%, 0.3);
   transition: all 0.2s linear;
 }
 
 .nav-link-header.dark:hover {
   color: var(--accent-color-dk);
-  box-shadow: inset -16px 0px 0 hsla(248, 100%, 69%, 0.3);
+  box-shadow: inset -20px 0px 0 hsla(248, 100%, 69%, 0.3);
   transition: all 0.2s linear;
 }
 
@@ -525,7 +531,7 @@ button {
 }
 
 .toggle-label {
-  background-color: var(--lightdetail1);
+  background-color: var(--lightdetail2);
   border-radius: 999px;
   cursor: pointer;
   display: flex;
@@ -719,7 +725,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .hero-design-element {
@@ -761,6 +767,11 @@ button {
   position: relative;
 }
 
+.container2-content {
+  display: flex;
+  gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
+}
+
 .block-wrapper-2 {
   width: 40%;
 }
@@ -781,20 +792,12 @@ button {
 .block-wrapper-3 {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
-  align-self: last baseline;
   width: 60%;
   height: 100%;
 }
 
 .block-wrapper-3 > p:last-of-type {
   margin-bottom: 2rem;
-}
-
-.bw3-button-div {
-  display: flex;
-  align-items: center;
-  gap: 30px;
 }
 
 .container-services {
@@ -1073,6 +1076,12 @@ button {
   padding: 100px 0;
 }
 
+.container4-content {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
+}
+
 .block-wrapper-6 {
   display: flex;
   flex-direction: column;
@@ -1130,7 +1139,7 @@ button {
   appearance: none;
   resize: none;
   box-shadow: 0px 8px 0 0 var(--purple-shade);
-  transition: all 0.2s linear;
+  transition: all 0.4s linear;
 }
 
 .form-control.dark {
@@ -1179,16 +1188,6 @@ button {
   gap: 2rem;
 }
 
-.info-title {
-  width: 100%;
-  font-weight: 700;
-  padding-bottom: 0.25rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 1.5px solid var(--bg-light2);
-  transition: border 0.3s linear;
-  opacity: 0.7;
-}
-
 .info-div {
   display: flex;
   flex-direction: column;
@@ -1200,33 +1199,23 @@ button {
   margin-bottom: 0.5rem;
 }
 
-.info-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
-}
-
-.info-social.dark {
-  color: #fff;
-}
-
-.info-social:hover {
-  color: var(--accent-color);
-}
-
-.info-social.dark:hover {
-  color: var(--accent-color-dk);
+.info-title {
+  width: 100%;
+  font-weight: 700;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1.5px solid var(--bg-light2);
+  transition: border 0.4s linear;
 }
 
 .info-link {
-  width: fit-content;
   cursor: pointer;
   transition: all 0.2s linear;
-  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+  font-size: clamp(
+    1.125rem,
+    0.3846153846153846rem + 0.9615384615384616vw,
+    1.25rem
+  );
 }
 
 .info-link.dark {
@@ -1235,14 +1224,12 @@ button {
 
 .info-link:hover {
   color: var(--accent-color);
-  box-shadow: inset -16px 0px 0 hsla(248, 93%, 62%, 0.3);
-  transition: all 0.2s linear;
+  box-shadow: inset -20px 0px 0 hsla(248, 93%, 62%, 0.3);
 }
 
 .info-link.dark:hover {
   color: var(--accent-color-dk);
-  box-shadow: inset -16px 0px 0 hsla(248, 100%, 69%, 0.3);
-  transition: all 0.2s linear;
+  box-shadow: inset -20px 0px 0 hsla(248, 100%, 69%, 0.3);
 }
 
 .info-email {
@@ -1250,7 +1237,7 @@ button {
 }
 
 .copy-button {
-  width: 12px;
+  width: 14px;
   height: 16px;
   background-color: transparent;
   border: 2px solid var(--purple-shade);
@@ -1260,7 +1247,7 @@ button {
   padding-top: 12px;
   border-radius: 0.125rem;
   margin-left: 4px;
-  transition: border 0.2s linear;
+  transition: border 0.4s linear;
 }
 
 .copy-button.dark {
@@ -1279,7 +1266,7 @@ button {
 
 .copy-button::before {
   content: "";
-  width: 12px;
+  width: 14px;
   height: 16px;
   background-color: #fff;
   border: 2px solid var(--purple-shade);
@@ -1287,7 +1274,7 @@ button {
   position: absolute;
   right: -90%;
   top: -50%;
-  transition: border 0.2s linear, background-color 0.4s linear;
+  transition: border 0.4s linear, background-color 0.4s linear;
 }
 
 .copy-button.dark::before {
@@ -1301,11 +1288,10 @@ button {
 
 .footer {
   background-color: var(--bg-light1);
-  transition: background-color 0.4s linear;
   position: relative;
   z-index: 998;
   overflow: hidden;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, .19); */
+  transition: background-color 0.4s linear;
 }
 
 .footer.dark {
@@ -1318,7 +1304,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0;
+  padding: 80px 0 60px;
   position: relative;
 }
 
@@ -1328,12 +1314,14 @@ button {
   font-weight: bold;
   pointer-events: none;
   user-select: none;
+  transition: color 0.2s linear;
 }
 
 .copyright {
   font-size: 2rem;
   font-weight: 700;
   margin-top: 0.5rem;
+  transition: color 0.2s linear;
 }
 
 .footer-nav-div-wrapper {
@@ -1351,13 +1339,16 @@ button {
   );
 }
 
+.footer-nav-title {
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
 .footer-nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: fit-content;
-  transition: transform 0.2s linear, color 0.2s linear;
   margin-bottom: 0.25rem;
+  transition: all 0.2s linear;
 }
 
 .footer-nav-link.dark {
@@ -1366,13 +1357,12 @@ button {
 
 .footer-nav-link:hover {
   color: var(--accent-color);
-  transition: color 0.2s linear;
+  box-shadow: inset -20px 0px 0 hsla(248, 93%, 62%, 0.3);
 }
 
-.footer-nav-link.dark:hover > span {
-  transition: box-shadow 0.2s linear, color 0.2s linear;
-  box-shadow: inset -16px 0px 0 hsla(248, 100%, 69%, 0.3);
+.footer-nav-link.dark:hover {
   color: var(--accent-color-dk);
+  box-shadow: inset -20px 0px 0 hsla(248, 100%, 69%, 0.3);
 }
 
 .footer-design-element {
@@ -1545,7 +1535,7 @@ button {
   .hero-button-div {
     gap: 1rem;
   }
-  .container2-responsive {
+  .container2-content {
     display: flex;
     flex-direction: column !important;
     align-items: center !important;
@@ -1608,7 +1598,7 @@ button {
   .disable.dark {
     background-color: #888;
   }
-  .container4-responsive {
+  .container4-content {
     /* width: 100%; */
     display: flex;
     flex-direction: column !important;
@@ -1649,13 +1639,6 @@ button {
   }
   .footer-nav-div {
     width: 50%;
-  }
-  .info-title {
-    font-size: 1.125rem;
-  }
-  .footer-nav-link {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
   }
 }
 @media (max-width: 500px) {
@@ -1700,9 +1683,6 @@ button {
   .footer-nav-div {
     width: fit-content;
     min-width: calc(50% - 1rem);
-  }
-  .info-title {
-    font-size: 1.125rem;
   }
   .footer-nav-link {
     font-size: 1.125rem;

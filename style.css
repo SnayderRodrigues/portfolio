@@ -9,7 +9,7 @@
   --lightdetail2: #d8d8d8;
   --nightdetail1: #2f2e49;
   --nightdetail2: #242338;
-  --bg-light1: #f7f7f7;
+  --bg-light1: #efefef;
   --bg-light2: #acb2fd;
   --bg-night1: #17171f;
   --bg-night2: #2f2e49;
@@ -1200,6 +1200,28 @@ button {
   margin-bottom: 0.5rem;
 }
 
+.info-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
+}
+
+.info-social.dark {
+  color: #fff;
+}
+
+.info-social:hover {
+  color: var(--accent-color);
+}
+
+.info-social.dark:hover {
+  color: var(--accent-color-dk);
+}
+
 .info-link {
   width: fit-content;
   cursor: pointer;
@@ -1217,7 +1239,7 @@ button {
   transition: all 0.2s linear;
 }
 
-.info-link:hover {
+.info-link.dark:hover {
   color: var(--accent-color-dk);
   box-shadow: inset -16px 0px 0 hsla(248, 100%, 69%, 0.3);
   transition: all 0.2s linear;
@@ -1330,8 +1352,11 @@ button {
 }
 
 .footer-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
-  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, color 0.2s linear;
   margin-bottom: 0.25rem;
 }
 
@@ -1339,14 +1364,9 @@ button {
   color: #fff;
 }
 
-.footer-nav-link span {
-  transition: box-shadow 0.2s linear, color 0.2s linear;
-}
-
-.footer-nav-link:hover > span {
-  transition: box-shadow 0.2s linear, color 0.2s linear;
-  box-shadow: inset -16px 0px 0 hsla(248, 93%, 62%, 0.3);
+.footer-nav-link:hover {
   color: var(--accent-color);
+  transition: color 0.2s linear;
 }
 
 .footer-nav-link.dark:hover > span {

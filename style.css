@@ -1479,8 +1479,8 @@ button {
     color: #000;
     background-color: var(--bg-light1);
     position: absolute;
-    top: -2px;
-    right: 0;
+    top: -4px;
+    right: 8px;
     padding-left: 3rem;
     border-radius: 0.375rem;
     opacity: 0;
@@ -1707,7 +1707,11 @@ button {
     margin-bottom: 60px;
   }
   p {
-    font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.125rem);
+    font-size: clamp(
+      1rem,
+      0.3846153846153846rem + 0.9615384615384616vw,
+      1.125rem
+    );
   }
   .button {
     font-size: 1.125rem;
@@ -1740,7 +1744,11 @@ button {
     width: 35%;
   }
   .services-title {
-    font-size: clamp(1.75rem, 1.3796296296296298rem + 1.8518518518518516vw, 2rem);
+    font-size: clamp(
+      1.75rem,
+      1.3796296296296298rem + 1.8518518518518516vw,
+      2.375rem
+    );
   }
   .projects-work-pagination {
     font-size: 10vw;

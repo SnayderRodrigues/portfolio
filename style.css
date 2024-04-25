@@ -1383,6 +1383,11 @@ button {
 
 /*  -------------------------------- RESPONSIVE -------------------------------- */
 
+@media (max-width: 1440px) {
+  .footer-nav-div-wrapper {
+    width: 360px;
+  }
+}
 @media (max-width: 1024px) {
   .block-wrapper-4 {
     padding: 40px;
@@ -1693,17 +1698,45 @@ button {
     height: 60vw;
   }
 }
-@media (max-height: 430px) {
-  .header,
-  .header.opaque,
-  .header.dark,
-  .header.opaque.dark {
-    height: 18vh;
+@media (max-height: 630px) {
+  .h2,
+  h2 {
+    font-size: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 4rem);
+    line-height: 55px;
+    font-weight: 700;
+    margin-bottom: 60px;
   }
-  .block-wrapper-1 {
-    justify-content: flex-end;
+  .button {
+    font-size: 1.125rem;
+    min-width: 100.34px;
+    padding: 12px 12px;
+  }
+  .header {
+    padding: 4px 0;
+  }
+  .header-ul {
+    font-size: 1.125rem;
+  }
+  .hero-title {
+    font-size: clamp(3rem, 2.2857142857142856rem + 3.571428571428571vw, 4rem);
+    margin-bottom: 2rem;
   }
   .hero-subtitle {
-    max-width: fit-content;
+    font-size: clamp(
+      1rem,
+      0.7142857142857143rem + 1.4285714285714286vw,
+      1.5rem
+    );
+    margin-bottom: 2rem;
+  }
+  .hero-design-element {
+    max-width: 460px;
+    max-height: 460px;
+  }
+  .services-title {
+    font-size: clamp(1.75rem, 1.3796296296296298rem + 1.8518518518518516vw, 2rem);
+  }
+  .projects-work-pagination {
+    font-size: 10vw;
   }
 }

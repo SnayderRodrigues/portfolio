@@ -1706,6 +1706,9 @@ button {
     font-weight: 700;
     margin-bottom: 60px;
   }
+  p {
+    font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.125rem);
+  }
   .button {
     font-size: 1.125rem;
     min-width: 100.34px;
@@ -1733,10 +1736,16 @@ button {
     max-width: 460px;
     max-height: 460px;
   }
+  .block-wrapper-2 {
+    width: 35%;
+  }
   .services-title {
     font-size: clamp(1.75rem, 1.3796296296296298rem + 1.8518518518518516vw, 2rem);
   }
   .projects-work-pagination {
     font-size: 10vw;
+  }
+  .block-wrapper-4 {
+    width: 60%;
   }
 }

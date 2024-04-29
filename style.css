@@ -881,10 +881,12 @@ button {
   margin-right: 4px;
   transform: rotate(45deg);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0px 0px 0 0 var(--purple-shade);
 }
 
 .scroll-down.dark {
   background-color: var(--purple-shade-dk);
+  box-shadow: 0px 0px 0 0 var(--purple-shade-dk);
 }
 
 .services-text {
@@ -915,8 +917,7 @@ button {
 
 .services-title.opened > .scroll-down {
   background-color: var(--accent-color);
-  border-radius: 50%;
-  transform: rotate(0);
+  box-shadow: 6px 6px 0 0 var(--purple-shade);
 }
 
 .services-title:hover > .scroll-down.dark {
@@ -925,6 +926,7 @@ button {
 
 .services-title.opened > .scroll-down.dark {
   background-color: var(--accent-color-dk);
+  box-shadow: 6px 6px 0 0 var(--purple-shade-dk);
 }
 
 .section-projects {

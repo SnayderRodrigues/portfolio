@@ -48,7 +48,6 @@ new App();
 //   loader.classList.add("loading-animation");
 // });
 
-
 // DARK MODE ---------------------------------------------------//
 
 function toggleDarkClass(className) {
@@ -62,7 +61,6 @@ function toggleDarkClass(className) {
 const check = document.getElementById("check");
 
 check.addEventListener("change", () => {
-
   document.body.classList.toggle("dark");
 
   toggleDarkClass("header");
@@ -201,14 +199,16 @@ function validateForm() {
   var isValid = true;
 
   if (name === "") {
-    document.getElementById("nameError").innerHTML = "*Por favor, insira o seu nome.";
+    document.getElementById("nameError").innerHTML =
+      "*Por favor, insira o seu nome.";
     isValid = false;
   } else {
     document.getElementById("nameError").innerHTML = "";
   }
 
   if (email === "") {
-    document.getElementById("emailError").innerHTML = "*Por favor, insira o seu e-mail.";
+    document.getElementById("emailError").innerHTML =
+      "*Por favor, insira o seu e-mail.";
     isValid = false;
   } else if (!isValidEmail(email)) {
     document.getElementById("emailError").innerHTML =
@@ -221,6 +221,7 @@ function validateForm() {
   if (message === "") {
     document.getElementById("messageError").innerHTML =
       "*Por favor, insira a sua mensagem.";
+    document.getElementById("formSent").innerHTML = "";
     isValid = false;
   } else {
     document.getElementById("messageError").innerHTML = "";
@@ -228,8 +229,7 @@ function validateForm() {
 
   if (isValid) {
     document.getElementById("form").reset();
-    document.getElementById("formSent").innerHTML =
-      "Mensagem enviada.";
+    document.getElementById("formSent").innerHTML = "Mensagem enviada.";
   }
 
   return isValid;

@@ -838,21 +838,25 @@ button {
   color: #fff;
 }
 
-.services-dropdown-div {
+.services-dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
   width: 100%;
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.services-dropdown-div.dark {
+.services-dropdown-item.dark {
   border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 .services-title {
+  width: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: left;
+  text-wrap: nowrap;
   padding: 1rem 0;
   margin: 0;
   /* font-size: 1.75rem; */
@@ -872,7 +876,9 @@ button {
   height: 16px;
   background-color: var(--purple-shade);
   border-radius: 0.125rem;
-  margin-right: 4px;
+  /* margin-right: 4px; */
+  margin-right: 1.5rem;
+  margin-left: 4px;
   transform: rotate(45deg);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0px 0px 0 0 var(--purple-shade);
@@ -884,9 +890,13 @@ button {
 }
 
 .services-text {
+  width: 50%;
   display: grid;
   grid-template-rows: 0fr;
+  background-color: var(--bg-light1);
   /* max-height: 0; */
+  margin: 1rem 0;
+  border-radius: 1.125rem;
   overflow: hidden;
   opacity: 0;
   transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
@@ -895,8 +905,10 @@ button {
 .services-text > div {
   overflow: hidden;
 }
+
 .services-text div > p {
-  padding-bottom: 24px;
+  /* padding-bottom: 24px; */
+  padding: 2rem;
   margin: 0;
 }
 
@@ -1391,6 +1403,24 @@ button {
   }
 }
 @media (max-width: 1024px) {
+  .services-dropdown-item {
+    flex-direction: column;
+    gap: 0;
+  }
+  .services-title {
+    width: 100%;
+  }
+  .services-text {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .services-title.opened + .services-text {
+    margin: 0 0 1rem 0;
+  }
+  .services-text div > p {
+    padding: 2rem;
+  }
   .project-title-wrapper {
     grid-column: 1 / -1;
   }
@@ -1422,9 +1452,6 @@ button {
   .section-about {
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
-  }
-  .services-title {
-    word-break: break-word;
   }
   .section-contact {
     border-bottom-left-radius: 2rem;
@@ -1561,17 +1588,7 @@ button {
     margin-top: 80px;
   }
   .services-wrapper {
-    flex-direction: column;
     gap: 2rem;
-  }
-  .services-headline-wrapper > p:first-of-type {
-    padding-top: 0;
-  }
-  .services-title.opened {
-    padding-left: 0;
-  }
-  .services-dropdown-div:hover > .services-title {
-    padding-left: 0;
   }
   .projects-container {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1651,6 +1668,12 @@ button {
     left: 50%;
     width: 90vw;
     height: 90vw;
+  }
+  .scroll-down {
+    margin-right: 1rem;
+  }
+  .services-text div > p {
+    padding: 1.5rem;
   }
   .project-description {
     padding: 1.5rem;

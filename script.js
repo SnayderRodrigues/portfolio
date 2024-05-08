@@ -78,7 +78,7 @@ check.addEventListener("change", () => {
   toggleDarkClass("services-dropdown");
   toggleDarkClass("nav-link-header");
   toggleDarkClass("button");
-  toggleDarkClass("services-dropdown-div");
+  toggleDarkClass("services-dropdown-item");
   toggleDarkClass("scroll-down");
   toggleDarkClass("block-wrapper-4");
   toggleDarkClass("mini-card");

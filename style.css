@@ -1006,9 +1006,9 @@ button {
   overflow: hidden;
 }
 
-.project-img-wrapper:hover > .project-img {
+/* .project-img-wrapper:hover > .project-img {
   scale: 1.14;
-}
+} */
 
 .project-img {
   width: 100%;
@@ -1675,6 +1675,18 @@ button {
   }
   .scroll-down {
     margin-right: 1rem;
+  }
+  .services-title:hover > .scroll-down {
+    background-color: var(--purple-shade);
+  }
+  .services-title:hover > .scroll-down.dark {
+    background-color: var(--purple-shade-dk);
+  }
+  .services-title.opened > .scroll-down {
+    background-color: var(--accent-color);
+  }
+  .services-title.opened > .scroll-down.dark {
+    background-color: var(--accent-color-dk);
   }
   .services-text div > p {
     padding: 1.5rem;

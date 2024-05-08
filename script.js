@@ -80,6 +80,7 @@ check.addEventListener("change", () => {
   toggleDarkClass("button");
   toggleDarkClass("services-dropdown-item");
   toggleDarkClass("scroll-down");
+  toggleDarkClass("services-text");
   toggleDarkClass("block-wrapper-4");
   toggleDarkClass("mini-card");
   toggleDarkClass("disable");

@@ -85,6 +85,7 @@ check.addEventListener("change", () => {
   toggleDarkClass("mini-card");
   toggleDarkClass("disable");
   toggleDarkClass("container4-content");
+  toggleDarkClass("info-title");
   toggleDarkClass("info-link");
   toggleDarkClass("copy-button");
   toggleDarkClass("form-control");
@@ -232,6 +233,10 @@ function validateForm() {
   if (isValid) {
     document.getElementById("form").reset();
     document.getElementById("formSent").innerHTML = "Mensagem enviada.";
+    document.getElementById("formSent").style.paddingTop = "8px";
+    document.getElementById("formSent").style.paddingBottom = "8px";
+    document.getElementById("formSent").style.paddingLeft = "0px";
+    document.getElementById("formSent").style.paddingRight = "0px";
   }
 
   return isValid;

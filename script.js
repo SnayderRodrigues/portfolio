@@ -231,12 +231,11 @@ function validateForm() {
   }
 
   if (isValid) {
-    document.getElementById("form").reset();
     document.getElementById("formSent").innerHTML = "Mensagem enviada.";
-    document.getElementById("formSent").style.paddingTop = "8px";
-    document.getElementById("formSent").style.paddingBottom = "8px";
-    document.getElementById("formSent").style.paddingLeft = "0px";
-    document.getElementById("formSent").style.paddingRight = "0px";
+    document.getElementById("formSent").style.padding = "8px 0";
+    setTimeout(function () {
+      document.getElementById("form").reset();
+    }, 1000);
   }
 
   return isValid;

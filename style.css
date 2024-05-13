@@ -1769,9 +1769,9 @@ button {
     padding: 1.5rem;
     gap: 1rem;
   }
-  .container4-content {
+  /* .container4-content {
     padding: 1.5rem;
-  }
+  } */
   .footer-design-element {
     width: 60vw;
     height: 60vw;
@@ -1788,9 +1788,9 @@ button {
     padding: 1.25rem;
     gap: 1.25rem;
   }
-  .container4-content {
+  /* .container4-content {
     padding: 1.25rem;
-  }
+  } */
   .container5-responsive {
     flex-direction: column;
     align-items: flex-start !important;

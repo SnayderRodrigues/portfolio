@@ -84,7 +84,7 @@ check.addEventListener("change", () => {
   toggleDarkClass("block-wrapper-4");
   toggleDarkClass("mini-card");
   toggleDarkClass("disable");
-  toggleDarkClass("container4-content");
+  // toggleDarkClass("container4-content");
   toggleDarkClass("info-title");
   toggleDarkClass("info-link");
   toggleDarkClass("copy-button");

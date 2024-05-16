@@ -1303,7 +1303,7 @@ button {
   content: "";
   width: 12px;
   height: 16px;
-  background-color: var(--bg-light1);
+  background-color: var(--white);
   border: 2px solid var(--black);
   border-radius: 0.125rem;
   position: absolute;
@@ -1313,7 +1313,7 @@ button {
 }
 
 .copy-button.dark::before {
-  background-color: var(--bg-night2);
+  background-color: var(--bg-night1);
   border: 2px solid var(--white);
 }
 

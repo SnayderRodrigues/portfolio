@@ -1092,7 +1092,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   justify-self: center;
-  width: 60%;
+  width: 65%;
 }
 
 .form-headline {
@@ -1192,7 +1192,7 @@ button {
 }
 
 .contact-info-wrapper {
-  width: 40%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -1212,14 +1212,6 @@ button {
 .info-title {
   width: 100%;
   font-weight: 700;
-  padding-bottom: 0.25rem;
-  margin-bottom: 0.75rem;
-  border-bottom: 1.5px solid var(--black);
-  transition: border 0.4s linear;
-}
-
-.info-title.dark {
-  border-bottom: 1.5px solid var(--white);
 }
 
 .info-link {
@@ -1244,52 +1236,6 @@ button {
 
 .info-email {
   margin-bottom: 0.5rem;
-}
-
-.copy-button {
-  width: 12px;
-  height: 16px;
-  background-color: transparent;
-  border: 2px solid var(--black);
-  position: relative;
-  padding-block: 0;
-  padding-inline: 0;
-  padding-top: 12px;
-  border-radius: 0.125rem;
-  margin-left: 4px;
-  transition: border 0.2s linear;
-}
-
-.copy-button.dark {
-  border: 2px solid var(--white);
-}
-
-.copy-button:hover,
-.copy-button:hover::before {
-  border: 2px solid var(--accent-color);
-}
-
-.copy-button.dark:hover,
-.copy-button.dark:hover::before {
-  border: 2px solid var(--accent-color-dk);
-}
-
-.copy-button::before {
-  content: "";
-  width: 12px;
-  height: 16px;
-  background-color: var(--white);
-  border: 2px solid var(--black);
-  border-radius: 0.125rem;
-  position: absolute;
-  right: -90%;
-  top: -50%;
-  transition: border 0.2s linear, background-color 0.4s linear;
-}
-
-.copy-button.dark::before {
-  background-color: var(--bg-night1);
-  border: 2px solid var(--white);
 }
 
 /*  --------------------------------------------------------------------------- */

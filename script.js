@@ -83,9 +83,7 @@ check.addEventListener("change", () => {
   toggleDarkClass("mini-card");
   toggleDarkClass("disable");
   toggleDarkClass("form-control");
-  toggleDarkClass("info-title");
   toggleDarkClass("info-link");
-  toggleDarkClass("copy-button");
   toggleDarkClass("footer-nav-link");
 });
 
@@ -268,37 +266,3 @@ function atualizarRelogio() {
 atualizarRelogio();
 
 setInterval(atualizarRelogio, 20000);
-
-// COPY BUTTONS ---------------------------------------------------//
-
-function copiarTexto() {
-  var texto = document.getElementById("copy-email");
-
-  var textoSelecionado = window.getSelection();
-  var intervalo = document.createRange();
-  intervalo.selectNodeContents(texto);
-  textoSelecionado.removeAllRanges();
-  textoSelecionado.addRange(intervalo);
-
-  document.execCommand("copy");
-
-  textoSelecionado.removeAllRanges();
-
-  alert("E-mail copiado.");
-}
-
-function copiarNumero() {
-  var numero = document.getElementById("copy-phone");
-
-  var textoSelecionado = window.getSelection();
-  var intervalo = document.createRange();
-  intervalo.selectNodeContents(numero);
-  textoSelecionado.removeAllRanges();
-  textoSelecionado.addRange(intervalo);
-
-  document.execCommand("copy");
-
-  textoSelecionado.removeAllRanges();
-
-  alert("Número copiado.");
-}

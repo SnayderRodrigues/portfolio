@@ -784,7 +784,7 @@ button {
 }
 
 .about-image-wrapper {
-  width: 40%;
+  width: 35%;
 }
 
 .author-photo {
@@ -805,7 +805,7 @@ button {
 .about-description-wrapper {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 65%;
   height: 100%;
 }
 
@@ -819,6 +819,10 @@ button {
   gap: 2rem;
 }
 
+.services-headline-wrapper {
+  max-width: 912px;
+}
+
 .services-block-wrapper {
   display: flex;
   flex-direction: column;
@@ -830,43 +834,50 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: #000;
   font-size: clamp(
     1.125rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.375rem
   );
-  line-height: 1.78;
-}
-
-.services-dropdown.dark {
-  color: #fff;
+  /* line-height: 1.78; */
 }
 
 .services-dropdown-item {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 100%;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 912px;
+  color: var(--black);
+  background-color: var(--bg-light1);
+  border-radius: 0.875rem;
+  /* padding: 1rem 2rem; */
+  margin-bottom: 1rem;
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.15); */
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.4s linear, color 0s linear;
 }
 
 .services-dropdown-item.dark {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.15); */
+  color: var(--white);
+  background-color: var(--bg-night2);
 }
 
 .services-title {
-  /* width: 50%; */
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: space-between;
   text-wrap: nowrap;
-  padding: 1rem 0;
+  padding: 2rem;
   margin: 0;
   /* font-size: 1.75rem; */
-  font-size: clamp(1.75rem, 1.3796296296296298rem + 1.8518518518518516vw, 3rem);
+  /* font-size: clamp(1.75rem, 1.3796296296296298rem + 1.8518518518518516vw, 3rem); */
+  font-size: clamp(
+    1.5rem,
+    1.319023569023569rem + 0.6734006734006733vw,
+    1.75rem
+  );
   font-weight: 600;
   transition: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
@@ -882,9 +893,9 @@ button {
   height: 16px;
   background-color: var(--purple-shade);
   border-radius: 0.125rem;
-  /* margin-right: 4px; */
-  margin-right: 1.5rem;
-  margin-left: 4px;
+  margin-right: 4px;
+  /* margin-right: 1.5rem; */
+  /* margin-left: 4px; */
   transform: rotate(45deg);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0px 0px 0 0 var(--purple-shade);
@@ -896,35 +907,33 @@ button {
 }
 
 .services-text {
-  width: 50%;
   display: grid;
   grid-template-rows: 0fr;
-  background-color: var(--bg-light1);
-  margin: -1rem 0 1rem;
+  /* background-color: var(--bg-light1); */
   border-radius: 0.875rem;
+  /* margin: -1rem 0 1rem; */
   overflow: hidden;
   opacity: 0;
-  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s linear;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.services-text.dark {
+/* .services-text.dark {
   background-color: var(--bg-night2);
-}
+} */
 
 .services-text > div {
   overflow: hidden;
 }
 
 .services-text div > p {
-  /* padding-bottom: 24px; */
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   margin: 0;
 }
 
 .services-title.opened + .services-text {
   grid-template-rows: 1fr;
   opacity: 1;
-  margin: 0 0 1rem;
+  /* margin: 0 0 1rem; */
 }
 
 .services-title:hover > .services-icon {
@@ -1453,12 +1462,6 @@ button {
     padding: 0;
     margin: 0;
   }
-  .services-title.opened + .services-text {
-    margin: 0 0 1rem 0;
-  }
-  .services-text div > p {
-    padding: 2rem;
-  }
   .project-title-wrapper {
     grid-column: 1 / -1;
   }
@@ -1703,10 +1706,12 @@ button {
     width: 90vw;
     height: 90vw;
   }
+  .services-title {
+    padding: 1.5rem;
+  }
   .services-icon {
-    width: 12px;
-    height: 12px;
-    margin-right: 1rem;
+    width: 14px;
+    height: 14px;
   }
   .services-title:hover > .services-icon {
     background-color: var(--purple-shade);
@@ -1721,7 +1726,7 @@ button {
     background-color: var(--accent-color-dk);
   }
   .services-text div > p {
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
   .project-description {
     padding: 1.5rem;
@@ -1739,8 +1744,11 @@ button {
   .container {
     width: min(100% - 8px);
   }
-  .services-text div > p {
+  .services-title {
     padding: 1.25rem;
+  }
+  .services-text div > p {
+    padding: 0 1.25rem 1.25rem 1.25rem;
   }
   .project-description {
     padding: 1.25rem;
@@ -1805,12 +1813,5 @@ button {
   .author-photo {
     max-height: 390px;
     object-fit: cover;
-  }
-  .services-title {
-    font-size: clamp(
-      1.75rem,
-      1.3796296296296298rem + 1.8518518518518516vw,
-      2.375rem
-    );
   }
 }

@@ -77,10 +77,8 @@ check.addEventListener("change", () => {
   toggleDarkClass("navbar-button");
   toggleDarkClass("tooltip-text");
   toggleDarkClass("author-photo");
-  // toggleDarkClass("services-dropdown");
   toggleDarkClass("services-dropdown-item");
   toggleDarkClass("services-icon");
-  // toggleDarkClass("services-text");
   toggleDarkClass("projects-work-card");
   toggleDarkClass("mini-card");
   toggleDarkClass("disable");

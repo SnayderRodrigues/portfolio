@@ -804,14 +804,20 @@ button {
 .services-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
-.services-headline-wrapper {
-  max-width: 912px;
+.services-content-wrapper {
+  display: flex;
+  gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
+}
+
+.services-subtitle-wrapper {
+  width: 35%;
 }
 
 .services-dropdown-wrapper {
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
@@ -828,7 +834,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  max-width: 912px;
   color: var(--black);
   background-color: var(--bg-light1);
   border-radius: 0.875rem;
@@ -950,10 +955,12 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 2rem;
+  gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
+  /* gap: 2rem; */
 }
 
 .projects-work-pagination {
+  width: 35%;
   font-family: "Outfit", sans-serif;
   font-size: 12vw;
   line-height: 1;
@@ -1357,17 +1364,13 @@ button {
   .author-photo {
     width: 65%;
   }
-  .services-dropdown-item {
+  .services-content-wrapper {
+    display: flex;
     flex-direction: column;
-    gap: 0;
-  }
-  .services-title {
     width: 100%;
   }
-  .services-text {
+  .services-subtitle-wrapper, .services-dropdown-wrapper {
     width: 100%;
-    padding: 0;
-    margin: 0;
   }
   .project-title-wrapper {
     grid-column: 1 / -1;
@@ -1378,6 +1381,18 @@ button {
   }
 }
 @media (max-width: 900px) {
+  .projects-work {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .projects-work-pagination {
+    font-family: "Outfit", sans-serif;
+    font-size: 16vw;
+    line-height: 1;
+  }
+  .projects-work-card {
+    width: 100%;
+  }
   .contact-container-content {
     display: flex;
     flex-direction: column;
@@ -1411,7 +1426,8 @@ button {
     min-width: 100.34px;
     padding: 12px 12px;
   }
-  .button:hover, .button:focus-visible {
+  .button:hover,
+  .button:focus-visible {
     background-color: var(--purple-shade);
     box-shadow: 0px 0px 0 0 var(--purple-shade);
   }
@@ -1549,7 +1565,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
   }
   .about-image-wrapper,
   .about-description-wrapper {
@@ -1568,18 +1583,6 @@ button {
   }
   .services-wrapper {
     gap: 2rem;
-  }
-  .projects-work {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .projects-work-pagination {
-    font-family: "Outfit", sans-serif;
-    font-size: 16vw;
-    line-height: 1;
-  }
-  .projects-work-card {
-    width: 100%;
   }
   .disable,
   .disable.dark {

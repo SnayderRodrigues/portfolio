@@ -58,7 +58,7 @@ function toggleDarkClass(className) {
   });
 }
 
-const check = document.getElementById("check");
+const check = document.getElementById("dark-mode-toggle");
 
 check.addEventListener("change", () => {
   document.body.classList.toggle("dark");
@@ -73,9 +73,9 @@ check.addEventListener("change", () => {
   toggleDarkClass("author-name");
   toggleDarkClass("header-ul");
   toggleDarkClass("nav-link-header");
-  toggleDarkClass("toggle-label");
+  toggleDarkClass("dark-mode-toggle-container");
+  toggleDarkClass("dark-mode-tooltip");
   toggleDarkClass("navbar-button");
-  toggleDarkClass("tooltip-text");
   toggleDarkClass("author-photo");
   toggleDarkClass("services-dropdown-item");
   toggleDarkClass("services-icon");

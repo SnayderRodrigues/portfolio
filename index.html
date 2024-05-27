@@ -69,18 +69,19 @@
             <a class="nav-link-header" href="#Contato">Contato</a>
           </li>
           <li class="header-li">
-            <div class="toggle-container">
-              <div id="tooltip-text" class="tooltip-text">Dark Mode</div>
-              <span class="dark-mode-text">Dark mode</span>
+            <span class="dark-mode-span">Dark mode</span>
+            <div class="dark-mode-toggle-container">
+              <div id="tooltip" class="dark-mode-tooltip">Dark Mode</div>
               <input
                 type="checkbox"
-                class="checkbox"
-                id="check"
-                name="dark mode"
+                class="dark-mode-toggle"
+                id="dark-mode-toggle"
+                name="darkMode"
               />
-              <label class="toggle-label" for="check">
-                <div class="toggle-ball"></div>
+              <label class="visually-hidden" for="dark-mode-toggle">
+                Dark Mode
               </label>
+              <div class="dark-mode-toggle-ball"></div>
             </div>
           </li>
         </ul>

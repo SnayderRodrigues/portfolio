@@ -14,8 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null; this.rel='stylesheet';"
     />
 
     <!-- ICON -->
@@ -29,7 +31,6 @@
     <title>Snayder Rodrigues — Desenvolvedor Front-End & Web Designer</title>
 
     <!-- SCRIPTS -->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   </head>
   <body>
     <svg class="body-grainy visually-hidden">
@@ -176,9 +177,9 @@
               <div class="services-subtitle-wrapper">
                 <h3 class="services-headline">Minha expertise</h3>
                 <p>
-                  Como Desenvolvedor Front-End, tenho expertise em
-                  uma ampla gama de serviços especializados em Desenvolvimento
-                  Web, permitindo-me criar experiências digitais envolventes e
+                  Como Desenvolvedor Front-End, tenho expertise em uma ampla
+                  gama de serviços especializados em Desenvolvimento Web,
+                  permitindo-me criar experiências digitais envolventes e
                   funcionais.
                 </p>
               </div>
@@ -851,6 +852,7 @@
     </footer>
     <!-- .FOOTER AREA  -->
     <!-- SCRIPTS -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

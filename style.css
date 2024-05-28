@@ -13,8 +13,7 @@
   --bg-night2: #2f2e49;
   --white: #ffffff;
   --light-gray: #afafaf;
-  --gray: #818181;
-  --dark-gray: #5e5e5e;
+  --gray: #595959;
   --black: #000000;
 }
 
@@ -1182,7 +1181,7 @@ button {
 }
 
 .form-control::placeholder {
-  color: var(--dark-gray);
+  color: var(--gray);
 }
 .form-control.dark::placeholder {
   color: var(--light-gray);

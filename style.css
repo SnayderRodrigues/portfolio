@@ -482,6 +482,7 @@ button {
   display: flex;
   align-items: center;
   margin-left: 20px;
+  position: relative;
 }
 
 .nav-link-header {
@@ -549,14 +550,14 @@ button {
 
 .dark-mode-toggle {
   width: 100%;
-  height: 26px;
+  height: 100%;
+  margin: 0;
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   cursor: pointer;
-  margin: 0;
 }
 
 .dark-mode-toggle-ball {
@@ -1535,6 +1536,12 @@ button {
   .header-li:last-of-type {
     margin-bottom: 0;
     /* margin-left: 8px; */
+  }
+  .dark-mode-toggle-container {
+    position: static;
+  }
+  .dark-mode-toggle-ball {
+    left: calc(100% - 47px);
   }
   .dark-mode-tooltip {
     display: none;

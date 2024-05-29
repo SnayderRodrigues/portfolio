@@ -773,13 +773,11 @@ button {
   object-position: bottom;
   width: 100%;
   border-radius: 0.875rem;
-  box-shadow: 0px 8px 0 0 var(--purple-shade);
-  transition: filter 0.3s linear, box-shadow 0.3s linear;
+  transition: filter 0.3s linear;
 }
 
 .author-photo.dark {
   filter: contrast(96%) brightness(104%);
-  box-shadow: 0px 8px 0 0 var(--purple-shade-dk);
 }
 
 .about-description-wrapper {
@@ -984,19 +982,18 @@ button {
   grid-template-columns: repeat(2, minmax(auto, 1fr));
   align-items: flex-start;
   height: fit-content;
-  /* padding: 60px; */
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-light2);
+  background-color: var(--bg-light1);
   border-radius: 0.875rem;
   /* gap: 2rem; */
-  box-shadow: 0px 8px 0 0 var(--purple-shade);
+  /* box-shadow: 0px 8px 0 0 var(--purple-shade); */
   transition: background-color 0.4s linear, box-shadow 0.4s linear;
 }
 
 .projects-work-card.dark {
   background-color: var(--bg-night2);
-  box-shadow: 0px 8px 0 0 var(--purple-shade-dk);
+  /* box-shadow: 0px 8px 0 0 var(--purple-shade-dk); */
 }
 
 .project-img-wrapper {

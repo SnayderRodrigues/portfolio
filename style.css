@@ -986,14 +986,11 @@ button {
   overflow: hidden;
   background-color: var(--bg-light1);
   border-radius: 0.875rem;
-  /* gap: 2rem; */
-  /* box-shadow: 0px 8px 0 0 var(--purple-shade); */
   transition: background-color 0.4s linear, box-shadow 0.4s linear;
 }
 
 .projects-work-card.dark {
   background-color: var(--bg-night2);
-  /* box-shadow: 0px 8px 0 0 var(--purple-shade-dk); */
 }
 
 .project-img-wrapper {
@@ -1163,7 +1160,7 @@ button {
   background-color: var(--bg-light1);
   background-clip: padding-box;
   padding: 12px 16px;
-  border: 1.5px solid transparent;
+  border: 1px solid var(--bg-light1);
   border-radius: 0.875rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1175,6 +1172,7 @@ button {
 .form-control.dark {
   color: var(--white);
   background-color: var(--bg-night2);
+  border: 1px solid var(--bg-night2);
 }
 
 .form-control::placeholder {
@@ -1200,7 +1198,7 @@ button {
 .form-error {
   color: red;
   font-size: 18px;
-  padding: 8px 0;
+  padding: 8px 0px;
 }
 
 .form-valid {
@@ -1660,6 +1658,9 @@ button {
   .project-description {
     padding: 1.5rem;
     gap: 1rem;
+  }
+  .form-error {
+    padding: 4px 0px;
   }
   /* .contact-container-content {
     padding: 1.5rem;

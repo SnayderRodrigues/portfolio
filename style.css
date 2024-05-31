@@ -1160,7 +1160,8 @@ button {
   background-color: var(--bg-light1);
   background-clip: padding-box;
   padding: 12px 16px;
-  border: 1px solid var(--bg-light1);
+  border: 1px solid transparent;
+  margin-top: -2px;
   border-radius: 0.875rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1172,7 +1173,6 @@ button {
 .form-control.dark {
   color: var(--white);
   background-color: var(--bg-night2);
-  border: 1px solid var(--bg-night2);
 }
 
 .form-control::placeholder {
@@ -1183,11 +1183,11 @@ button {
 }
 
 .form-control:focus-visible {
-  border: 1.5px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   outline: none;
 }
 .form-control.dark:focus-visible {
-  border: 1.5px solid var(--accent-color-dk);
+  border: 1px solid var(--accent-color-dk);
   outline: none;
 }
 
@@ -1197,13 +1197,11 @@ button {
 
 .form-error {
   color: red;
-  font-size: 18px;
   padding: 8px 0px;
 }
 
 .form-valid {
   color: rgb(0, 205, 0);
-  font-size: 18px;
   padding: 0px;
 }
 
@@ -1661,6 +1659,9 @@ button {
   }
   .form-error {
     padding: 4px 0px;
+  }
+  .form-div-2 .form-error {
+    padding: 8px 0px;
   }
   /* .contact-container-content {
     padding: 1.5rem;

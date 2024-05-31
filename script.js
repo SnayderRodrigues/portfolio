@@ -231,11 +231,6 @@ function validateForm() {
     setTimeout(function () {
       document.getElementById("form").reset();
     }, 1000);
-  } else {
-    var errorElements = document.getElementsByClassName("form-error");
-    for (var i = 0; i < errorElements.length; i++) {
-      errorElements[i].style.padding = "8px 0";
-    }
   }
 
   return isValid;

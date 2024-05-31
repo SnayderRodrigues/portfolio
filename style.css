@@ -238,12 +238,12 @@ button {
   );
   font-weight: 400;
   overflow: hidden;
-  transition: background-color 0.4s linear, box-shadow 0.2s ease-in-out;
+  transition: background-color 0.2s linear, box-shadow 0.2s ease-in-out;
 }
 
 .button:hover {
-  background-color: var(--accent-color);
-  box-shadow: 0px 6px 0 0 var(--purple-shade);
+  background-color: var(--purple-shade);
+  /* box-shadow: 0px 6px 0 0 var(--purple-shade); */
 }
 
 .button.dark {
@@ -251,8 +251,8 @@ button {
 }
 
 .button.dark:hover {
-  background-color: var(--accent-color-dk);
-  box-shadow: 0px 6px 0 0 var(--purple-shade-dk);
+  background-color: var(--purple-shade-dk);
+  /* box-shadow: 0px 6px 0 0 var(--purple-shade-dk); */
 }
 
 .link {
@@ -509,12 +509,20 @@ button {
 .active {
   color: var(--white);
   background-color: var(--accent-color);
-  transition: color 0.1s linear, background-color 0.4s linear;
+  transition: color 0.1s linear, background-color 0.2s linear;
+}
+
+.active:hover {
+  background-color: var(--purple-shade);
 }
 
 .active.dark {
   background-color: var(--accent-color-dk);
-  transition: background-color 0.4s linear;
+  transition: background-color 0.2s linear;
+}
+
+.active.dark:hover {
+  background-color: var(--purple-shade-dk);
 }
 
 .dark-mode-toggle-container {

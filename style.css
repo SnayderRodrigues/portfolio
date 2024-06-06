@@ -723,9 +723,9 @@ button {
 .hero-design-element {
   content: "";
   width: 60vw;
-  max-width: 700px;
+  max-width: clamp(25rem, -12.063953488372093rem + 116.27906976744187vh, 43.75rem);
   height: 60vw;
-  max-height: 700px;
+  max-height: clamp(25rem, -12.063953488372093rem + 116.27906976744187vh, 43.75rem);
   border-radius: 50%;
   background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
   position: absolute;
@@ -1582,6 +1582,12 @@ button {
   .hero-button-div {
     gap: 1rem;
   }
+  .hero-design-element {
+    top: 60%;
+    left: 50%;
+    width: 70vw;
+    height: 70vw;
+  }
   .about-container-content {
     display: flex;
     flex-direction: column;
@@ -1744,10 +1750,6 @@ button {
       0.7142857142857143rem + 1.4285714285714286vw,
       1.5rem
     );
-  }
-  .hero-design-element {
-    max-width: 460px;
-    max-height: 460px;
   }
   .author-photo {
     max-height: 390px;

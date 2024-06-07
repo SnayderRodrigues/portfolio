@@ -1047,15 +1047,14 @@ button {
 .mini-card {
   padding: 0.25rem 0.7rem;
   border-radius: 0.375rem;
-  background-color: var(--bg-night2);
-  color: var(--white);
+  background-color: var(--lightdetail2);
   cursor: default;
-  transition: all 0.4s linear;
+  transition: background-color 0.4s linear, color 0.2s linear;
 }
 
 .mini-card.dark {
-  background-color: var(--bg-light2);
-  color: var(--black);
+  background-color: var(--nightdetail2);
+  color: var(--white);
 }
 
 .project-button-wrapper {

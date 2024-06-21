@@ -1104,7 +1104,7 @@ button {
 
 .contact-container-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: clamp(2.5rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
 }
 
@@ -1229,6 +1229,18 @@ button {
 
 .info-div > * {
   margin-bottom: 0.5rem;
+}
+
+.info-headline {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(
+    1.5rem,
+    1.2857142857142856rem + 1.0714285714285714vw,
+    2.25rem
+  );
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .info-title {

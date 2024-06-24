@@ -859,6 +859,7 @@ button {
   margin-bottom: 0.5rem;
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     background-color 0.4s linear, color 0s linear;
+    overflow: hidden;
 }
 
 .services-dropdown-item.dark {
@@ -1506,8 +1507,8 @@ button {
     border-radius: 50%;
     background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
     position: absolute;
-    top: 100%;
-    left: 80%;
+    top: 65%;
+    left: 60%;
     transform: translate(-50%, -50%);
     z-index: -1;
     opacity: 0.2;
@@ -1526,7 +1527,7 @@ button {
     padding-left: 2rem;
     border-radius: 0.875rem;
     opacity: 0;
-    scale: 0.3;
+    scale: 0.5;
     transition: opacity 0.3s linear, scale 0.3s linear,
       background-color 0.3s linear, gap 0.3s linear;
     user-select: none;

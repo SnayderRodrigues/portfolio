@@ -267,43 +267,11 @@ button {
 }
 
 /* --------------------------------- ANIMATIONS -------------------------------- */
-
-.slide-up {
-  /* transition: all 2.6s linear; */
-  animation: saiba-mais 1s ease-in-out;
-}
-
-@keyframes saiba-mais {
-  0% {
-    transform: translateY(5%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.slide-down {
-  /* transition: all 2.6s linear; */
-  animation: header-down 1s ease-in-out;
-}
-
-@keyframes header-down {
-  0% {
-    transform: translateY(-10vh);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .fade-in {
-  /* transition: all 2.6s linear; */
-  animation: fade-in-planets 1s ease-in-out;
+  animation: fade-in 0.5s ease-in-out;
 }
 
-@keyframes fade-in-planets {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -311,57 +279,20 @@ button {
     opacity: 1;
   }
 }
+.scale-up {
+  animation: scale-up 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-@keyframes anim-lr {
+@keyframes scale-up {
   0% {
-    transform: translateX(-10px);
-  }
-  50% {
-    transform: translateX(10px);
+    scale: 0.5;
   }
   100% {
-    transform: translateX(-10px);
+    scale: 1;
   }
 }
 
-.elem-lr {
-  animation: anim-lr 6s infinite ease-in-out;
-}
-
-@keyframes anim-rl {
-  0% {
-    transform: translateX(10px);
-  }
-  50% {
-    transform: translateX(-10px);
-  }
-  100% {
-    transform: translateX(10px);
-  }
-}
-
-.elem-rl {
-  animation: anim-rl 6s infinite ease-in-out;
-}
-
-@keyframes ring1 {
-  0% {
-    transform: rotateX(70deg) rotateY(25deg) rotateZ(0deg) scale(1.75);
-  }
-  100% {
-    transform: rotateX(70deg) rotateY(25deg) rotateZ(360deg) scale(1.75);
-  }
-}
-
-@keyframes ring2 {
-  0% {
-    transform: rotateX(70deg) rotateY(25deg) rotateZ(0deg) scale(1.75);
-  }
-  100% {
-    transform: rotateX(70deg) rotateY(25deg) rotateZ(360deg) scale(1.75);
-  }
-}
-
+/* header logo */
 .rotating {
   animation: rotating 4s infinite linear;
 }
@@ -370,11 +301,38 @@ button {
   0% {
     transform: rotate(0);
   }
-  /* 50% {
-        transform: rotate(-360deg);
-    } */
+  50% {
+    transform: rotate(-45deg);
+  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
+  }
+}
+
+/* dark mode ball */
+@keyframes ball-trail-left {
+  0% {
+    box-shadow: 0px 0px 0px 0px var(--white);
+  }
+  30% {
+    box-shadow: -4px 0px 0px 0px rgba(255, 255, 255, 0.8),
+      -8px 0px 0px 0px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0px var(--white);
+  }
+}
+
+@keyframes ball-trail-right {
+  0% {
+    box-shadow: 0px 0px 0px 0px var(--white);
+  }
+  30% {
+    box-shadow: 4px 0px 0px 0px rgba(255, 255, 255, 0.8),
+      8px 0px 0px 0px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0px var(--white);
   }
 }
 
@@ -580,10 +538,12 @@ button {
   height: 20px;
   width: 20px;
   transform: translateX(0px);
-  transition: transform 0.2s linear;
+  transition: transform 0.3s linear;
+  animation: ball-trail-right 0.3s linear;
 }
 
 .dark-mode-toggle:checked ~ .dark-mode-toggle-ball {
+  animation: ball-trail-left 0.3s linear;
   transform: translateX(24px);
 }
 
@@ -732,15 +692,24 @@ button {
 .hero-design-element {
   content: "";
   width: 60vw;
-  max-width: clamp(25rem, -12.063953488372093rem + 116.27906976744187vh, 43.75rem);
+  max-width: clamp(
+    25rem,
+    -12.063953488372093rem + 116.27906976744187vh,
+    43.75rem
+  );
   height: 60vw;
-  max-height: clamp(25rem, -12.063953488372093rem + 116.27906976744187vh, 43.75rem);
+  max-height: clamp(
+    25rem,
+    -12.063953488372093rem + 116.27906976744187vh,
+    43.75rem
+  );
   border-radius: 50%;
   background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
   position: absolute;
   top: 60%;
   left: 70%;
   transform: translate(-50%, -50%);
+  transform-origin: left top;
   z-index: -1;
   opacity: 0.2;
 }
@@ -868,7 +837,7 @@ button {
   margin-bottom: 0.5rem;
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     background-color 0.4s linear, color 0s linear;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .services-dropdown-item.dark {

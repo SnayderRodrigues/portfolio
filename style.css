@@ -943,6 +943,21 @@ button {
   padding-bottom: 100px;
 }
 
+.projects-description-div {
+  display: flex;
+  gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
+}
+
+.projects-description-div > p {
+  display: flex;
+  width: 35%;
+  margin-bottom: 4rem;
+}
+
+.projects-description-div > div {
+  width: 65%;
+}
+
 .projects-block-wrapper {
   display: flex;
   flex-direction: column;
@@ -969,7 +984,7 @@ button {
   width: 65%;
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 1fr));
-  align-items: flex-start;
+  align-items: flex-stat;
   height: fit-content;
   position: relative;
   overflow: hidden;
@@ -1030,6 +1045,26 @@ button {
   background-color: var(--lightdetail2);
   cursor: default;
   transition: background-color 0.4s linear, color 0.2s linear;
+}
+
+.projects-work:first-of-type .mini-card:first-of-type {
+  border-left: 4px solid #fa191b;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.projects-work:nth-of-type(2) .mini-card:first-of-type {
+  border-left: 4px solid #87d32a;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.projects-work:nth-of-type(3) .mini-card:first-of-type {
+  border-left: 4px solid #fe6115;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.projects-work:nth-of-type(4) .mini-card:first-of-type {
+  border-left: 4px solid #1a39e4;
+  border-radius: 0 0.375rem 0.375rem 0;
 }
 
 .mini-card.dark {
@@ -1371,7 +1406,7 @@ button {
     width: 100%;
   }
   .author-photo {
-    width: 65%;
+    width: 50%;
   }
   .services-content-wrapper {
     display: flex;
@@ -1391,6 +1426,12 @@ button {
   }
 }
 @media (max-width: 900px) {
+  .projects-description-div > p {
+    width: 50%;
+  }
+  .projects-description-div > div {
+    display: none;
+  }
   .projects-work {
     flex-direction: column;
     gap: 1rem;
@@ -1603,6 +1644,9 @@ button {
   }
   .services-wrapper {
     gap: 2rem;
+  }
+  .projects-description-div > p {
+    width: 100%;
   }
   .footer-container {
     flex-direction: column;

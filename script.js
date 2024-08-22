@@ -39,53 +39,51 @@ class App {
 
 new App();
 
-// PRELOADER ---------------------------------------------------//
-
-// var loader = document.getElementById("preloader");
-
-// window.addEventListener("load", function () {
-//   // loader.style.display = "none";
-//   loader.classList.add("loading-animation");
-// });
-
 // DARK MODE ---------------------------------------------------//
 
-function toggleDarkClass(className) {
-  var elementos = document.getElementsByClassName(className);
-  var arrayDeElementos = Array.from(elementos);
-  arrayDeElementos.forEach(function (elemento) {
-    elemento.classList.toggle("dark");
-  });
+class DarkModeToggle {
+  constructor(toggleElementId) {
+    this.toggleElement = document.getElementById(toggleElementId);
+    this.darkModeClasses = [
+      "header",
+      "hero-section",
+      "about-section",
+      "projects-section",
+      "contact-section",
+      "footer",
+      "button",
+      "author-name",
+      "header-ul",
+      "nav-link-header",
+      "dark-mode-toggle-container",
+      "dark-mode-tooltip",
+      "navbar-button",
+      "author-photo",
+      "services-dropdown-item",
+      "services-icon",
+      "projects-work-card",
+      "mini-card",
+      "disable",
+      "form-control",
+      "info-link",
+      "footer-nav-link",
+    ];
+    this.addToggleListener();
+  }
+
+  addToggleListener() {
+    this.toggleElement.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
+      this.darkModeClasses.forEach((className) => {
+        document.querySelectorAll(`.${className}`).forEach((element) => {
+          element.classList.toggle("dark");
+        });
+      });
+    });
+  }
 }
 
-const check = document.getElementById("dark-mode-toggle");
-
-check.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
-
-  toggleDarkClass("header");
-  toggleDarkClass("hero-section");
-  toggleDarkClass("about-section");
-  toggleDarkClass("projects-section");
-  toggleDarkClass("contact-section");
-  toggleDarkClass("footer");
-  toggleDarkClass("button");
-  toggleDarkClass("author-name");
-  toggleDarkClass("header-ul");
-  toggleDarkClass("nav-link-header");
-  toggleDarkClass("dark-mode-toggle-container");
-  toggleDarkClass("dark-mode-tooltip");
-  toggleDarkClass("navbar-button");
-  toggleDarkClass("author-photo");
-  toggleDarkClass("services-dropdown-item");
-  toggleDarkClass("services-icon");
-  toggleDarkClass("projects-work-card");
-  toggleDarkClass("mini-card");
-  toggleDarkClass("disable");
-  toggleDarkClass("form-control");
-  toggleDarkClass("info-link");
-  toggleDarkClass("footer-nav-link");
-});
+new DarkModeToggle("dark-mode-toggle");
 
 // HIDDEN NAVBAR ---------------------------------------------------//
 
@@ -244,25 +242,3 @@ function isValidEmail(email) {
 function clearFormSent() {
   document.getElementById("formSent").innerHTML = "";
 }
-
-// REAL TIME ---------------------------------------------------//
-
-function atualizarRelogio() {
-  var agora = new Date();
-
-  var horas = agora.getHours();
-  var minutos = agora.getMinutes();
-  var periodo = horas >= 12 ? "PM" : "AM";
-
-  horas = horas % 12 || 12;
-
-  minutos = minutos < 10 ? "0" + minutos : minutos;
-
-  var formatoHora = horas + ":" + minutos + " " + periodo;
-
-  document.getElementById("hora-local").innerText = formatoHora;
-}
-
-atualizarRelogio();
-
-setInterval(atualizarRelogio, 20000);

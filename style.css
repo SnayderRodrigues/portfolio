@@ -364,8 +364,7 @@ button {
   z-index: 999;
   background-color: var(--bg-light1);
   padding: 12px 0;
-  transition: background-color 0.4s linear, transform 0.2s ease-in-out;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, .19); */
+  transition: background-color 0.4s linear, transform 0.4s ease;
 }
 
 .header.dark {
@@ -385,10 +384,8 @@ button {
 
 .navbar.container {
   display: flex;
-  flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
 }
 
 .logo {
@@ -1010,7 +1007,6 @@ button {
   height: auto;
   object-fit: cover;
   scale: 1.005;
-  transition: scale 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-description {

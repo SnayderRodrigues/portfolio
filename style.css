@@ -201,8 +201,7 @@ li {
 
 a {
   text-decoration: none;
-  color: inherit;
-  transition: color 0.2s linear;
+  color: var(--black);
 }
 
 p {
@@ -243,12 +242,11 @@ button {
   );
   font-weight: 400;
   overflow: hidden;
-  transition: background-color 0.2s linear, box-shadow 0.2s ease-in-out;
+  transition: color 0.2s linear, background-color 0.2s linear;
 }
 
 .button:hover {
   background-color: var(--purple-shade);
-  /* box-shadow: 0px 6px 0 0 var(--purple-shade); */
 }
 
 .button.dark {
@@ -257,17 +255,12 @@ button {
 
 .button.dark:hover {
   background-color: var(--purple-shade-dk);
-  /* box-shadow: 0px 6px 0 0 var(--purple-shade-dk); */
 }
 
 .link {
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-.link.dark {
-  color: var(--white);
 }
 
 /* --------------------------------- ANIMATIONS -------------------------------- */
@@ -473,7 +466,7 @@ button {
 .active {
   color: var(--white);
   background-color: var(--accent-color);
-  transition: color 0.1s linear, background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 
 .active:hover {
@@ -482,7 +475,6 @@ button {
 
 .active.dark {
   background-color: var(--accent-color-dk);
-  transition: background-color 0.2s linear;
 }
 
 .active.dark:hover {
@@ -563,8 +555,7 @@ button {
   pointer-events: none;
   user-select: none;
   opacity: 0;
-  transition: background-color 0.4s linear, color 0.3s linear,
-    opacity 0.2s linear;
+  transition: background-color 0.4s linear, opacity 0.2s linear;
 }
 
 .dark-mode-tooltip.dark {
@@ -837,7 +828,7 @@ button {
   border-radius: 0.875rem;
   margin-bottom: 0.5rem;
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    background-color 0.4s linear, color 0s linear;
+  background-color 0.4s linear, color 0s linear;
   overflow: hidden;
 }
 
@@ -1040,11 +1031,11 @@ button {
 }
 
 .mini-card {
+  background-color: var(--lightdetail2);
   padding: 0.25rem 0.7rem;
   border-radius: 0.375rem;
-  background-color: var(--lightdetail2);
   cursor: default;
-  transition: background-color 0.4s linear, color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.4s linear;
 }
 
 .projects-work:first-of-type .mini-card:first-of-type {
@@ -1190,7 +1181,7 @@ button {
   -moz-appearance: none;
   appearance: none;
   resize: none;
-  transition: all 0.4s linear;
+  transition: all 0.4s linear, color 0.2s linear;
 }
 
 .form-control.dark {
@@ -1269,13 +1260,13 @@ button {
   transition: all 0.2s linear;
 }
 
-.info-link.dark {
-  color: var(--white);
-}
-
 .info-link:hover {
   color: var(--accent-color);
   box-shadow: inset -20px 0px 0 hsla(248, 93%, 62%, 0.3);
+}
+
+.info-link.dark {
+  color: var(--white);
 }
 
 .info-link.dark:hover {
@@ -1301,7 +1292,6 @@ button {
 
 .footer.dark {
   background-color: var(--bg-night2);
-  color: var(--white);
 }
 
 .footer-container {
@@ -1324,6 +1314,11 @@ button {
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: -1px;
+  transition: color 0.2s linear;
+}
+
+.author-name-footer.dark {
+  color: var(--white);
 }
 
 .copyright {
@@ -1359,12 +1354,21 @@ button {
 .footer-nav-link {
   width: fit-content;
   margin-bottom: 0.25rem;
-  /* transition: border 0.2s linear; */
+  transition: all 0.2s linear;
 }
 
 .footer-nav-link:hover {
   color: var(--accent-color);
   box-shadow: inset -20px 0px 0 hsla(248, 93%, 62%, 0.3);
+}
+
+.footer-nav-link.dark {
+  color: var(--white);
+}
+
+.footer-nav-link.dark:hover {
+  color: var(--accent-color-dk);
+  box-shadow: inset -20px 0px 0 hsla(248, 100%, 69%, 0.3);
 }
 
 .footer-design-element {
@@ -1388,32 +1392,46 @@ button {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.footer-container:nth-of-type(2) > span {
+.footer-container:nth-of-type(2) > div {
   max-width: 26rem;
 }
 
-.footer-container:nth-of-type(2) > span a {
+.footer-tools-link {
   font-weight: 700;
+  transition: color 0.2s linear;
 }
 
-.footer-container:nth-of-type(2) > span a:hover {
+.footer-tools-link:hover {
   color: var(--accent-color);
+}
+
+.footer-tools-link.dark {
+  color: var(--white);
+}
+
+.footer-tools-link.dark:hover {
+  color: var(--accent-color-dk);
 }
 
 .footer-scroll-top {
   font-size: 1.125rem;
-  padding: 0.5rem 0;
+  color: var(--white);
+  background: var(--accent-color);
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  transition: background-color 0.2s linear;
 }
 
 .footer-scroll-top:hover {
-  color: var(--accent-color);
+  background-color: var(--purple-shade);
 }
 
-.footer-scroll-top svg {
-  transition: all 0.2s linear;
+.footer-scroll-top.dark {
+  background-color: var(--accent-color-dk);
 }
-.footer-scroll-top:hover svg {
-  fill: var(--accent-color);
+
+.footer-scroll-top.dark:hover {
+  background-color: var(--purple-shade-dk);
 }
 
 /*  -------------------------------- RESPONSIVE -------------------------------- */

@@ -52,6 +52,7 @@ class DarkModeToggle {
       "contact-section",
       "footer",
       "button",
+      "link",
       "author-name",
       "header-ul",
       "nav-link-header",
@@ -66,7 +67,6 @@ class DarkModeToggle {
       "disable",
       "form-control",
       "info-link",
-      "footer-nav-link",
     ];
     this.addToggleListener();
   }

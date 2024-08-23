@@ -70,6 +70,7 @@ class DarkModeToggle {
       "footer-nav-link",
       "footer-scroll-top",
       "footer-tools-link",
+      "footer-scroll-top",
     ];
     this.addToggleListener();
   }

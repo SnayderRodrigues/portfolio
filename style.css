@@ -844,19 +844,20 @@ button {
   text-wrap: nowrap;
   padding: 2rem;
   margin: 0;
+  font-weight: 600;
+  transition: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.services-title-h3 {
   font-size: clamp(
     1.5rem,
     1.319023569023569rem + 0.6734006734006733vw,
     1.75rem
   );
   font-weight: 600;
-  transition: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-}
-
-.services-title-span {
-  letter-spacing: -1px;
   margin-right: 1rem;
+  margin-bottom: 0;
 }
 
 .services-icon {

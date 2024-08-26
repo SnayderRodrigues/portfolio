@@ -72,22 +72,42 @@ class DarkModeToggle {
       "footer-tools-link",
       "footer-scroll-top",
     ];
+
+    this.initializeDarkMode();
     this.addToggleListener();
+  }
+
+  initializeDarkMode() {
+    const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
+    if (darkModeEnabled) {
+      this.toggleElement.checked = true;
+      this.applyDarkMode(true);
+    }
   }
 
   addToggleListener() {
     this.toggleElement.addEventListener("change", () => {
-      document.body.classList.toggle("dark");
-      this.darkModeClasses.forEach((className) => {
-        document.querySelectorAll(`.${className}`).forEach((element) => {
-          element.classList.toggle("dark");
-        });
+      const darkModeEnabled = this.toggleElement.checked;
+      this.applyDarkMode(darkModeEnabled);
+      localStorage.setItem(
+        "darkMode",
+        darkModeEnabled ? "enabled" : "disabled"
+      );
+    });
+  }
+
+  applyDarkMode(enable) {
+    document.body.classList.toggle("dark", enable);
+    this.darkModeClasses.forEach((className) => {
+      document.querySelectorAll(`.${className}`).forEach((element) => {
+        element.classList.toggle("dark", enable);
       });
     });
   }
 }
 
 new DarkModeToggle("dark-mode-toggle");
+
 
 // HIDDEN NAVBAR ---------------------------------------------------//
 

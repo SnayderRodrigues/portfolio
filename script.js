@@ -61,6 +61,7 @@ class DarkModeToggle {
       "author-photo",
       "services-dropdown-item",
       "services-icon",
+      "projects-work",
       "projects-work-description",
       "projects-work-subtitle",
       "projects-work-subtitle-link",

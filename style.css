@@ -982,15 +982,19 @@ button {
 
 .projects-work-title {
   max-width: 32rem;
-  font-size: clamp(1.875rem, 2.093vw + 1.326rem, 3rem);
+  font-size: clamp(2rem, 1.5812807881773399rem + 1.5763546798029555vw, 3rem);
   font-weight: 600;
   line-height: 1.12;
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
 }
 
 .projects-work-subtitle {
   max-width: 32rem;
-  font-size: clamp(1.875rem, 2.093vw + 1.326rem, 3rem);
+  font-size: clamp(
+    1.5rem,
+    1.0812807881773399rem + 1.5763546798029555vw,
+    2.5rem
+  );
   font-weight: 600;
   line-height: 1.12;
   color: var(--gray);
@@ -1404,6 +1408,23 @@ button {
 
 /*  -------------------------------- RESPONSIVE -------------------------------- */
 
+@media (max-width: 1440px) {
+  .projects-work-description::before {
+    display: none;
+  }
+  .projects-work-description.dark::before {
+    display: none;
+  }
+  .projects-work {
+    background-color: var(--bg-light1);
+    padding: clamp(1.5rem, 0.8719211822660099rem + 2.3645320197044333vw, 3rem);
+    border-radius: clamp(2rem, 1.79064039408867rem + 0.7881773399014778vw, 2.5rem);
+    transition: background-color 0.4s linear;
+  }
+  .projects-work.dark {
+    background-color: var(--bg-night2);
+  }
+}
 @media (max-width: 1024px) {
   .about-container-content {
     display: flex;
@@ -1663,25 +1684,15 @@ button {
   .services-wrapper {
     gap: 2rem;
   }
-  .projects-work {
-    padding: 0;
-    margin-bottom: 6rem;
-  }
   .projects-work:last-of-type {
     margin-bottom: 0;
-  }
-  .projects-work:hover > .projects-work-description::before {
-    background-color: transparent;
-  }
-  .projects-work:hover > .projects-work-description.dark::before {
-    background-color: transparent;
   }
   .projects-work-title,
   .projects-work-subtitle {
     max-width: max-content;
   }
   .projects-work-subtitle {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .footer-nav-div-wrapper {
     flex-direction: row;
@@ -1756,6 +1767,9 @@ button {
   }
   .services-text div > p {
     padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+  .projects-work {
+    gap: 2rem;
   }
   .form-error {
     padding: 4px 0px;

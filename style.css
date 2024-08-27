@@ -822,7 +822,6 @@ button {
   align-items: flex-end;
   color: var(--black);
   background-color: var(--bg-light1);
-  border: 2px solid transparent;
   border-radius: 0.875rem;
   margin-bottom: 0.5rem;
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1),
@@ -835,14 +834,6 @@ button {
   background-color: var(--bg-night2);
 }
 
-@media (min-width: 769px) {
-  .services-dropdown-item:hover {
-    border: 2px solid var(--accent-color);
-  }
-  .services-dropdown-item.dark:hover {
-    border: 2px solid var(--accent-color-dk);
-  }
-}
 
 .services-title {
   width: 100%;
@@ -939,18 +930,24 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 2rem;
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
-/* .projects-headline-subtitle {
-  margin-bottom: 4rem;
-} */
 
 .projects-work {
   display: flex;
   gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
   padding: 3rem 0;
+  position: relative;
+}
+
+.projects-work:hover > .projects-work-description::before {
+  background-color: var(--bg-light1);
+}
+
+.projects-work:hover > .projects-work-description.dark::before {
+  background-color: var(--bg-night2);
 }
 
 .projects-work-description {
@@ -960,6 +957,24 @@ button {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.projects-work-description::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 6rem);
+    height: 100%;
+    border-radius: 2.5rem;
+    transition: background-color 0.4s linear;
+}
+
+.projects-work-description > div:first-of-type {
+  position: relative;
+  z-index: 1;
 }
 
 .projects-work-title {
@@ -976,6 +991,18 @@ button {
   font-weight: 600;
   line-height: 1.12;
   color: var(--gray);
+}
+
+.projects-work-subtitle.dark {
+  color: var(--light-gray);
+}
+
+.projects-work-subtitle-link {
+  color: var(--accent-color);
+}
+
+.projects-work-subtitle-link.dark {
+  color: var(--accent-color-dk);
 }
 
 .project-work-image-wrapper {

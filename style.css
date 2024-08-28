@@ -232,16 +232,17 @@ button {
   justify-content: center;
   position: relative;
   z-index: 2;
-  color: var(--white);
-  background-color: var(--accent-color);
-  border-radius: 0.625rem;
-  padding: 12px 16px;
+  font-family: "Hanken Grotesk", sans-serif;
   font-size: clamp(
     1rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.25rem
   );
   font-weight: 400;
+  color: var(--white);
+  background-color: var(--accent-color);
+  padding: 12px 16px;
+  border-radius: 0.625rem;
   overflow: hidden;
   transition: color 0.2s linear, background-color 0.2s linear;
 }
@@ -258,36 +259,29 @@ button {
   background-color: var(--purple-shade-dk);
 }
 
-.button::before,
-.button::after {
+.button::before {
   content: "";
   position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: var(--white);
-  opacity: 0;
-  transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1),
-    opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
   z-index: -1;
-  transform: translate(100%, -25%) translate3d(0, 0, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--purple-shade);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.button:hover::before,
-.button:hover::after {
-  opacity: 0.15;
-  transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1),
-    opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+.button.dark::before {
+  background-color: var(--purple-shade-dk);
 }
 
 .button:hover::before {
-  transform: translate3d(50%, 0, 0) scale(0.9);
-}
-
-.button:hover::after {
-  transform: translate(50%, 0) scale(1.1);
+  width: 150px;
+  height: 150px;
+  opacity: 1;
 }
 
 .link {
@@ -648,15 +642,15 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: "Outfit", sans-serif;
   cursor: default;
   width: 100%;
 }
 
 .hero-title {
   width: 100%;
-  margin-bottom: 3rem;
   max-width: 16ch;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 3rem;
 }
 
 .hero-subtitle {
@@ -669,7 +663,6 @@ button {
 
 .hero-subtitle > span {
   font-weight: 600;
-  /* font-style: italic; */
 }
 
 .hero-button-div {
@@ -956,7 +949,6 @@ button {
 
 .projects-work-description {
   flex: 1 1 0%;
-  font-family: "Outfit", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -983,6 +975,7 @@ button {
 
 .projects-work-title {
   max-width: 32rem;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(2rem, 1.5812807881773399rem + 1.5763546798029555vw, 3rem);
   font-weight: 600;
   line-height: 1.12;
@@ -990,14 +983,14 @@ button {
 }
 
 .projects-work-subtitle {
+  line-height: 1.4;
   max-width: 32rem;
   font-size: clamp(
-    1.5rem,
-    1.0812807881773399rem + 1.5763546798029555vw,
-    2.5rem
+    1.125rem,
+    0.9679802955665024rem + 0.5911330049261083vw,
+    1.5rem
   );
   font-weight: 600;
-  line-height: 1.12;
   color: var(--gray);
   margin-bottom: 2rem;
 }
@@ -1007,10 +1000,20 @@ button {
 }
 
 .projects-work-subtitle-link {
+  color: var(--black);
+  font-weight: 700;
+  transition: color 0.2s linear;
+}
+
+.projects-work-subtitle-link:hover {
   color: var(--accent-color);
 }
 
 .projects-work-subtitle-link.dark {
+  color: var(--white);
+}
+
+.projects-work-subtitle-link.dark:hover {
   color: var(--accent-color-dk);
 }
 

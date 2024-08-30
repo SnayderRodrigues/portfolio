@@ -271,7 +271,7 @@ button {
   background-color: var(--purple-shade);
   border-radius: 50%;
   opacity: 0;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .button.dark::before {
@@ -930,42 +930,32 @@ button {
 .projects-work {
   display: flex;
   gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
-  padding: 3rem 0;
-  margin-bottom: 3rem;
   position: relative;
+  background-color: var(--bg-light1);
+  padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
+  border-radius: clamp(
+    0.625rem,
+    0.19458128078817738rem + 2.5615763546798025vw,
+    2.5rem
+  );
+  margin-bottom: 3rem;
+  transition: background-color 0.4s linear;
+}
+
+.projects-work.dark {
+  background-color: var(--bg-night2);
 }
 
 .projects-work:last-of-type {
   margin-bottom: 0;
 }
 
-.projects-work:hover > .projects-work-description::before {
-  background-color: var(--bg-light1);
-}
-
-.projects-work:hover > .projects-work-description.dark::before {
-  background-color: var(--bg-night2);
-}
-
 .projects-work-description {
-  flex: 1 1 0%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-}
-
-.projects-work-description::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% + 6rem);
-  height: 100%;
-  border-radius: 2.5rem;
-  transition: background-color 0.2s linear;
 }
 
 .projects-work-description > div:first-of-type {
@@ -1018,7 +1008,7 @@ button {
 }
 
 .project-work-image-wrapper {
-  flex: 1 1 0%;
+  flex: 1;
   aspect-ratio: 8 / 5;
   position: relative;
   border-radius: 0.625rem;
@@ -1396,27 +1386,6 @@ button {
 
 /*  -------------------------------- RESPONSIVE -------------------------------- */
 
-@media (max-width: 1440px) {
-  .projects-work-description::before {
-    display: none;
-  }
-  .projects-work-description.dark::before {
-    display: none;
-  }
-  .projects-work {
-    background-color: var(--bg-light1);
-    padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
-    border-radius: clamp(
-      0.625rem,
-      0.19458128078817738rem + 2.5615763546798025vw,
-      2.5rem
-    );
-    transition: background-color 0.4s linear;
-  }
-  .projects-work.dark {
-    background-color: var(--bg-night2);
-  }
-}
 @media (max-width: 1024px) {
   .about-container,
   .projects-container {

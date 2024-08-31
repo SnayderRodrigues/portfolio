@@ -972,6 +972,22 @@ button {
   margin-bottom: 1rem;
 }
 
+.projects-work:first-of-type .projects-work-title > span {
+  color: #fd1616;
+}
+
+.projects-work:nth-of-type(2) .projects-work-title > span {
+  color: #88d42c;
+}
+
+.projects-work:nth-of-type(3) .projects-work-title > span {
+  color: #7b6af4;
+}
+
+.projects-work:nth-of-type(4) .projects-work-title > span {
+  color: #4772fa;
+}
+
 .projects-work-subtitle {
   line-height: 1.4;
   max-width: 32rem;

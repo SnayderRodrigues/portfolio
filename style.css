@@ -212,7 +212,7 @@ a {
 
 p {
   font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
-  line-height: 1.78;
+  line-height: 1.58;
   margin: 0 0 1rem 0;
 }
 
@@ -738,10 +738,11 @@ button {
 }
 
 .about-image-wrapper {
-  width: 35%;
+  flex: 1;
 }
 
 .author-photo {
+  aspect-ratio: 1 / 1;
   max-height: 390px;
   object-fit: cover;
   object-position: bottom;
@@ -757,7 +758,7 @@ button {
 .about-description-wrapper {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  flex: 2;
   height: 100%;
 }
 
@@ -801,7 +802,6 @@ button {
 .services-dropdown-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   color: var(--black);
   background-color: var(--bg-light1);
   border-radius: 0.625rem;
@@ -809,23 +809,53 @@ button {
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     background-color 0.4s linear, color 0s linear;
   overflow: hidden;
+  position: relative;
 }
 
-.services-dropdown-item:hover {
-  background-color: var(--lightdetail2);
+.services-dropdown-item::after {
+  content: "";
+  display: block;
+  aspect-ratio: 1 / 1;
+  height: 90%;
+  background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
+  opacity: 0;
+  border-radius: 50%;
+  position: absolute;
+  right: 8%;
+  bottom: 0;
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* .services-dropdown-item:hover::after {
+  opacity: 0.2;
+} */
+
+.services-dropdown-item:first-of-type {
+  border-radius: clamp(
+      0.625rem,
+      -0.16009852216748766rem + 2.955665024630542vw,
+      2.5rem
+    )
+    clamp(0.625rem, -0.16009852216748766rem + 2.955665024630542vw, 2.5rem)
+    0.625rem 0.625rem;
 }
 
 .services-dropdown-item:last-of-type {
   margin-bottom: 0;
+  border-radius: 0.625rem 0.625rem
+    clamp(0.625rem, -0.16009852216748766rem + 2.955665024630542vw, 2.5rem)
+    clamp(0.625rem, -0.16009852216748766rem + 2.955665024630542vw, 2.5rem);
+}
+
+.services-dropdown-item:hover .services-title-h3 {
+  transform: translateX(0.5rem);
 }
 
 .services-dropdown-item.dark {
   color: var(--white);
   background-color: var(--bg-night2);
-}
-
-.services-dropdown-item.dark:hover {
-  background-color: var(--nightdetail2);
 }
 
 .services-title {
@@ -850,6 +880,7 @@ button {
   font-weight: 600;
   margin-right: 1rem;
   margin-bottom: 0;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .services-icon {
@@ -882,8 +913,13 @@ button {
 }
 
 .services-text div > p {
+  max-width: 74ch;
   padding: 0 2rem 2rem 2rem;
   margin: 0;
+}
+
+.services-title.opened > .services-title-h3 {
+  transform: translateX(0.5rem);
 }
 
 .services-title.opened + .services-text {
@@ -906,6 +942,10 @@ button {
 .services-title.opened > .services-icon.dark {
   background-color: var(--accent-color-dk);
   box-shadow: 6px 6px 0 0 var(--purple-shade-dk);
+}
+
+.services-dropdown-item:has(.services-title.opened)::after {
+  opacity: 0.2;
 }
 
 .projects-section {
@@ -1422,7 +1462,7 @@ button {
     width: 100%;
   }
   .author-photo {
-    width: 50%;
+    width: 65%;
   }
   .services-content-wrapper {
     display: flex;
@@ -1432,6 +1472,9 @@ button {
   .services-subtitle-wrapper,
   .services-dropdown-wrapper {
     width: 100%;
+  }
+  .services-dropdown-item:has(.services-title.opened)::after {
+    display: none;
   }
   .projects-work {
     flex-direction: column;
@@ -1631,10 +1674,6 @@ button {
     flex-direction: column;
     width: 100%;
   }
-  .author-photo {
-    width: 100%;
-    align-self: center;
-  }
   .container-services {
     margin-top: 80px;
   }
@@ -1703,12 +1742,21 @@ button {
     width: 90vw;
     height: 90vw;
   }
+  .author-photo {
+    width: 100%;
+  }
   .services-title {
     padding: 1.5rem;
   }
   .services-icon {
     width: 14px;
     height: 14px;
+  }
+  .services-dropdown-item:hover .services-title-h3 {
+    transform: translateX(0);
+  }
+  .services-title.opened > .services-title-h3 {
+    transform: translateX(0);
   }
   .services-title:hover > .services-icon {
     background-color: var(--purple-shade);
@@ -1803,9 +1851,5 @@ button {
       0.7142857142857143rem + 1.4285714285714286vw,
       1.5rem
     );
-  }
-  .author-photo {
-    max-height: 390px;
-    object-fit: cover;
   }
 }

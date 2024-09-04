@@ -54,46 +54,6 @@ html.lenis body {
   pointer-events: none;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.flex-direction-column {
-  flex-direction: column;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.align-items-start {
-  align-items: flex-start;
-}
-
-.align-items-baseline {
-  align-items: baseline;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.justify-content-space-between {
-  justify-content: space-between;
-}
-
-.justify-content-right {
-  justify-content: right;
-}
-
-.gap-4 {
-  gap: 4rem;
-}
-
-.gap-2 {
-  gap: 2rem;
-}
-
 body {
   position: relative;
   font-family: "Hanken Grotesk", sans-serif;
@@ -101,7 +61,7 @@ body {
   background-color: var(--bg-light1);
   margin: 0;
   transition: color 0.2s linear, background-color 0.4s linear;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -150,6 +110,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Outfit", sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.2;
@@ -157,9 +118,7 @@ h6 {
 
 .h1,
 h1 {
-  font-family: "Outfit", sans-serif;
   font-size: 4rem;
-  /* font-size: clamp(4rem, -0.01117734724292152rem + 8.345752608047691vw, 7.5rem); */
   font-size: clamp(4rem, 3.2857142857142856rem + 3.571428571428571vw, 6.5rem);
   font-weight: 600;
   line-height: 1;
@@ -176,7 +135,6 @@ h1 {
 
 .h2,
 h2 {
-  font-family: "Outfit", sans-serif;
   font-size: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
   line-height: 55px;
   font-weight: 600;
@@ -186,7 +144,6 @@ h2 {
 
 .h3,
 h3 {
-  font-family: "Outfit", sans-serif;
   font-size: clamp(
     1.5rem,
     1.2857142857142856rem + 1.0714285714285714vw,
@@ -205,11 +162,6 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: var(--black);
-}
-
 p {
   font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
   line-height: 1.58;
@@ -223,9 +175,14 @@ img {
 }
 
 button {
-  font-family: "Hanken Grotesk", sans-serif;
+  font-family: inherit;
   cursor: pointer;
   border: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
 }
 
 .button {
@@ -236,13 +193,11 @@ button {
   justify-content: center;
   position: relative;
   z-index: 2;
-  font-family: "Hanken Grotesk", sans-serif;
   font-size: clamp(
     1rem,
     1.0340909090909092rem + 0.45454545454545453vw,
     1.25rem
   );
-  font-weight: 400;
   color: var(--white);
   background-color: var(--accent-color);
   padding: 12px 16px;
@@ -295,18 +250,7 @@ button {
 }
 
 /* --------------------------------- ANIMATIONS -------------------------------- */
-.fade-in {
-  animation: fade-in 0.5s ease-in-out;
-}
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .scale-up {
   animation: scale-up 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -622,7 +566,7 @@ button {
   background-color: var(--bg-light1);
   position: relative;
   z-index: 1;
-  transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear, opacity 0.4s linear;
   overflow: hidden;
 }
 
@@ -654,7 +598,6 @@ button {
 .hero-title {
   width: 100%;
   max-width: 16ch;
-  font-family: "Outfit", sans-serif;
   margin-bottom: 3rem;
 }
 
@@ -716,7 +659,6 @@ button {
     4rem
   );
   position: relative;
-  overflow: hidden;
 }
 
 .about-section.dark {
@@ -785,14 +727,6 @@ button {
   gap: 1rem;
 }
 
-.services-dropdown-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  justify-content: space-between;
-}
-
 .services-dropdown {
   display: flex;
   flex-direction: column;
@@ -849,7 +783,7 @@ button {
     clamp(0.625rem, -0.16009852216748766rem + 2.955665024630542vw, 2.5rem);
 }
 
-.services-dropdown-item:hover .services-title-h3 {
+.services-dropdown-item:hover .services-header-title {
   transform: translateX(0.5rem);
 }
 
@@ -858,7 +792,7 @@ button {
   background-color: var(--bg-night2);
 }
 
-.services-title {
+.services-header {
   width: 100%;
   display: flex;
   align-items: center;
@@ -871,7 +805,7 @@ button {
   cursor: pointer;
 }
 
-.services-title-h3 {
+.services-header-title {
   font-size: clamp(
     1.5rem,
     1.319023569023569rem + 0.6734006734006733vw,
@@ -883,7 +817,7 @@ button {
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.services-icon {
+.services-header-icon {
   flex-shrink: 0;
   width: 16px;
   height: 16px;
@@ -895,7 +829,7 @@ button {
   box-shadow: 0px 0px 0 0 var(--purple-shade);
 }
 
-.services-icon.dark {
+.services-header-icon.dark {
   background-color: var(--purple-shade-dk);
   box-shadow: 0px 0px 0 0 var(--purple-shade-dk);
 }
@@ -918,33 +852,33 @@ button {
   margin: 0;
 }
 
-.services-title.opened > .services-title-h3 {
+.services-header.opened > .services-header-title {
   transform: translateX(0.5rem);
 }
 
-.services-title.opened + .services-text {
+.services-header.opened + .services-text {
   grid-template-rows: 1fr;
 }
 
-.services-title:hover > .services-icon {
+.services-header:hover > .services-header-icon {
   background-color: var(--accent-color);
 }
 
-.services-title.opened > .services-icon {
+.services-header.opened > .services-header-icon {
   background-color: var(--accent-color);
   box-shadow: 6px 6px 0 0 var(--purple-shade);
 }
 
-.services-title:hover > .services-icon.dark {
+.services-header:hover > .services-header-icon.dark {
   background-color: var(--accent-color-dk);
 }
 
-.services-title.opened > .services-icon.dark {
+.services-header.opened > .services-header-icon.dark {
   background-color: var(--accent-color-dk);
   box-shadow: 6px 6px 0 0 var(--purple-shade-dk);
 }
 
-.services-dropdown-item:has(.services-title.opened)::after {
+.services-dropdown-item:has(.services-header.opened)::after {
   opacity: 0.2;
 }
 
@@ -952,7 +886,6 @@ button {
   background-color: var(--white);
   transition: background-color 0.4s linear;
   position: relative;
-  overflow: hidden;
 }
 
 .projects-section.dark {
@@ -962,14 +895,12 @@ button {
 .projects-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-top: 100px;
 }
 
 .projects-work {
   display: flex;
   gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
-  position: relative;
   background-color: var(--bg-light1);
   padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
   border-radius: clamp(
@@ -1004,11 +935,14 @@ button {
 
 .projects-work-title {
   max-width: 32rem;
-  font-family: "Outfit", sans-serif;
   font-size: clamp(2rem, 1.5812807881773399rem + 1.5763546798029555vw, 3rem);
   font-weight: 600;
   line-height: 1.12;
   margin-bottom: 1rem;
+}
+
+.projects-work-title > span {
+  font-size: calc(100% + 0.25rem);
 }
 
 .projects-work:first-of-type .projects-work-title > span {
@@ -1338,6 +1272,8 @@ button {
 
 .footer-nav-div {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   font-size: clamp(
     1.125rem,
     0.3846153846153846rem + 0.9615384615384616vw,
@@ -1469,11 +1405,7 @@ button {
     flex-direction: column;
     width: 100%;
   }
-  .services-subtitle-wrapper,
-  .services-dropdown-wrapper {
-    width: 100%;
-  }
-  .services-dropdown-item:has(.services-title.opened)::after {
+  .services-dropdown-item:has(.services-header.opened)::after {
     display: none;
   }
   .projects-work {
@@ -1745,29 +1677,29 @@ button {
   .author-photo {
     width: 100%;
   }
-  .services-title {
+  .services-header {
     padding: 1.5rem;
   }
-  .services-icon {
+  .services-header-icon {
     width: 14px;
     height: 14px;
   }
-  .services-dropdown-item:hover .services-title-h3 {
+  .services-dropdown-item:hover .services-header-title {
     transform: translateX(0);
   }
-  .services-title.opened > .services-title-h3 {
+  .services-header.opened > .services-header-title {
     transform: translateX(0);
   }
-  .services-title:hover > .services-icon {
+  .services-header:hover > .services-header-icon {
     background-color: var(--purple-shade);
   }
-  .services-title:hover > .services-icon.dark {
+  .services-header:hover > .services-header-icon.dark {
     background-color: var(--purple-shade-dk);
   }
-  .services-title.opened > .services-icon {
+  .services-header.opened > .services-header-icon {
     background-color: var(--accent-color);
   }
-  .services-title.opened > .services-icon.dark {
+  .services-header.opened > .services-header-icon.dark {
     background-color: var(--accent-color-dk);
   }
   .services-text div > p {
@@ -1787,7 +1719,7 @@ button {
   .container {
     width: min(100% - 8px);
   }
-  .services-title {
+  .services-header {
     padding: 1.25rem;
   }
   .services-text div > p {

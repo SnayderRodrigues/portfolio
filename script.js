@@ -60,7 +60,7 @@ class DarkModeToggle {
       "navbar-button",
       "author-photo",
       "services-dropdown-item",
-      "services-icon",
+      "services-header-icon",
       "projects-work",
       "projects-work-subtitle",
       "projects-work-subtitle-link",
@@ -197,7 +197,7 @@ window.addEventListener("scroll", function () {
 
 // SERVICES DROPDOWN ---------------------------------------------------//
 
-const services = document.querySelectorAll(".services-title");
+const services = document.querySelectorAll(".services-header");
 
 services.forEach((sv) => {
   sv.addEventListener("click", () => {

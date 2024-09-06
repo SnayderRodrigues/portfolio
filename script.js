@@ -62,6 +62,7 @@ class DarkModeToggle {
       "services-dropdown-item",
       "services-header-icon",
       "projects-work",
+      "projects-work-title",
       "projects-work-subtitle",
       "projects-work-subtitle-link",
       "disable",

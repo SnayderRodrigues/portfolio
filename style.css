@@ -63,7 +63,7 @@ body {
   color: var(--black);
   background-color: var(--primary);
   margin: 0;
-  transition: color 0.2s linear, background-color 0.4s linear;
+  transition: color 0.2s linear, background-color 0.2s linear;
   /* overflow-x: hidden; */
   -webkit-font-smoothing: antialiased;
 }
@@ -309,7 +309,7 @@ a {
   z-index: 999;
   background-color: var(--primary);
   padding: 12px 0;
-  transition: background-color 0.4s linear, transform 0.4s ease;
+  transition: background-color 0.2s linear, transform 0.4s ease;
 }
 
 .header.dark {
@@ -433,7 +433,7 @@ a {
   background-color: var(--primary-variant);
   border-radius: 999px;
   position: relative;
-  transition: all 0.3s linear;
+  transition: all 0.3s linear, background-color 0.2s linear;
   cursor: pointer;
 }
 
@@ -469,7 +469,7 @@ a {
   height: 20px;
   width: 20px;
   transform: translateX(0px);
-  transition: transform 0.3s linear;
+  transition: transform 0.3s ease-out;
 }
 
 .dark-mode-toggle:checked ~ .dark-mode-toggle-ball {
@@ -491,7 +491,7 @@ a {
   pointer-events: none;
   user-select: none;
   opacity: 0;
-  transition: color 0.2s linear, background-color 0.4s linear,
+  transition: color 0.2s linear, background-color 0.2s linear,
     opacity 0.2s linear;
 }
 
@@ -569,7 +569,7 @@ a {
   background-color: var(--primary);
   position: relative;
   z-index: 1;
-  transition: background-color 0.4s linear, opacity 0.4s linear;
+  transition: background-color 0.2s linear;
   overflow: hidden;
 }
 
@@ -650,7 +650,7 @@ a {
 
 .about-section {
   background-color: var(--background);
-  transition: background-color 0.4s linear;
+  transition: background-color 0.2s linear;
   border-top-left-radius: clamp(
     2rem,
     1.1485148514851486rem + 3.1683168316831685vw,
@@ -744,7 +744,7 @@ a {
   border-radius: 0.625rem;
   margin-bottom: 0.5rem;
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    background-color 0.4s linear, color 0s linear;
+    background-color 0.2s linear, color 0s linear;
   overflow: hidden;
   position: relative;
 }
@@ -822,14 +822,14 @@ a {
 
 .services-header-icon {
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   background-color: var(--accent-variant);
   border-radius: 0.25rem;
   border-radius: 50%;
   margin-right: 4px;
   transform: rotate(90deg);
-  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s linear;
   box-shadow: 0px 0px 0 0 var(--accent-variant);
 }
 
@@ -888,7 +888,7 @@ a {
 
 .projects-section {
   background-color: var(--background);
-  transition: background-color 0.4s linear;
+  transition: background-color 0.2s linear;
   position: relative;
 }
 
@@ -913,7 +913,7 @@ a {
     2.5rem
   );
   margin-bottom: 3rem;
-  transition: background-color 0.4s linear;
+  transition: background-color 0.2s linear;
 }
 
 .projects-work.dark {
@@ -1037,7 +1037,7 @@ a {
 
 .contact-section {
   background-color: var(--background);
-  transition: background-color 0.4s linear;
+  transition: background-color 0.2s linear;
   border-bottom-left-radius: clamp(
     2rem,
     1.1485148514851486rem + 3.1683168316831685vw,
@@ -1065,7 +1065,8 @@ a {
 
 .contact-socials {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   margin-bottom: clamp(2rem, 1.4285714285714286rem + 2.857142857142857vw, 4rem);
 }
 
@@ -1074,11 +1075,12 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
+  font-weight: 600;
   background-color: var(--primary);
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 0.375rem;
   position: relative;
-  transition: background-color 0.4s linear;
+  transition: background-color 0.2s linear;
 }
 
 .contact-socials-button:hover {
@@ -1121,7 +1123,7 @@ a {
   opacity: 0;
   pointer-events: none;
   user-select: none;
-  transition: color 0.2s linear, background-color 0.4s linear,
+  transition: color 0.2s linear, background-color 0.2s linear,
     opacity 0.2s linear;
 }
 
@@ -1139,11 +1141,11 @@ a {
 }
 
 .contact-socials-button:nth-of-type(2)::after {
-  content: "GitHub";
+  content: "LinkedIn";
 }
 
 .contact-socials-button:nth-of-type(3)::after {
-  content: "LinkedIn";
+  content: "GitHub";
 }
 
 .contact-socials-button:nth-of-type(4)::after {
@@ -1218,7 +1220,7 @@ a {
   -moz-appearance: none;
   appearance: none;
   resize: none;
-  transition: all 0.4s linear, color 0.2s linear;
+  transition: all 0.2s linear, color 0.2s linear;
 }
 
 .form-control.dark {
@@ -1267,7 +1269,7 @@ a {
   position: relative;
   z-index: 998;
   overflow: hidden;
-  transition: background-color 0.4s linear;
+  transition: background-color 0.2s linear;
 }
 
 .footer.dark {

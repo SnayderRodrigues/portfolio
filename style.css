@@ -608,7 +608,7 @@ a {
 }
 
 .hero-container {
-  height: 100svh;
+  min-height: 100svh;
   display: flex;
 }
 
@@ -618,6 +618,7 @@ a {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  padding: 6rem 0;
 }
 
 .hero-text {

@@ -65,6 +65,7 @@ class DarkModeToggle {
       "projects-work-title",
       "projects-work-subtitle",
       "projects-work-subtitle-link",
+      "project-work-image-wrapper",
       "disable",
       "contact-socials-button",
       "form-control",

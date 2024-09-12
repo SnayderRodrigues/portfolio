@@ -1510,7 +1510,15 @@ a {
 
 /*  -------------------------------- RESPONSIVE -------------------------------- */
 
+@media (max-width: 1440px) {
+  .container {
+    width: min(100% - 64px);
+  }
+}
 @media (max-width: 1024px) {
+  .container {
+    width: min(100% - 48px);
+  }
   .about-container,
   .projects-container {
     padding-top: 6rem;

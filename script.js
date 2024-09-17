@@ -67,11 +67,11 @@ class DarkModeToggle {
       "projects-work-subtitle-link",
       "project-work-image-wrapper",
       "disable",
+      "contact-socials-email",
       "contact-socials-button",
       "form-control",
       "author-name-footer",
       "footer-nav-link",
-      "footer-scroll-top",
       "footer-tools-link",
       "footer-scroll-top",
     ];
@@ -114,48 +114,48 @@ new DarkModeToggle("dark-mode-toggle");
 
 // HIDDEN NAVBAR ---------------------------------------------------//
 
-function show(anything) {
-  document.querySelector(".navbar-button").value = anything;
+function setupNavbar() {
+  let navbarButton = document.querySelector(".navbuttons");
+  let navbarList = document.querySelector(".header-ul");
+  let navbarListItems = document.querySelectorAll(".header-li");
+  let navbarShadow = document.querySelector(".ul-shadow");
+  let html = document.querySelector("html");
+
+  navbarButton.onclick = function () {
+    navbarButton.classList.toggle("open-nav");
+    navbarList.classList.toggle("open-nav");
+    navbarShadow.classList.toggle("open-nav");
+    html.classList.toggle("open-nav");
+
+    navbarList.removeAttribute("style");
+    navbarShadow.removeAttribute("style");
+  };
+
+  navbarListItems.forEach((link) => {
+    link.addEventListener("click", function () {
+      navbarButton.classList.remove("open-nav");
+      navbarList.classList.remove("open-nav");
+      navbarShadow.classList.remove("open-nav");
+      html.classList.remove("open-nav");
+    });
+  });
+
+  navbarShadow.onclick = function () {
+    navbarButton.classList.remove("open-nav");
+    navbarList.classList.remove("open-nav");
+    navbarShadow.classList.remove("open-nav");
+    html.classList.remove("open-nav");
+  };
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 768) {
+      navbarList.style.transition = "none";
+      navbarShadow.style.transition = "none";
+    }
+  });
 }
 
-let nv = document.querySelector(".navbuttons");
-let nvh = document.querySelector(".header-ul");
-let links = document.querySelectorAll(".header-li");
-let uls = document.querySelector(".ul-shadow");
-let html = document.querySelector("html");
-
-nv.onclick = function () {
-  nv.classList.toggle("open-nav");
-  nvh.classList.toggle("open-nav");
-  uls.classList.toggle("open-nav");
-  html.classList.toggle("open-nav");
-
-  nvh.removeAttribute("style");
-  uls.removeAttribute("style");
-};
-
-links.forEach((link) => {
-  link.addEventListener("click", function () {
-    nv.classList.remove("open-nav");
-    nvh.classList.remove("open-nav");
-    uls.classList.remove("open-nav");
-    html.classList.remove("open-nav");
-  });
-});
-
-uls.onclick = function () {
-  nv.classList.remove("open-nav");
-  nvh.classList.remove("open-nav");
-  uls.classList.remove("open-nav");
-  html.classList.remove("open-nav");
-};
-
-window.addEventListener("resize", function () {
-  if (window.innerWidth < 768) {
-    nvh.style.transition = "none";
-    uls.style.transition = "none";
-  }
-});
+setupNavbar();
 
 // HEADER ITEM ACTIVE ---------------------------------------------------//
 

@@ -152,8 +152,9 @@ h3 {
     1.2857142857142856rem + 1.0714285714285714vw,
     2.25rem
   );
-  margin-bottom: 1rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -333,6 +334,7 @@ a {
   display: flex;
   align-items: center;
   position: relative;
+  outline: 0;
 }
 
 .logo-img {
@@ -340,9 +342,12 @@ a {
   scale: 0;
   transition: scale 0.3s ease-in-out;
   animation: rotating 4s infinite linear;
+  animation-play-state: paused;
 }
 
 .logo:hover > .logo-img {
+  animation: rotating 4s infinite linear;
+  animation-play-state: running;
   scale: 1;
 }
 
@@ -1121,6 +1126,25 @@ a {
   margin-bottom: clamp(2rem, 1.4285714285714286rem + 2.857142857142857vw, 4rem);
 }
 
+.contact-socials-email {
+  font-size: clamp(
+    1.125rem,
+    0.9679802955665024rem + 0.5911330049261083vw,
+    1.5rem
+  );
+  color: inherit;
+  margin-bottom: 1rem;
+  transition: color 0.2s linear;
+}
+
+.contact-socials-email:hover {
+  color: var(--accent);
+}
+
+.contact-socials-email.dark:hover {
+  color: var(--accent-dark);
+}
+
 .contact-socials-button {
   display: flex;
   align-items: center;
@@ -1178,22 +1202,18 @@ a {
 }
 
 .contact-socials-button:first-of-type::after {
-  content: "E-mail";
-}
-
-.contact-socials-button:nth-of-type(2)::after {
   content: "LinkedIn";
 }
 
-.contact-socials-button:nth-of-type(3)::after {
+.contact-socials-button:nth-of-type(2)::after {
   content: "GitHub";
 }
 
-.contact-socials-button:nth-of-type(4)::after {
+.contact-socials-button:nth-of-type(3)::after {
   content: "Instagram";
 }
 
-.contact-socials-button:nth-of-type(5)::after {
+.contact-socials-button:nth-of-type(4)::after {
   content: "WhatsApp";
 }
 

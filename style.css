@@ -317,9 +317,9 @@ a {
   background-color: var(--primary-dark);
 }
 
-.header.opaque {
+/* .header.opaque {
   transform: translateY(-100%);
-}
+} */
 
 .navbar {
   display: flex;
@@ -758,13 +758,13 @@ a {
   content: "";
   display: block;
   aspect-ratio: 1 / 1;
-  height: 90%;
+  width: 20%;
   background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
   opacity: 0;
   border-radius: 50%;
   position: absolute;
   right: 8%;
-  bottom: 0;
+  top: 5%;
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   pointer-events: none;
@@ -1127,6 +1127,7 @@ a {
 }
 
 .contact-socials-email {
+  width: fit-content;
   font-size: clamp(
     1.125rem,
     0.9679802955665024rem + 0.5911330049261083vw,

@@ -58,6 +58,8 @@ class DarkModeToggle {
       "dark-mode-toggle-container",
       "dark-mode-tooltip",
       "navbar-button",
+      "hero-avatar",
+      "hero-cards",
       "author-photo",
       "services-dropdown-item",
       "services-header-icon",

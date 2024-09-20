@@ -967,19 +967,17 @@ a {
 .projects-work {
   display: flex;
   gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
-  background-color: var(--primary);
+  background-color: var(--background);
   padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
-  border-radius: clamp(
-    0.625rem,
-    0.19458128078817738rem + 2.5615763546798025vw,
-    2.5rem
-  );
+  border: 2px solid var(--primary);
+  border-radius: 0.625rem;
   margin-bottom: 3rem;
-  transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear, border 0.2s linear;
 }
 
 .projects-work.dark {
-  background-color: var(--primary-dark);
+  background-color: var(--background-dark);
+  border: 2px solid var(--primary-dark);
 }
 
 .projects-work:last-of-type {
@@ -1078,7 +1076,7 @@ a {
   position: relative;
   background-color: var(--primary-variant);
   padding: 1.5rem 0.375rem 0.375rem 0.375rem;
-  border-radius: 1rem;
+  border-radius: 0.625rem;
   transition: background-color 0.2s linear;
   overflow: hidden;
 }
@@ -1125,7 +1123,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0.625rem;
+  border-radius: 0.375rem;
 }
 
 .project-button-wrapper {
@@ -1898,7 +1896,6 @@ a {
   .projects-work {
     gap: 1.5rem;
     padding: 1.25rem;
-    margin-bottom: 4rem;
   }
   .footer-nav-link {
     font-size: 1.125rem;

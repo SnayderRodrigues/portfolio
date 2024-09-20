@@ -61,7 +61,7 @@ class DarkModeToggle {
       "hero-avatar",
       "hero-cards",
       "author-photo",
-      "services-dropdown-item",
+      "services-card",
       "services-header-icon",
       "projects-work",
       "projects-work-title",
@@ -197,22 +197,6 @@ window.addEventListener("scroll", function () {
   }
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
-
-// SERVICES DROPDOWN ---------------------------------------------------//
-
-const services = document.querySelectorAll(".services-header");
-
-services.forEach((sv) => {
-  sv.addEventListener("click", () => {
-    services.forEach((item) => {
-      if (item !== sv) {
-        item.classList.remove("opened");
-      }
-    });
-
-    sv.classList.toggle("opened");
-  });
 });
 
 // FORM VALIDATION -------------------------------------------------//

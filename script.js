@@ -71,7 +71,7 @@ class DarkModeToggle {
       "disable",
       "contact-socials-email",
       "contact-socials-button",
-      "form-control",
+      "form-input",
       "author-name-footer",
       "footer-nav-link",
       "footer-tools-link",

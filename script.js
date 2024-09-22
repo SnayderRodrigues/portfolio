@@ -184,20 +184,20 @@ window.onscroll = () => {
 
 // OPAQUE HEADER ---------------------------------------------------//
 
-let lastScrollTop = 0;
+// let lastScrollTop = 0;
 
-window.addEventListener("scroll", function () {
-  const header = document.querySelector(".header");
-  const currentScroll = window.scrollY;
+// window.addEventListener("scroll", function () {
+//   const header = document.querySelector(".header");
+//   const currentScroll = window.scrollY;
 
-  if (currentScroll > lastScrollTop) {
-    header.classList.add("opaque");
-  } else {
-    header.classList.remove("opaque");
-  }
+//   if (currentScroll > lastScrollTop) {
+//     header.classList.add("opaque");
+//   } else {
+//     header.classList.remove("opaque");
+//   }
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+// });
 
 // SERVICES CARDS HEIGHT ----------------------------------------------//
 

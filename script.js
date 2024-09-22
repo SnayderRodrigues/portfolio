@@ -199,30 +199,6 @@ window.onscroll = () => {
 //   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 // });
 
-// SERVICES CARDS HEIGHT ----------------------------------------------//
-
-const cards = document.querySelectorAll(".services-card");
-
-function setEqualHeights() {
-  let maxHeight = 0;
-
-  cards.forEach((card) => {
-    card.style.height = "auto";
-  });
-
-  cards.forEach((card) => {
-    maxHeight = Math.max(maxHeight, card.offsetHeight);
-  });
-
-  cards.forEach((card) => {
-    card.style.height = maxHeight + "px";
-  });
-}
-
-setEqualHeights();
-
-window.addEventListener("resize", setEqualHeights);
-
 // FORM VALIDATION -------------------------------------------------//
 
 function validateForm() {

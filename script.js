@@ -120,7 +120,7 @@ function setupNavbar() {
   let navbarButton = document.querySelector(".navbuttons");
   let navbarList = document.querySelector(".header-ul");
   let navbarListItems = document.querySelectorAll(".header-li");
-  let navbarShadow = document.querySelector(".ul-shadow");
+  let navbarShadow = document.querySelector(".header-ul-shadow");
   let html = document.querySelector("html");
 
   navbarButton.onclick = function () {

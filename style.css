@@ -19,7 +19,7 @@
   --gray: #595959;
   --black: #000000;
 
-  --light-blue: #a5e2f5;
+  --light-blue: #a5d5f5;
   --light-green: #a2e7c4;
   --blue: #1d3997;
   --magenta: #7a1075;
@@ -170,6 +170,7 @@ h2 {
 
 .h3,
 h3 {
+  font-family: "Hanken Grotesk", sans-serif;
   font-size: clamp(
     1.5rem,
     1.2857142857142856rem + 1.0714285714285714vw,
@@ -622,10 +623,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  border: 4px solid var(--background);
-  outline: 2px solid var(--primary-variant);
+  width: 4rem;
+  height: 4rem;
+  border: 0.25rem solid var(--background);
+  outline: 0.125rem solid var(--primary-variant);
   border-radius: 50%;
   margin-bottom: 1rem;
   position: relative;
@@ -635,8 +636,8 @@ a {
 }
 
 .hero-avatar.dark {
-  border: 4px solid var(--background-dark);
-  outline: 2px solid var(--primary-variant-dark);
+  border: 0.25rem solid var(--background-dark);
+  outline: 0.125rem solid var(--primary-variant-dark);
 }
 
 .hero-avatar:hover::after {
@@ -1192,6 +1193,9 @@ a {
 }
 
 .contact-socials-email {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   width: fit-content;
   font-size: clamp(
     1.125rem,
@@ -1213,6 +1217,32 @@ a {
 
 .contact-socials-email.dark:hover {
   color: var(--accent-dark);
+}
+
+.contact-socials-email > svg {
+  width: clamp(
+    1.125rem,
+    0.9679802955665024rem + 0.5911330049261083vw,
+    1.5rem
+  );
+  margin-top: 0.25rem;
+}
+
+.contact-socials-email > svg > path {
+  fill: var(--black);
+  transition: fill 0.2s linear;
+}
+
+.contact-socials-email:hover > svg > path {
+  fill: var(--accent);
+}
+
+.contact-socials-email.dark > svg > path {
+  fill: var(--white);
+}
+
+.contact-socials-email.dark:hover > svg > path {
+  fill: var(--accent-dark);
 }
 
 .contact-socials-button {

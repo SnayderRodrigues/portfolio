@@ -110,26 +110,19 @@ body::before {
   overflow: hidden;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Outfit", sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.2;
 }
 
-.h1,
 h1 {
+  font-family: "Outfit", sans-serif;
   font-size: 4rem;
   font-size: clamp(4rem, 3.2857142857142856rem + 3.571428571428571vw, 6.5rem);
   font-weight: 600;
@@ -138,7 +131,6 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .h1,
   h1 {
     font-size: 3rem;
     font-size: clamp(3rem, 2.2857142857142856rem + 3.571428571428571vw, 4rem);
@@ -146,15 +138,14 @@ h1 {
 }
 
 @media (max-width: 500px) {
-  .h1,
   h1 {
     font-size: 2.75rem;
     letter-spacing: -2px;
   }
 }
 
-.h2,
 h2 {
+  font-family: "Outfit", sans-serif;
   font-size: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
   line-height: 55px;
   font-weight: 600;
@@ -168,9 +159,7 @@ h2 {
   }
 }
 
-.h3,
 h3 {
-  font-family: "Hanken Grotesk", sans-serif;
   font-size: clamp(
     1.5rem,
     1.2857142857142856rem + 1.0714285714285714vw,
@@ -179,6 +168,11 @@ h3 {
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
 }
 
 ul {
@@ -208,9 +202,9 @@ button {
   border: none;
 }
 
-a {
-  text-decoration: none;
-  color: var(--black);
+input,
+textarea {
+  font: inherit;
 }
 
 .button {
@@ -649,7 +643,7 @@ a {
   display: block;
   width: max-content;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   background-color: var(--background);
   padding: 0.5rem 0.75rem;
   border-radius: 999px;
@@ -707,17 +701,18 @@ a {
 }
 
 .hero-text {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   cursor: default;
-  width: 100%;
   position: relative;
   z-index: 2;
 }
 
 .hero-title {
   width: 100%;
+  font-family: "Outfit", sans-serif;
   max-width: 16ch;
   margin-bottom: 2rem;
 }
@@ -1053,6 +1048,7 @@ a {
   color: var(--gray);
   margin-bottom: 2rem;
   text-wrap: balance;
+  text-wrap: pretty;
 }
 
 .projects-work-subtitle.dark {
@@ -1197,9 +1193,10 @@ a {
   align-items: center;
   gap: 0.25rem;
   width: fit-content;
+  font-size: 1.25rem;
   font-size: clamp(
-    1.125rem,
-    0.9679802955665024rem + 0.5911330049261083vw,
+    1.25rem,
+    1.1435643564356435rem + 0.39603960396039606vw,
     1.5rem
   );
   color: var(--black);
@@ -1220,12 +1217,13 @@ a {
 }
 
 .contact-socials-email > svg {
-  width: clamp(
-    1.125rem,
-    0.9679802955665024rem + 0.5911330049261083vw,
-    1.5rem
+  width: clamp(1.25rem, 1.1435643564356435rem + 0.39603960396039606vw, 1.5rem);
+  height: clamp(1.25rem, 1.1435643564356435rem + 0.39603960396039606vw, 1.5rem);
+  margin-top: clamp(
+    0.25rem,
+    0.1967821782178218rem + 0.19801980198019803vw,
+    0.375rem
   );
-  margin-top: 0.25rem;
 }
 
 .contact-socials-email > svg > path {
@@ -1373,7 +1371,6 @@ a {
 .form-input {
   display: block;
   width: 100%;
-  font-family: "Hanken Grotesk", sans-serif;
   font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
   font-weight: 400;
   line-height: 1.5;
@@ -1473,6 +1470,7 @@ a {
 .footer-logo-wrapper {
   display: flex;
   flex-direction: column;
+  font-family: "Outfit", sans-serif;
 }
 
 .author-name-footer {
@@ -1481,6 +1479,7 @@ a {
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: -1px;
+  line-height: 1;
   transition: color 0.2s linear;
 }
 
@@ -1489,7 +1488,6 @@ a {
 }
 
 .copyright {
-  font-family: "Outfit", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-top: 0.5rem;
@@ -1955,7 +1953,6 @@ a {
   }
 }
 @media (max-height: 630px) {
-  .h2,
   h2 {
     font-size: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 4rem);
   }

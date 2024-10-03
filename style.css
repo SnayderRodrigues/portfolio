@@ -23,6 +23,13 @@
   --light-green: #a2e7c4;
   --blue: #1d3997;
   --magenta: #7a1075;
+
+  --rounded-xsm: 0.25rem;
+  --rounded-sm: 0.375rem;
+  --rounded-md: 0.625rem;
+  --rounded-lg: clamp(1.5rem, 0.4356435643564356rem + 3.9603960396039604vw, 4rem);
+  --rounded-50: 50%;
+  --rounded-full: 999px;
 }
 
 *,
@@ -209,7 +216,7 @@ textarea {
 
 .button {
   width: fit-content;
-  min-width: 100.34px;
+  min-width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,16 +229,14 @@ textarea {
   );
   color: var(--white);
   background-color: var(--accent);
-  padding: 12px 12px;
-  border-radius: 0.625rem;
+  padding: 12px;
+  border-radius: var(--rounded-md);
   overflow: hidden;
-  transition: color 0.2s linear, background-color 0.2s linear,
-    box-shadow 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear;
 }
 
 .button:hover {
   background-color: var(--accent-variant);
-  box-shadow: 0 4px 0 var(--accent);
 }
 
 .button.dark {
@@ -240,7 +245,6 @@ textarea {
 
 .button.dark:hover {
   background-color: var(--accent-variant-dark);
-  box-shadow: 0 4px 0 var(--accent-dark);
 }
 
 .button::before {
@@ -253,7 +257,7 @@ textarea {
   width: 20px;
   height: 20px;
   background-color: var(--accent-variant);
-  border-radius: 50%;
+  border-radius: var(--rounded-50);
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -415,7 +419,7 @@ textarea {
   color: var(--black);
   font-weight: 700;
   padding: 4px 8px;
-  border-radius: 0.375rem;
+  border-radius: var(--rounded-xsm);
   transition: color 0.2s linear;
 }
 
@@ -456,7 +460,7 @@ textarea {
   height: 26px;
   width: 50px;
   background-color: var(--primary-variant);
-  border-radius: 999px;
+  border-radius: var(--rounded-full);
   position: relative;
   transition: all 0.3s linear, background-color 0.2s linear;
   cursor: pointer;
@@ -488,7 +492,7 @@ textarea {
 
 .dark-mode-toggle-ball {
   background-color: var(--white);
-  border-radius: 999px;
+  border-radius: var(--rounded-full);
   position: absolute;
   left: 3px;
   height: 20px;
@@ -510,7 +514,7 @@ textarea {
   font-size: 1rem;
   background-color: var(--primary-variant);
   padding: 4px 8px;
-  border-radius: 0.375rem;
+  border-radius: var(--rounded-xsm);
   margin-top: 5px;
   transform: translateX(-50%);
   pointer-events: none;
@@ -592,6 +596,19 @@ textarea {
 
 .hero-section {
   background-color: var(--primary);
+  /* --brand-gradient-1--color-1: #29183c;
+    --brand-gradient-1--color-2: #2a285a;
+    --brand-gradient-1--color-3: #2f4cb4;
+    --brand-gradient-1--color-4: #687abf;
+    --brand-gradient-1--color-5: #f6d0db;
+  background-image: linear-gradient(
+    50deg,
+    var(--brand-gradient-1--color-1),
+    var(--brand-gradient-1--color-2) 11%,
+    var(--brand-gradient-1--color-3) 44%,
+    var(--brand-gradient-1--color-4) 63%,
+    var(--brand-gradient-1--color-5)
+  ); */
   position: relative;
   z-index: 1;
   transition: background-color 0.2s linear;
@@ -621,7 +638,7 @@ textarea {
   height: 4rem;
   border: 0.25rem solid var(--background);
   outline: 0.125rem solid var(--primary-variant);
-  border-radius: 50%;
+  border-radius: var(--rounded-50);
   margin-bottom: 1rem;
   position: relative;
   z-index: 2;
@@ -646,7 +663,7 @@ textarea {
   font-weight: 600;
   background-color: var(--background);
   padding: 0.5rem 0.75rem;
-  border-radius: 999px;
+  border-radius: var(--rounded-full);
   position: absolute;
   top: 50%;
   left: 100%;
@@ -664,7 +681,7 @@ textarea {
 .hero-avatar-image {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: var(--rounded-50);
 }
 
 .hero-tags {
@@ -680,7 +697,7 @@ textarea {
   font-weight: 600;
   background-color: var(--primary-variant);
   padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
+  border-radius: var(--rounded-sm);
   transition: background-color 0.2s linear;
 }
 
@@ -733,7 +750,11 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+.hero-button {
+  padding: 14px 24px;
 }
 
 .hero-design-element {
@@ -742,7 +763,7 @@ textarea {
   height: 33vw;
   min-width: 400px;
   min-height: 400px;
-  border-radius: 50%;
+  border-radius: var(--rounded-50);
   background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
   position: absolute;
   top: 50%;
@@ -756,16 +777,8 @@ textarea {
 .about-section {
   background-color: var(--background);
   transition: background-color 0.2s linear;
-  border-top-left-radius: clamp(
-    2rem,
-    1.1485148514851486rem + 3.1683168316831685vw,
-    4rem
-  );
-  border-top-right-radius: clamp(
-    2rem,
-    1.1485148514851486rem + 3.1683168316831685vw,
-    4rem
-  );
+  border-top-left-radius: var(--rounded-lg);
+  border-top-right-radius: var(--rounded-lg);
   position: relative;
 }
 
@@ -797,7 +810,7 @@ textarea {
   object-fit: cover;
   object-position: bottom;
   width: 100%;
-  border-radius: 0.625rem;
+  border-radius: var(--rounded-md);
   transition: filter 0.3s linear;
 }
 
@@ -847,7 +860,7 @@ textarea {
   flex-direction: column;
   background-color: var(--background);
   border: 2px solid var(--primary);
-  border-radius: 0.625rem;
+  border-radius: var(--rounded-md);
   transition: background-color 0.2s linear, border 0.2s linear;
   position: sticky;
   top: 6rem;
@@ -876,7 +889,7 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
-  border-radius: 0.375rem;
+  border-radius: var(--rounded-sm);
   transition: background-color 0.2s linear;
 }
 
@@ -959,7 +972,7 @@ textarea {
   background-color: var(--background);
   padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
   border: 2px solid var(--primary);
-  border-radius: 0.625rem;
+  border-radius: var(--rounded-md);
   margin-bottom: 3rem;
   transition: background-color 0.2s linear, border 0.2s linear;
 }
@@ -1016,7 +1029,7 @@ textarea {
   font-weight: 600;
   background-color: var(--primary-variant);
   padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
+  border-radius: var(--rounded-sm);
   transition: background-color 0.2s linear;
 }
 
@@ -1079,7 +1092,7 @@ textarea {
   position: relative;
   background-color: var(--primary-variant);
   padding: 1.5rem 0.375rem 0.375rem 0.375rem;
-  border-radius: 0.625rem;
+  border-radius: var(--rounded-md);
   transition: background-color 0.2s linear;
   overflow: hidden;
 }
@@ -1094,7 +1107,7 @@ textarea {
   width: 0.5rem;
   aspect-ratio: 1 / 1;
   background-color: var(--primary);
-  border-radius: 50%;
+  border-radius: var(--rounded-50);
   position: absolute;
   top: 0.5rem;
   right: 1.5rem;
@@ -1107,7 +1120,7 @@ textarea {
   width: 0.5rem;
   aspect-ratio: 1 / 1;
   background-color: var(--accent-variant);
-  border-radius: 50%;
+  border-radius: var(--rounded-50);
   position: absolute;
   top: 0.5rem;
   right: 0.75rem;
@@ -1126,7 +1139,7 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0.375rem;
+  border-radius: var(--rounded-sm);
 }
 
 .project-button-wrapper {
@@ -1153,16 +1166,8 @@ textarea {
 .contact-section {
   background-color: var(--background);
   transition: background-color 0.2s linear;
-  border-bottom-left-radius: clamp(
-    2rem,
-    1.1485148514851486rem + 3.1683168316831685vw,
-    4rem
-  );
-  border-bottom-right-radius: clamp(
-    2rem,
-    1.1485148514851486rem + 3.1683168316831685vw,
-    4rem
-  );
+  border-bottom-left-radius: var(--rounded-lg);
+  border-bottom-right-radius: var(--rounded-lg);
   position: relative;
 }
 
@@ -1251,7 +1256,7 @@ textarea {
   background-color: var(--background);
   padding: 0.625rem;
   border: 2px solid var(--primary);
-  border-radius: 0.375rem;
+  border-radius: var(--rounded-sm);
   position: relative;
   transition: background-color 0.2s linear, border 0.2s linear;
 }
@@ -1287,7 +1292,7 @@ textarea {
   font-size: 1rem;
   background-color: var(--primary);
   padding: 0.25rem 0.5rem;
-  border-radius: 0.375rem;
+  border-radius: var(--rounded-xsm);
   margin-top: 0.5rem;
   position: absolute;
   top: 100%;
@@ -1379,7 +1384,7 @@ textarea {
   padding: 12px 16px;
   border: 2px solid var(--primary);
   margin-top: -2px;
-  border-radius: 0.625rem;
+  border-radius: var(--rounded-md);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1432,7 +1437,7 @@ textarea {
   max-width: 500px;
   height: 40vw;
   max-height: 500px;
-  border-radius: 50%;
+  border-radius: var(--rounded-50);
   background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
   position: absolute;
   top: 55%;
@@ -1539,7 +1544,7 @@ textarea {
   max-width: 400px;
   height: 40vw;
   max-height: 400px;
-  border-radius: 50%;
+  border-radius: var(--rounded-50);
   background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
   position: absolute;
   top: 75%;
@@ -1676,10 +1681,6 @@ textarea {
   }
 }
 @media (max-width: 768px) {
-  .button {
-    min-width: 100.34px;
-    padding: 12px 12px;
-  }
   .button:hover,
   .button:focus-visible {
     background-color: var(--accent);
@@ -1721,7 +1722,7 @@ textarea {
     top: 0px;
     right: 4px;
     padding: 2rem 0 2rem 2rem;
-    border-radius: 0.625rem;
+    border-radius: var(--rounded-md);
     opacity: 0;
     scale: 0.5;
     transition: opacity 0.3s linear, scale 0.3s linear,
@@ -1798,7 +1799,7 @@ textarea {
     max-width: 400px;
     height: 40vw;
     max-height: 400px;
-    border-radius: 50%;
+    border-radius: var(--rounded-50);
     background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
     position: absolute;
     top: 65%;
@@ -1810,9 +1811,6 @@ textarea {
   .hero-container {
     justify-content: flex-end;
     padding-bottom: 2.5rem;
-  }
-  .hero-button-div {
-    gap: 1rem;
   }
   .hero-design-element {
     top: 60%;
@@ -1851,7 +1849,6 @@ textarea {
   .project-work-image-wrapper {
     background-color: transparent;
     padding: 0;
-    border-radius: 0.625rem;
     transition: background-color 0.2s linear;
     overflow: hidden;
   }

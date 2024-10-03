@@ -151,6 +151,13 @@ h1 {
   }
 }
 
+@media (max-width: 430px) {
+  h1 {
+    font-size: 2.625rem;
+    letter-spacing: -2px;
+  }
+}
+
 h2 {
   font-family: "Outfit", sans-serif;
   font-size: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
@@ -596,19 +603,6 @@ textarea {
 
 .hero-section {
   background-color: var(--primary);
-  /* --brand-gradient-1--color-1: #29183c;
-    --brand-gradient-1--color-2: #2a285a;
-    --brand-gradient-1--color-3: #2f4cb4;
-    --brand-gradient-1--color-4: #687abf;
-    --brand-gradient-1--color-5: #f6d0db;
-  background-image: linear-gradient(
-    50deg,
-    var(--brand-gradient-1--color-1),
-    var(--brand-gradient-1--color-2) 11%,
-    var(--brand-gradient-1--color-3) 44%,
-    var(--brand-gradient-1--color-4) 63%,
-    var(--brand-gradient-1--color-5)
-  ); */
   position: relative;
   z-index: 1;
   transition: background-color 0.2s linear;
@@ -637,45 +631,50 @@ textarea {
   width: 4rem;
   height: 4rem;
   border: 0.25rem solid var(--background);
-  outline: 0.125rem solid var(--primary-variant);
   border-radius: var(--rounded-50);
   margin-bottom: 1rem;
   position: relative;
   z-index: 2;
-  cursor: pointer;
-  transition: all 0.2s linear;
+  transition: border 0.2s linear, outline 0.2s linear;
 }
 
 .hero-avatar.dark {
   border: 0.25rem solid var(--background-dark);
-  outline: 0.125rem solid var(--primary-variant-dark);
-}
-
-.hero-avatar:hover::after {
-  opacity: 1;
 }
 
 .hero-avatar::after {
-  content: "You do know this is just a simulation, don’t you?";
+  /* content: "You do know this is just a simulation, don’t you?"; */
+  content: "Disponível para Freelance";
   display: block;
   width: max-content;
   font-size: 0.75rem;
   font-weight: 600;
   background-color: var(--background);
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 1.75rem;
   border-radius: var(--rounded-full);
   position: absolute;
   top: 50%;
   left: 100%;
   transform: translate(1rem, -50%);
-  transition: opacity 0.2s ease, background-color 0.2s linear;
-  opacity: 0;
-  pointer-events: none;
-  user-select: none;
+  transition: background-color 0.2s linear;
 }
 
 .hero-avatar.dark::after {
   background-color: var(--background-dark);
+}
+
+.hero-avatar::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--light-green);
+  border-radius: var(--rounded-50);
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: 1;
+  transform: translate(1.75rem, -50%);
 }
 
 .hero-avatar-image {

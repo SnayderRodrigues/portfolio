@@ -27,7 +27,11 @@
   --rounded-xsm: 0.25rem;
   --rounded-sm: 0.375rem;
   --rounded-md: 0.625rem;
-  --rounded-lg: clamp(1.5rem, 0.4356435643564356rem + 3.9603960396039604vw, 4rem);
+  --rounded-lg: clamp(
+    1.5rem,
+    0.4356435643564356rem + 3.9603960396039604vw,
+    4rem
+  );
   --rounded-50: 50%;
   --rounded-full: 999px;
 }
@@ -1589,6 +1593,11 @@ textarea {
 
 .footer-scroll-top {
   font-size: 1.125rem;
+}
+
+.footer-scroll-top:hover::before {
+  width: 200px;
+  height: 200px;
 }
 
 /*  -------------------------------- RESPONSIVE -------------------------------- */

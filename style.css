@@ -797,6 +797,18 @@ textarea {
   position: relative;
 }
 
+.about-headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-headline > svg {
+  width: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  height: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  transform: rotate(180deg);
+}
+
 .about-container-content {
   display: flex;
   gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
@@ -967,6 +979,18 @@ textarea {
   display: flex;
   flex-direction: column;
   padding-top: 180px;
+}
+
+.projects-headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projects-headline > svg {
+  width: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  height: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  transform: rotate(180deg);
 }
 
 .projects-work {
@@ -1157,15 +1181,6 @@ textarea {
   margin-top: 2px;
 }
 
-.disable,
-.disable.dark,
-.disable:hover,
-.disable.dark:hover {
-  pointer-events: none;
-  cursor: default;
-  background-color: var(--gray);
-}
-
 .contact-section {
   background-color: var(--background);
   transition: background-color 0.2s linear;
@@ -1186,6 +1201,18 @@ textarea {
   padding-bottom: 100px;
   position: relative;
   z-index: 2;
+}
+
+.contact-headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-headline > svg {
+  width: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  height: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  transform: rotate(180deg);
 }
 
 .contact-socials {

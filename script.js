@@ -70,7 +70,8 @@ class DarkModeToggle {
       "projects-work-subtitle-link",
       "project-work-image-wrapper",
       "disable",
-      "contact-socials-email",
+      "contact-email",
+      "contact-copy-button",
       "contact-socials-button",
       "form-input",
       "author-name-footer",
@@ -113,7 +114,6 @@ class DarkModeToggle {
 }
 
 new DarkModeToggle("dark-mode-toggle");
-
 
 // HIDDEN NAVBAR ---------------------------------------------------//
 
@@ -199,6 +199,23 @@ window.onscroll = () => {
 
 //   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 // });
+
+// COPY EMAIL FUNCTION  -------------------------------------------------//
+
+document
+  .querySelector(".contact-copy-button")
+  .addEventListener("click", function () {
+    const email = "snayderrodrigues@gmail.com";
+
+    const input = document.createElement("input");
+    input.value = email;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    document.body.removeChild(input);
+
+    alert("E-mail copiado para a área de transferência.");
+  });
 
 // FORM VALIDATION -------------------------------------------------//
 

@@ -1223,7 +1223,15 @@ textarea {
   margin-bottom: clamp(2rem, 1.4285714285714286rem + 2.857142857142857vw, 4rem);
 }
 
-.contact-socials-email {
+.contact-email-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.contact-email {
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -1235,47 +1243,44 @@ textarea {
     1.5rem
   );
   color: var(--black);
-  margin-bottom: 1rem;
   transition: color 0.2s linear;
 }
 
-.contact-socials-email:hover {
+.contact-email:hover {
   color: var(--accent);
 }
 
-.contact-socials-email.dark {
+.contact-email.dark {
   color: var(--white);
 }
 
-.contact-socials-email.dark:hover {
+.contact-email.dark:hover {
   color: var(--accent-dark);
 }
 
-.contact-socials-email > svg {
-  width: clamp(1.25rem, 1.1435643564356435rem + 0.39603960396039606vw, 1.5rem);
-  height: clamp(1.25rem, 1.1435643564356435rem + 0.39603960396039606vw, 1.5rem);
-  margin-top: clamp(
-    0.25rem,
-    0.1967821782178218rem + 0.19801980198019803vw,
-    0.375rem
-  );
+.contact-copy-button {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  background-color: var(--background);
+  padding: 0.375rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--rounded-sm);
+  transition: background-color 0.2s linear, border 0.2s linear;
+  cursor: pointer;
+  position: relative;
 }
 
-.contact-socials-email > svg > path {
-  fill: var(--black);
-  transition: fill 0.2s linear;
+.contact-copy-button:hover {
+  background-color: var(--primary);
 }
 
-.contact-socials-email:hover > svg > path {
-  fill: var(--accent);
+.contact-copy-button.dark {
+  background-color: var(--background-dark);
+  border: 2px solid var(--primary-dark);
 }
 
-.contact-socials-email.dark > svg > path {
-  fill: var(--white);
-}
-
-.contact-socials-email.dark:hover > svg > path {
-  fill: var(--accent-dark);
+.contact-copy-button.dark:hover {
+  background-color: var(--primary-dark);
 }
 
 .contact-socials-button {

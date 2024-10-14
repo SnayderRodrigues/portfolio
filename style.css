@@ -477,16 +477,8 @@ textarea {
   cursor: pointer;
 }
 
-.dark-mode-toggle-container:hover {
-  background-color: var(--accent);
-}
-
 .dark-mode-toggle-container.dark {
   background-color: var(--primary-variant-dark);
-}
-
-.dark-mode-toggle-container.dark:hover {
-  background-color: var(--accent-dark);
 }
 
 .dark-mode-toggle {
@@ -1767,7 +1759,7 @@ textarea {
     opacity: 0;
     scale: 0.9;
     transition: opacity 0.2s linear, scale 0.2s linear,
-      background-color 0.3s linear;
+      background-color 0.2s linear;
     user-select: none;
     pointer-events: none;
     transform-origin: top center;
@@ -1916,6 +1908,9 @@ textarea {
   }
 }
 @media (max-width: 500px) {
+  :root {
+      scroll-padding: 2rem;
+  }
   .container {
     width: min(100% - 12px);
   }

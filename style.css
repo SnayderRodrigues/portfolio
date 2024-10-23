@@ -19,9 +19,11 @@
   --gray: #595959;
   --black: #000000;
 
-  --light-blue: #a5d5f5;
+  --light-blue: #abc4fa;
   --light-green: #a2e7c4;
+  --light-purple: #d6d4ff;
   --blue: #1d3997;
+  --green: #135e54;
   --magenta: #7a1075;
 
   --rounded-xsm: 0.25rem;
@@ -311,7 +313,7 @@ textarea {
     transform: rotate(0);
   }
   50% {
-    transform: rotate(-45deg);
+    transform: rotate(-53deg);
   }
   100% {
     transform: rotate(0deg);
@@ -375,16 +377,18 @@ textarea {
 
 .logo-img {
   width: 45px;
-  scale: 0;
-  transition: scale 0.3s ease-in-out;
+  scale: 0.3;
+  opacity: 0;
+  transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
   animation: rotating 4s infinite linear;
   animation-play-state: paused;
 }
 
 .logo:hover > .logo-img {
+  scale: 1;
+  opacity: 1;
   animation: rotating 4s infinite linear;
   animation-play-state: running;
-  scale: 1;
 }
 
 .author-name {
@@ -430,7 +434,7 @@ textarea {
   color: var(--black);
   font-weight: 700;
   padding: 4px 8px;
-  border-radius: var(--rounded-xsm);
+  border-radius: var(--rounded-sm);
   transition: color 0.2s linear;
 }
 
@@ -473,7 +477,7 @@ textarea {
   background-color: var(--primary-variant);
   border-radius: var(--rounded-full);
   position: relative;
-  transition: all 0.3s linear, background-color 0.2s linear;
+  transition: all 0.2s linear, background-color 0.2s linear;
   cursor: pointer;
 }
 
@@ -501,7 +505,7 @@ textarea {
   height: 20px;
   width: 20px;
   transform: translateX(0px);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease;
 }
 
 .dark-mode-toggle:checked ~ .dark-mode-toggle-ball {
@@ -517,7 +521,7 @@ textarea {
   font-size: 1rem;
   background-color: var(--primary-variant);
   padding: 4px 8px;
-  border-radius: var(--rounded-xsm);
+  border-radius: var(--rounded-sm);
   margin-top: 5px;
   transform: translateX(-50%);
   pointer-events: none;
@@ -640,6 +644,7 @@ textarea {
 
 .hero-avatar::after {
   /* content: "You do know this is just a simulation, don’t you?"; */
+  /* content: "My quality should not be bought and sold for convenience's sake, ever"; */
   content: "Disponível para Freelance";
   display: block;
   width: max-content;
@@ -671,6 +676,11 @@ textarea {
   left: 100%;
   z-index: 1;
   transform: translate(1.75rem, -50%);
+  transition: background-color 0.2s linear;
+}
+
+.hero-avatar.dark::before {
+  background-color: var(--green);
 }
 
 .hero-avatar-image {
@@ -701,7 +711,7 @@ textarea {
 }
 
 .hero-tags > span:nth-of-type(2) {
-  background-color: var(--light-green);
+  background-color: var(--light-purple);
 }
 
 .hero-tags.dark > span:first-of-type {
@@ -819,7 +829,7 @@ textarea {
   object-position: bottom;
   width: 100%;
   border-radius: var(--rounded-md);
-  transition: filter 0.3s linear;
+  transition: filter 0.2s linear;
 }
 
 .author-photo.dark {
@@ -906,7 +916,7 @@ textarea {
 }
 
 .services-card:nth-of-type(2) > .services-header > .services-header-icon {
-  background-color: var(--accent-variant);
+  background-color: var(--light-purple);
 }
 
 .services-card:nth-of-type(3) > .services-header > .services-header-icon {
@@ -922,11 +932,11 @@ textarea {
 }
 
 .services-card:nth-of-type(2) > .services-header > .services-header-icon.dark {
-  background-color: var(--accent-variant-dark);
+  background-color: var(--magenta);
 }
 
 .services-card:nth-of-type(3) > .services-header > .services-header-icon.dark {
-  background-color: var(--magenta);
+  background-color: var(--green);
 }
 
 .services-card:nth-of-type(4) > .services-header > .services-header-icon.dark {
@@ -1058,7 +1068,7 @@ textarea {
 }
 
 .projects-work-tags > span:nth-of-type(2) {
-  background-color: var(--light-green);
+  background-color: var(--light-purple);
 }
 
 .projects-work-tags.dark > span:first-of-type {
@@ -1320,7 +1330,7 @@ textarea {
   font-size: 1rem;
   background-color: var(--primary);
   padding: 0.25rem 0.5rem;
-  border-radius: var(--rounded-xsm);
+  border-radius: var(--rounded-sm);
   margin-top: 0.5rem;
   position: absolute;
   top: 100%;
@@ -1909,7 +1919,7 @@ textarea {
 }
 @media (max-width: 500px) {
   :root {
-      scroll-padding: 2rem;
+    scroll-padding: 2rem;
   }
   .container {
     width: min(100% - 12px);

@@ -1,8 +1,9 @@
 :root {
-  --accent: #5c2ae5;
+  --accent: #5f30de;
   --accent-dark: #5f30de;
 
-  --accent-variant: #9e94e2;
+  --accent-variant: #5133a3;
+  --accent-variant-light: #9e94e2;
   --accent-variant-dark: #3f3675;
 
   --primary: #efefef;
@@ -260,29 +261,37 @@ textarea {
   background-color: var(--accent-variant-dark);
 }
 
-.button::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: var(--accent-variant);
-  border-radius: var(--rounded-50);
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+.button span:first-of-type {
+  padding-right: 0.5rem;
+  transition: all 0.2s linear;
 }
 
-.button.dark::before {
-  background-color: var(--accent-variant-dark);
+.button:hover span:first-of-type {
+  transform: translateX(0.25rem);
 }
 
-.button:hover::before {
-  width: 150px;
-  height: 150px;
-  opacity: 1;
+.button span:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7253ff;
+  width: 1.5rem;
+  height: 1.5rem;
+  aspect-ratio: 1 / 1;
+  transition: all 0.2s linear;
+  border-radius: var(--rounded-xsm);
+}
+
+.button:hover span:nth-of-type(2) {
+  transform: rotate(90deg);
+  scale: 0.4;
+  background-color: #e9e8ff;
+}
+
+.button:hover span:nth-of-type(2) svg {
+  width: 0px;
+  height: 0px;
+  transition: all 0.2s linear;
 }
 
 .link {
@@ -760,8 +769,16 @@ textarea {
 }
 
 .hero-button {
-  padding: 14px 24px;
+  padding: 14px 16px;
 }
+
+.hero-button span:nth-of-type(2) svg {
+  transform: rotate(45deg);
+}
+
+/* .hero-button:nth-of-type(2) {
+  background-color: #3a169c;
+} */
 
 .hero-design-element {
   content: "";
@@ -1149,7 +1166,7 @@ textarea {
   display: block;
   width: 0.5rem;
   aspect-ratio: 1 / 1;
-  background-color: var(--accent-variant);
+  background-color: var(--accent-variant-light);
   border-radius: var(--rounded-50);
   position: absolute;
   top: 0.5rem;
@@ -1633,11 +1650,6 @@ textarea {
   color: var(--accent-dark);
 }
 
-.footer-scroll-top:hover::before {
-  width: 200px;
-  height: 200px;
-}
-
 /*  -------------------------------- RESPONSIVE -------------------------------- */
 
 @media (max-width: 1440px) {
@@ -1727,15 +1739,21 @@ textarea {
   .button:hover,
   .button:focus-visible {
     background-color: var(--accent);
-    box-shadow: none;
   }
   .button.dark:hover {
     background-color: var(--accent-dark);
-    box-shadow: none;
   }
-  .button::before,
-  .button::after {
-    display: none;
+  .button:hover span:first-of-type {
+    transform: translateX(0);
+  }
+  .button:hover span:nth-of-type(2) {
+    transform: rotate(0deg);
+    scale: 1;
+    background-color: #7253ff;
+  }
+  .button:hover span:nth-of-type(2) svg {
+    width: auto;
+    height: auto;
   }
   .container {
     width: min(100% - 32px);

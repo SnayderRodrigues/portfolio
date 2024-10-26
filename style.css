@@ -26,6 +26,7 @@
   --blue: #1d3997;
   --green: #135e54;
   --magenta: #7a1075;
+  --red: #ff0000;
 
   --rounded-xsm: 0.25rem;
   --rounded-sm: 0.375rem;
@@ -45,6 +46,8 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  /* outline: 2px solid lime; */
+  /* background: hsl(0 100% 50% / .1)!important; */
 }
 
 ::selection {
@@ -300,7 +303,7 @@ textarea {
   gap: 4px;
 }
 
-/* --------------------------------- ANIMATIONS -------------------------------- */
+/* -------------------------------- ANIMATIONS -------------------------------- */
 
 .scale-up {
   animation: scale-up 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -315,8 +318,6 @@ textarea {
   }
 }
 
-/* header logo */
-
 @keyframes rotating {
   0% {
     transform: rotate(0);
@@ -329,9 +330,7 @@ textarea {
   }
 }
 
-/* ----------------------------------------------------------------------------- */
-
-/*  -------------------------------- CONTAINER WRAPPER ------------------------- */
+/*  ------------------------------- CONTAINER WRAPPER ------------------------- */
 
 .container {
   width: 100%;
@@ -343,8 +342,6 @@ textarea {
   width: min(100% - 64px, 1440px);
   margin-inline: auto;
 }
-
-/*  --------------------------------------------------------------------------- */
 
 /*  ---------------------------------- HEADER --------------------------------- */
 
@@ -385,7 +382,8 @@ textarea {
 }
 
 .logo-img {
-  width: 45px;
+  width: 44px;
+  height: 44px;
   scale: 0.3;
   opacity: 0;
   transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -606,8 +604,6 @@ textarea {
   background-color: var(--white);
 }
 
-/*  --------------------------------------------------------------------------- */
-
 /*  ------------------------------------ MAIN --------------------------------- */
 
 .hero-section {
@@ -775,10 +771,6 @@ textarea {
 .hero-button span:nth-of-type(2) svg {
   transform: rotate(45deg);
 }
-
-/* .hero-button:nth-of-type(2) {
-  background-color: #3a169c;
-} */
 
 .hero-design-element {
   content: "";
@@ -1477,7 +1469,7 @@ textarea {
 }
 
 .form-error {
-  color: red;
+  color: var(--red);
   padding: 8px 0px;
 }
 
@@ -1501,8 +1493,6 @@ textarea {
   z-index: -1;
   opacity: 0.2;
 }
-
-/*  --------------------------------------------------------------------------- */
 
 /*  ---------------------------------- FOOTER --------------------------------- */
 
@@ -1564,7 +1554,7 @@ textarea {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.375rem;
   font-size: clamp(
     1.125rem,
     0.3846153846153846rem + 0.9615384615384616vw,
@@ -1650,7 +1640,7 @@ textarea {
   color: var(--accent-dark);
 }
 
-/*  -------------------------------- RESPONSIVE -------------------------------- */
+/*  ------------------------------- RESPONSIVE -------------------------------- */
 
 @media (max-width: 1440px) {
   .container {

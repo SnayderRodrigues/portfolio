@@ -413,8 +413,8 @@ textarea {
 .header-ul {
   display: flex;
   font-size: clamp(
-    1.125rem,
-    1.0795454545454546rem + 0.22727272727272727vw,
+    1rem,
+    0.8935643564356436rem + 0.39603960396039606vw,
     1.25rem
   );
   padding-inline-start: 0px;
@@ -424,16 +424,16 @@ textarea {
 .header-li {
   display: flex;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 12px;
   position: relative;
 }
 
 .nav-link-header {
   color: var(--black);
-  font-weight: 700;
-  padding: 4px 8px;
-  border-radius: var(--rounded-sm);
-  transition: color 0.2s linear;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--rounded-xsm);
+  transition: color 0.2s linear, background-color 0.2s linear;
 }
 
 .nav-link-header.dark {
@@ -441,11 +441,11 @@ textarea {
 }
 
 .nav-link-header:hover:not(.active) {
-  color: var(--accent);
+  background-color: var(--background);
 }
 
 .nav-link-header.dark:hover:not(.active) {
-  color: var(--accent-dark);
+  background-color: var(--accent-variant-dark);
 }
 
 .active {
@@ -1744,15 +1744,15 @@ textarea {
   .header-ul {
     display: flex;
     flex-direction: column;
-    width: 75vw;
+    width: calc(100% - 1rem);
+    font-size: 1.125rem;
     position: fixed;
     top: 8px;
     right: 8px;
-    padding: 2rem 0 2rem 1.5rem;
+    padding: 2.5rem 0 2.5rem 1.5rem;
     border-radius: var(--rounded-md);
     opacity: 0;
-    scale: 0.9;
-    transition: opacity 0.2s linear, scale 0.2s linear,
+    transition: opacity 0.2s linear,
       background-color 0.2s linear;
     user-select: none;
     pointer-events: none;
@@ -1776,7 +1776,7 @@ textarea {
   }
   .header-li {
     width: fit-content;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     margin-left: 0;
   }
   .header-li:last-of-type {
@@ -1793,8 +1793,8 @@ textarea {
   }
   .dark-mode-span {
     display: inline-block;
-    padding: 4px 16px 4px 8px;
-    font-weight: 700;
+    padding: 4px 16px 4px 12px;
+    font-weight: 600;
   }
   .navbuttons {
     display: flex;
@@ -1837,7 +1837,7 @@ textarea {
   }
   .hero-container {
     justify-content: flex-end;
-    padding-bottom: 2.5rem;
+    padding-bottom: 4rem;
   }
   .about-container-content {
     display: flex;
@@ -1901,6 +1901,7 @@ textarea {
   }
   .header-ul {
     width: calc(100% - 16px);
+    padding: 2.5rem 0 2.5rem 0.75rem;
   }
   .hero-title {
     margin-bottom: 1.5rem;

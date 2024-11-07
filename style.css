@@ -276,7 +276,7 @@ textarea {
 }
 
 .button:hover span:nth-of-type(2) {
-  background-color: var(--light-purple);
+  background-color: var(--white);
   border-radius: var(--rounded-50);
   transform: rotate(90deg);
   scale: 0.4;
@@ -496,6 +496,9 @@ textarea {
 }
 
 .dark-mode-toggle-ball {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--white);
   border-radius: var(--rounded-full);
   position: absolute;
@@ -504,6 +507,34 @@ textarea {
   width: 20px;
   transform: translateX(0px);
   transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle-ball svg {
+  width: 0.75rem;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill 0.2s linear, opacity 0.2s linear;
+}
+
+.dark-mode-toggle-ball svg:first-of-type {
+  fill: var(--light-gray);
+  opacity: 1;
+}
+
+.dark-mode-toggle-ball svg:nth-of-type(2) {
+  opacity: 0;
+}
+
+.dark-mode-toggle:checked ~ .dark-mode-toggle-ball svg:first-of-type {
+  opacity: 0;
+}
+
+.dark-mode-toggle:checked ~ .dark-mode-toggle-ball svg:nth-of-type(2) {
+  opacity: 1;
+  fill: var(--primary-dark);
 }
 
 .dark-mode-toggle:checked ~ .dark-mode-toggle-ball {

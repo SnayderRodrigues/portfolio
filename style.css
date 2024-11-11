@@ -369,6 +369,7 @@ textarea {
   display: flex;
   align-items: center;
   position: relative;
+  z-index: 999;
   outline: 0;
 }
 
@@ -412,6 +413,7 @@ textarea {
 
 .header-ul {
   display: flex;
+  gap: 0.5rem;
   font-size: clamp(
     1rem,
     0.8935643564356436rem + 0.39603960396039606vw,
@@ -422,9 +424,9 @@ textarea {
 }
 
 .header-li {
+  width: fit-content;
   display: flex;
   align-items: center;
-  margin-left: 12px;
   position: relative;
 }
 
@@ -474,6 +476,7 @@ textarea {
   width: 50px;
   background-color: var(--primary);
   border-radius: var(--rounded-full);
+  margin-left: 10px;
   position: relative;
   transition: all 0.2s linear, background-color 0.2s linear;
   cursor: pointer;
@@ -574,7 +577,7 @@ textarea {
   width: fit-content;
 }
 
-.header-ul-shadow {
+.header-ul-infos {
   display: none;
 }
 
@@ -1760,6 +1763,10 @@ textarea {
   .container {
     width: min(100% - 32px);
   }
+  .hero-container {
+    justify-content: flex-end;
+    padding-bottom: 4rem;
+  }
   .projects-container {
     padding-top: 4rem;
   }
@@ -1772,13 +1779,14 @@ textarea {
   .header-ul {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 1rem);
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
     font-size: 1.125rem;
     position: fixed;
-    top: 8px;
-    right: 8px;
-    padding: 2.5rem 0 2.5rem 1.5rem;
-    border-radius: var(--rounded-md);
+    top: 0px;
+    right: 0px;
+    padding: 6.5rem 2rem 2rem 2rem;
     opacity: 0;
     transition: opacity 0.2s linear, background-color 0.2s linear;
     user-select: none;
@@ -1787,27 +1795,21 @@ textarea {
     z-index: 998;
     overflow: hidden;
   }
-  .header-ul.dark {
-    background-color: var(--background-dark);
-  }
   .header-ul.open-nav {
     background-color: var(--background);
     opacity: 1;
-    scale: 1;
     pointer-events: all;
     visibility: visible;
-    z-index: 998;
   }
   .header-ul.open-nav.dark {
     background-color: var(--background-dark);
   }
-  .header-li {
-    width: fit-content;
-    margin-bottom: 24px;
-    margin-left: 0;
+  .nav-link-header {
+    padding: 0;
   }
-  .header-li:last-of-type {
-    margin-bottom: 0;
+  .nav-link-header.active {
+    color: unset;
+    background-color: unset;
   }
   .dark-mode-toggle-container {
     position: static;
@@ -1820,34 +1822,46 @@ textarea {
   }
   .dark-mode-span {
     display: inline-block;
-    padding: 4px 16px 4px 12px;
+    padding: 0px 4px 2px 0px;
     font-weight: 600;
+  }
+  .header-ul-infos {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .header-ul-infos a {
+    color: inherit;
+  }
+  .header-ul-infos > span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+  .header-ul-email {
+    margin-bottom: 1.5rem;
+  }
+  .header-ul-infos > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .header-ul-link {
+    padding: 4px 10px;
+    border: 2px solid var(--primary);
+    border-radius: var(--rounded-xsm);
+    transition: border 0.2s linear;
+  }
+  .header-ul.dark .header-ul-link {
+    border: 2px solid var(--primary-dark);
   }
   .navbuttons {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .header-ul-shadow {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 997;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.2s linear;
-    user-select: none;
-    pointer-events: none;
-  }
-  .header-ul-shadow.open-nav {
-    opacity: 1;
-    user-select: all;
-    pointer-events: all;
-  }
-  .navbar-design-element {
+  .header-ul::after {
     content: "";
     width: 60vw;
     max-width: 300px;
@@ -1856,15 +1870,11 @@ textarea {
     border-radius: var(--rounded-50);
     background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
     position: absolute;
-    top: 65%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+    top: 75%;
+    right: 0;
+    transform: translate(-2rem, -50%);
     z-index: -1;
     opacity: 0.2;
-  }
-  .hero-container {
-    justify-content: flex-end;
-    padding-bottom: 4rem;
   }
   .about-container-content {
     display: flex;
@@ -1940,8 +1950,7 @@ textarea {
     width: min(100% - 8px);
   }
   .header-ul {
-    width: calc(100% - 16px);
-    padding: 2.5rem 0 2.5rem 0.75rem;
+    padding: 6.5rem 1.25rem 1.25rem 1.25rem;
   }
   .hero-title {
     margin-bottom: 1.5rem;

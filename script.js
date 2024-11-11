@@ -121,39 +121,30 @@ function setupNavbar() {
   let navbarButton = document.querySelector(".navbuttons");
   let navbarList = document.querySelector(".header-ul");
   let navbarListItems = document.querySelectorAll(".header-li");
-  let navbarShadow = document.querySelector(".header-ul-shadow");
   let html = document.querySelector("html");
 
   navbarButton.onclick = function () {
     navbarButton.classList.toggle("open-nav");
     navbarList.classList.toggle("open-nav");
-    navbarShadow.classList.toggle("open-nav");
     html.classList.toggle("open-nav");
 
     navbarList.removeAttribute("style");
-    navbarShadow.removeAttribute("style");
   };
 
-  navbarListItems.forEach((link) => {
+  navbarListItems.forEach((link, index) => {
     link.addEventListener("click", function () {
+      if (index === navbarListItems.length - 1) {
+        return;
+      }
       navbarButton.classList.remove("open-nav");
       navbarList.classList.remove("open-nav");
-      navbarShadow.classList.remove("open-nav");
       html.classList.remove("open-nav");
     });
   });
 
-  navbarShadow.onclick = function () {
-    navbarButton.classList.remove("open-nav");
-    navbarList.classList.remove("open-nav");
-    navbarShadow.classList.remove("open-nav");
-    html.classList.remove("open-nav");
-  };
-
   window.addEventListener("resize", function () {
     if (window.innerWidth < 768) {
       navbarList.style.transition = "none";
-      navbarShadow.style.transition = "none";
     }
   });
 }

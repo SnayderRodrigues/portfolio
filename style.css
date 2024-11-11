@@ -296,7 +296,7 @@ textarea {
 
 /* -------------------------------- ANIMATIONS -------------------------------- */
 
-.scale-up {
+/* .scale-up {
   animation: scale-up 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -319,7 +319,7 @@ textarea {
   100% {
     transform: rotate(0deg);
   }
-}
+} */
 
 /*  ------------------------------- CONTAINER WRAPPER ------------------------- */
 
@@ -368,31 +368,23 @@ textarea {
 .logo {
   display: flex;
   align-items: center;
+  gap: clamp(0.75rem, 0.6435643564356436rem + 0.39603960396039606vw, 1rem);
   position: relative;
   z-index: 999;
   outline: 0;
 }
 
-.logo-img {
-  width: 44px;
-  height: 44px;
-  scale: 0.3;
-  opacity: 0;
-  transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  animation: rotating 4s infinite linear;
-  animation-play-state: paused;
-}
-
-.logo:hover > .logo-img {
-  scale: 1;
+.logo-image {
+  width: clamp(2.25rem, 2.1435643564356437rem + 0.39603960396039606vw, 2.5rem);
+  height: clamp(2.25rem, 2.1435643564356437rem + 0.39603960396039606vw, 2.5rem);
+  aspect-ratio: 1 / 1;
   opacity: 1;
-  animation: rotating 4s infinite linear;
-  animation-play-state: running;
+  transition: filter 0.2s linear;
 }
 
 .author-name {
-  color: var(--black);
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
   font-family: "Outfit", sans-serif;
   font-size: clamp(
     1.25rem,
@@ -401,9 +393,9 @@ textarea {
   );
   font-weight: 700;
   line-height: 1;
+  color: var(--black);
   cursor: pointer;
   user-select: none;
-  margin-right: 1rem;
   transition: color 0.2s linear;
 }
 
@@ -1493,7 +1485,7 @@ textarea {
 }
 
 .form-valid {
-  color: rgb(0, 205, 0);
+  color: #00cd00;
   padding: 0px;
 }
 

@@ -1540,6 +1540,7 @@ textarea {
   font-weight: 700;
   letter-spacing: -1px;
   line-height: 1;
+  margin-bottom: 4px;
   transition: color 0.2s linear;
 }
 
@@ -1563,7 +1564,7 @@ textarea {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.125rem;
+  gap: 0.25rem;
   font-size: clamp(
     1.125rem,
     0.3846153846153846rem + 0.9615384615384616vw,

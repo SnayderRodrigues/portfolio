@@ -1238,12 +1238,42 @@ textarea {
   transform: rotate(180deg);
 }
 
-.contact-socials {
-  width: fit-content;
+.contact-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 6rem 3rem;
+  border-radius: var(--rounded-md);
   margin-bottom: clamp(2rem, 1.4285714285714286rem + 2.857142857142857vw, 4rem);
+  transition: background-color 0.2s linear;
+}
+
+.contact-section.dark .contact-card {
+  background-color: var(--primary-dark);
+}
+
+.contact-card h3 {
+  text-align: center;
+  font-size: 3rem;
+  max-width: 20ch;
+  margin-bottom: 3rem;
+}
+
+.contact-card-logo {
+  width: 6rem;
+  height: 6rem;
+}
+
+.contact-card-button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card-button {
+  padding: 14px 24px;
 }
 
 .contact-email-wrapper {
@@ -1283,10 +1313,11 @@ textarea {
 
 .contact-copy-button {
   font-size: 0.75rem;
+  line-height: 1;
   text-transform: uppercase;
   background-color: var(--background);
   padding: 0.375rem;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--background);
   border-radius: var(--rounded-xsm);
   transition: background-color 0.2s linear, border 0.2s linear;
   cursor: pointer;
@@ -1299,11 +1330,19 @@ textarea {
 
 .contact-copy-button.dark {
   background-color: var(--background-dark);
-  border: 2px solid var(--primary-dark);
+  border: 2px solid var(--background-dark);
 }
 
 .contact-copy-button.dark:hover {
   background-color: var(--primary-dark);
+}
+
+.contact-socials {
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  /* margin-bottom: clamp(2rem, 1.4285714285714286rem + 2.857142857142857vw, 4rem); */
 }
 
 .contact-socials-button {
@@ -1313,7 +1352,7 @@ textarea {
   gap: 0.5rem;
   background-color: var(--background);
   padding: 0.625rem;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--background);
   border-radius: var(--rounded-xsm);
   position: relative;
   transition: background-color 0.2s linear, border 0.2s linear;
@@ -1325,7 +1364,7 @@ textarea {
 
 .contact-socials-button.dark {
   background-color: var(--background-dark);
-  border: 2px solid var(--primary-dark);
+  border: 2px solid var(--background-dark);
 }
 
 .contact-socials-button.dark:hover {
@@ -1348,7 +1387,7 @@ textarea {
   gap: 0.25rem;
   color: var(--black);
   font-size: 1rem;
-  background-color: var(--primary);
+  background-color: var(--background);
   padding: 0.25rem 0.5rem;
   border-radius: var(--rounded-xsm);
   margin-top: 0.5rem;
@@ -1369,7 +1408,7 @@ textarea {
 
 .contact-socials-button.dark::after {
   color: var(--white);
-  background-color: var(--primary-dark);
+  background-color: var(--background-dark);
 }
 
 .contact-socials-button:first-of-type::after {
@@ -1398,7 +1437,6 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  justify-self: center;
 }
 
 .form-headline {
@@ -1487,22 +1525,6 @@ textarea {
 .form-valid {
   color: #00cd00;
   padding: 0px;
-}
-
-.contact-design-element:first-of-type {
-  content: "";
-  width: 40vw;
-  max-width: 500px;
-  height: 40vw;
-  max-height: 500px;
-  border-radius: var(--rounded-50);
-  background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
-  position: absolute;
-  top: 65%;
-  right: 0%;
-  transform: translate(0%, -50%);
-  z-index: -1;
-  opacity: 0.2;
 }
 
 /*  ---------------------------------- FOOTER --------------------------------- */
@@ -1668,9 +1690,6 @@ textarea {
   }
   .about-container-content {
     margin-bottom: 4rem;
-  }
-  .contact-design-element {
-    display: none;
   }
   .footer-container:first-of-type {
     display: flex;

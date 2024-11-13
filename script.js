@@ -205,62 +205,62 @@ document
     document.execCommand("copy");
     document.body.removeChild(input);
 
-    alert("E-mail copiado para a área de transferência.");
+    // alert("E-mail copiado para a área de transferência.");
   });
 
 // FORM VALIDATION -------------------------------------------------//
 
-function validateForm() {
-  var name = document.getElementById("inputName").value;
-  var email = document.getElementById("inputEmail").value;
-  var message = document.getElementById("inputMessage").value;
-  var isValid = true;
+// function validateForm() {
+//   var name = document.getElementById("inputName").value;
+//   var email = document.getElementById("inputEmail").value;
+//   var message = document.getElementById("inputMessage").value;
+//   var isValid = true;
 
-  if (name === "") {
-    document.getElementById("nameError").innerHTML =
-      "*Por favor, insira o seu nome.";
-    isValid = false;
-  } else {
-    document.getElementById("nameError").innerHTML = "";
-  }
+//   if (name === "") {
+//     document.getElementById("nameError").innerHTML =
+//       "*Este campo é obrigatório.";
+//     isValid = false;
+//   } else {
+//     document.getElementById("nameError").innerHTML = "";
+//   }
 
-  if (email === "") {
-    document.getElementById("emailError").innerHTML =
-      "*Por favor, insira o seu e-mail.";
-    isValid = false;
-  } else if (!isValidEmail(email)) {
-    document.getElementById("emailError").innerHTML =
-      "*Por favor, insira um e-mail válido.";
-    isValid = false;
-  } else {
-    document.getElementById("emailError").innerHTML = "";
-  }
+//   if (email === "") {
+//     document.getElementById("emailError").innerHTML =
+//       "*Este campo é obrigatório.";
+//     isValid = false;
+//   } else if (!isValidEmail(email)) {
+//     document.getElementById("emailError").innerHTML =
+//       "*Insira um e-mail válido.";
+//     isValid = false;
+//   } else {
+//     document.getElementById("emailError").innerHTML = "";
+//   }
 
-  if (message === "") {
-    document.getElementById("messageError").innerHTML =
-      "*Por favor, insira a sua mensagem.";
-    document.getElementById("formSent").innerHTML = "";
-    isValid = false;
-  } else {
-    document.getElementById("messageError").innerHTML = "";
-  }
+//   if (message === "") {
+//     document.getElementById("messageError").innerHTML =
+//       "*Por favor, insira a sua mensagem.";
+//     document.getElementById("formSent").innerHTML = "";
+//     isValid = false;
+//   } else {
+//     document.getElementById("messageError").innerHTML = "";
+//   }
 
-  if (isValid) {
-    document.getElementById("formSent").innerHTML = "Mensagem enviada.";
-    document.getElementById("formSent").style.padding = "8px 0";
-    setTimeout(function () {
-      document.getElementById("form").reset();
-    }, 1000);
-  }
+//   if (isValid) {
+//     document.getElementById("formSent").innerHTML = "Mensagem enviada.";
+//     document.getElementById("formSent").style.padding = "8px 0";
+//     setTimeout(function () {
+//       document.getElementById("form").reset();
+//     }, 1000);
+//   }
 
-  return isValid;
-}
+//   return isValid;
+// }
 
-function isValidEmail(email) {
-  var re = /\S+@\S+\.\S+/;
-  return re.test(email);
-}
+// function isValidEmail(email) {
+//   var re = /\S+@\S+\.\S+/;
+//   return re.test(email);
+// }
 
-function clearFormSent() {
-  document.getElementById("formSent").innerHTML = "";
-}
+// function clearFormSent() {
+//   document.getElementById("formSent").innerHTML = "";
+// }

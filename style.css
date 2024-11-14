@@ -1238,9 +1238,9 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   background-color: var(--primary);
-  padding: 6rem
+  padding: clamp(2.5rem, 1.00990099009901rem + 5.544554455445545vw, 6rem)
     clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem)
     clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem)
     clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
@@ -1261,12 +1261,13 @@ textarea {
 
 .contact-card-headline h3 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.5742574257425743rem + 1.5841584158415842vw, 3rem);
   max-width: 20ch;
 }
 
 .contact-card-headline p {
-  margin-bottom: 0;
+  margin-bottom: clamp(1rem, 0.5742574257425743rem + 1.5841584158415842vw, 2rem);
 }
 
 .contact-card-button-wrapper {
@@ -1309,12 +1310,12 @@ textarea {
   align-items: center;
   gap: 0.25rem;
   width: fit-content;
-  font-size: 1.25rem;
-  /* font-size: clamp(
-    1.25rem,
-    1.1435643564356435rem + 0.39603960396039606vw,
-    1.5rem
-  ); */
+  font-size: 1rem;
+  font-size: clamp(
+    1rem,
+    0.8935643564356436rem + 0.39603960396039606vw,
+    1.25rem
+  );
   color: var(--black);
   transition: color 0.2s linear;
 }
@@ -1401,8 +1402,7 @@ textarea {
   opacity: 0;
   pointer-events: none;
   user-select: none;
-  transition: background-color 0.2s linear,
-    opacity 0.2s linear;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
 }
 
 .contact-socials-button:hover::after {
@@ -1813,6 +1813,11 @@ textarea {
   .project-work-image-wrapper::before,
   .project-work-image-wrapper::after {
     display: none;
+  }
+  .contact-card-link-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
   .footer-navigation-wrapper {
     flex-direction: column;

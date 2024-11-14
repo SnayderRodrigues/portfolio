@@ -174,23 +174,6 @@ window.onscroll = () => {
   });
 };
 
-// OPAQUE HEADER ---------------------------------------------------//
-
-// let lastScrollTop = 0;
-
-// window.addEventListener("scroll", function () {
-//   const header = document.querySelector(".header");
-//   const currentScroll = window.scrollY;
-
-//   if (currentScroll > lastScrollTop) {
-//     header.classList.add("opaque");
-//   } else {
-//     header.classList.remove("opaque");
-//   }
-
-//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-// });
-
 // COPY EMAIL FUNCTION  -------------------------------------------------//
 
 document
@@ -207,60 +190,3 @@ document
 
     // alert("E-mail copiado para a área de transferência.");
   });
-
-// FORM VALIDATION -------------------------------------------------//
-
-// function validateForm() {
-//   var name = document.getElementById("inputName").value;
-//   var email = document.getElementById("inputEmail").value;
-//   var message = document.getElementById("inputMessage").value;
-//   var isValid = true;
-
-//   if (name === "") {
-//     document.getElementById("nameError").innerHTML =
-//       "*Este campo é obrigatório.";
-//     isValid = false;
-//   } else {
-//     document.getElementById("nameError").innerHTML = "";
-//   }
-
-//   if (email === "") {
-//     document.getElementById("emailError").innerHTML =
-//       "*Este campo é obrigatório.";
-//     isValid = false;
-//   } else if (!isValidEmail(email)) {
-//     document.getElementById("emailError").innerHTML =
-//       "*Insira um e-mail válido.";
-//     isValid = false;
-//   } else {
-//     document.getElementById("emailError").innerHTML = "";
-//   }
-
-//   if (message === "") {
-//     document.getElementById("messageError").innerHTML =
-//       "*Por favor, insira a sua mensagem.";
-//     document.getElementById("formSent").innerHTML = "";
-//     isValid = false;
-//   } else {
-//     document.getElementById("messageError").innerHTML = "";
-//   }
-
-//   if (isValid) {
-//     document.getElementById("formSent").innerHTML = "Mensagem enviada.";
-//     document.getElementById("formSent").style.padding = "8px 0";
-//     setTimeout(function () {
-//       document.getElementById("form").reset();
-//     }, 1000);
-//   }
-
-//   return isValid;
-// }
-
-// function isValidEmail(email) {
-//   var re = /\S+@\S+\.\S+/;
-//   return re.test(email);
-// }
-
-// function clearFormSent() {
-//   document.getElementById("formSent").innerHTML = "";
-// }

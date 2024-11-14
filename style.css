@@ -1748,6 +1748,7 @@ textarea {
     gap: 0.5rem;
   }
   .header-ul-link {
+    font-size: 1rem;
     padding: 4px 10px;
     border: 2px solid var(--primary);
     border-radius: var(--rounded-xsm);

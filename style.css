@@ -10,7 +10,7 @@
   --background: #f8f8fe;
   --background-dark: #10101e;
 
-  --selection: #9e94e2;
+  --selection: #9e94e266;
 
   --white: #ffffff;
   --light-gray: #a3a6b2;
@@ -176,11 +176,8 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(
-    1.5rem,
-    1.2857142857142856rem + 1.0714285714285714vw,
-    2.25rem
-  );
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(2rem, 1.5742574257425743rem + 1.5841584158415842vw, 3rem);
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-bottom: 1rem;
@@ -203,7 +200,7 @@ li {
 p {
   font-size: clamp(1rem, 0.3846153846153846rem + 0.9615384615384616vw, 1.25rem);
   line-height: 1.58;
-  margin: 0 0 1rem 0;
+  margin: 0;
 }
 
 img {
@@ -225,7 +222,6 @@ textarea {
 
 .button {
   width: fit-content;
-  min-width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,8 +423,8 @@ textarea {
 }
 
 .nav-link-header {
-  color: var(--black);
   font-weight: 600;
+  color: var(--black);
   padding: 4px 10px;
   border-radius: var(--rounded-xsm);
   transition: color var(--default-transition),
@@ -660,30 +656,23 @@ textarea {
 }
 
 .hero-avatar-image {
-  width: 3.75rem;
-  height: 3.75rem;
-  padding: 0.25rem;
-  border: 0.125rem solid var(--primary);
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: var(--rounded-50);
-  transition: border var(--default-transition);
-}
-
-.hero-avatar.dark .hero-avatar-image {
-  border: 0.125rem solid var(--primary-dark);
 }
 
 .hero-avatar div {
   position: relative;
   font-size: 0.875rem;
   font-weight: 600;
-  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-  border: 0.125rem solid var(--primary);
+  padding: 0.5rem 0.75rem 0.5rem 1.625rem;
+  background-color: var(--primary);
   border-radius: var(--rounded-full);
-  transition: border var(--default-transition);
+  transition: background-color var(--default-transition);
 }
 
 .hero-avatar.dark div {
-  border: 0.125rem solid var(--primary-dark);
+  background-color: var(--primary-dark);
 }
 
 .hero-avatar div::before {
@@ -697,7 +686,7 @@ textarea {
   top: 50%;
   left: 0%;
   z-index: 1;
-  transform: translate(0.5rem, -50%);
+  transform: translate(0.625rem, -50%);
   transition: background-color var(--default-transition);
 }
 
@@ -863,15 +852,13 @@ textarea {
 }
 
 .about-description-title {
+  text-transform: uppercase;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.about-description-wrapper > p:first-of-type {
-  margin-bottom: 2rem;
-}
-
-.about-description-wrapper > p:last-of-type {
-  margin-bottom: 0rem;
+.about-description-wrapper p:nth-of-type(2) {
+  margin-bottom: 1rem;
 }
 
 .services-container {
@@ -914,11 +901,9 @@ textarea {
 .services-header {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   text-wrap: nowrap;
-  /* padding: 2rem; */
   margin: 0;
   font-weight: 600;
 }
@@ -981,12 +966,7 @@ textarea {
     1.75rem
   );
   font-weight: 600;
-  margin-right: 1rem;
   margin-bottom: 0;
-}
-
-.services-text > p {
-  margin: 0;
 }
 
 .projects-section {
@@ -1041,11 +1021,8 @@ textarea {
   border: 2px solid var(--primary-dark);
 }
 
-.projects-disclaimer > h3 {
-  font-family: "Outfit", sans-serif;
-  font-size: 2rem;
-  font-size: clamp(2rem, 1.5742574257425743rem + 1.5841584158415842vw, 3rem);
-  max-width: 20ch;
+.projects-disclaimer > p {
+  margin-bottom: 1rem;
 }
 
 .projects-disclaimer > a {
@@ -1304,14 +1281,8 @@ textarea {
 }
 
 .contact-card-headline h3 {
-  font-family: "Outfit", sans-serif;
   text-align: center;
-  font-size: 2rem;
-  font-size: clamp(2rem, 1.5742574257425743rem + 1.5841584158415842vw, 3rem);
   max-width: 20ch;
-}
-
-.contact-card-headline p {
   margin-bottom: clamp(
     1rem,
     0.5742574257425743rem + 1.5841584158415842vw,
@@ -1524,11 +1495,6 @@ textarea {
   transition: color var(--default-transition);
 }
 
-.footer-logo-wrapper:hover .footer-logo-name,
-.footer-logo-wrapper:hover .footer-logo-copyright {
-  color: var(--accent);
-}
-
 .footer-logo-copyright {
   font-size: clamp(1.25rem, 0.9306930693069306rem + 1.188118811881188vw, 2rem);
   transition: color var(--default-transition);
@@ -1634,6 +1600,7 @@ textarea {
 
 .footer-scroll-top {
   font-size: 1rem;
+  padding: 12px 20px;
 }
 
 /*  ------------------------------- RESPONSIVE -------------------------------- */
@@ -1772,11 +1739,11 @@ textarea {
   .dark-mode-button {
     position: static;
   }
+  .dark-mode-button::after {
+    display: none;
+  }
   .dark-mode-toggle-ball {
     left: calc(100% - 47px);
-  }
-  .dark-mode-tooltip {
-    display: none;
   }
   .dark-mode-span {
     display: inline-block;

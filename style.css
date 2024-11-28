@@ -669,6 +669,7 @@ textarea {
   background-color: var(--primary);
   border-radius: var(--rounded-full);
   transition: background-color var(--default-transition);
+  cursor: default;
 }
 
 .hero-avatar.dark div {
@@ -822,6 +823,7 @@ textarea {
 
 .about-container-content {
   display: flex;
+  align-items: center;
   gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
   margin-bottom: 100px;
 }
@@ -1283,11 +1285,7 @@ textarea {
 .contact-card-headline h3 {
   text-align: center;
   max-width: 20ch;
-  margin-bottom: clamp(
-    1rem,
-    0.5742574257425743rem + 1.5841584158415842vw,
-    2rem
-  );
+  margin-bottom: 2rem;
 }
 
 .contact-card-button-wrapper {
@@ -1487,7 +1485,7 @@ textarea {
 .footer-logo-name {
   width: fit-content;
   height: fit-content;
-  font-size: clamp(2rem, 1.5742574257425743rem + 1.5841584158415842vw, 3rem);
+  font-size: clamp(2.25rem, 1.9306930693069306rem + 1.188118811881188vw, 3rem);
   letter-spacing: -1px;
   line-height: 1;
   color: inherit;
@@ -1496,7 +1494,7 @@ textarea {
 }
 
 .footer-logo-copyright {
-  font-size: clamp(1.25rem, 0.9306930693069306rem + 1.188118811881188vw, 2rem);
+  font-size: clamp(1.5rem, 1.2871287128712872rem + 0.7920792079207921vw, 2rem);
   transition: color var(--default-transition);
 }
 

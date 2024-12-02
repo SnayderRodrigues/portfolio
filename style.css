@@ -346,16 +346,12 @@ textarea {
   z-index: 999;
   background-color: var(--background);
   padding: 12px 0;
-  transition: background-color var(--default-transition), transform 0.4s ease;
+  transition: background-color var(--default-transition);
 }
 
 .header.dark {
   background-color: var(--background-dark);
 }
-
-/* .header.opaque {
-  transform: translateY(-100%);
-} */
 
 .navbar {
   display: flex;
@@ -482,28 +478,26 @@ textarea {
 
 .dark-mode-button::after {
   content: "Dark Mode";
-  display: block;
   width: max-content;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  color: inherit;
   font-size: 0.875rem;
   background-color: var(--primary);
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
   border-radius: var(--rounded-xsm);
-  margin-top: 5px;
+  margin-top: 0.5rem;
+  position: absolute;
+  top: auto;
+  left: -10000px;
   transform: translateX(-50%);
+  opacity: 0;
   pointer-events: none;
   user-select: none;
-  opacity: 0;
-  visibility: hidden;
   transition: background-color var(--default-transition),
-    opacity var(--default-transition), visibility var(--default-transition);
+    opacity var(--default-transition);
 }
 
 .dark-mode-button:hover::after {
-  visibility: visible;
+  top: 100%;
+  left: 50%;
   opacity: 1;
 }
 
@@ -1404,9 +1398,6 @@ textarea {
 
 .contact-socials-button::after {
   width: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.25rem;
   color: var(--white);
   font-size: 0.875rem;

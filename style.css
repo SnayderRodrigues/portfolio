@@ -8,7 +8,7 @@
   /* --primary: #dbdae6; */
   /* --primary-dark: #2f2e49; */
 
-  --secondary: #dbdbf9;
+  --secondary: rgb(219, 219, 239);
   --secondary-dark: #2f2e49;
 
   --background: #f8f8fe;
@@ -1462,39 +1462,10 @@ textarea {
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 2rem;
   padding-top: 100px;
-  padding-bottom: 2rem;
   position: relative;
-}
-
-.footer-logo-wrapper {
-  display: flex;
-  flex-direction: column;
-  font-family: "Outfit", sans-serif;
-  font-weight: 700;
-  color: var(--black);
-}
-
-.footer-logo-wrapper.dark {
-  color: var(--white);
-}
-
-.footer-logo-name {
-  width: fit-content;
-  height: fit-content;
-  font-size: clamp(2.25rem, 1.9306930693069306rem + 1.188118811881188vw, 3rem);
-  letter-spacing: -1px;
-  line-height: 1;
-  color: inherit;
-  margin-bottom: 4px;
-  transition: color var(--default-transition);
-}
-
-.footer-logo-copyright {
-  font-size: clamp(1.5rem, 1.2871287128712872rem + 0.7920792079207921vw, 2rem);
-  transition: color var(--default-transition);
 }
 
 .footer-navigation-wrapper {
@@ -1503,8 +1474,7 @@ textarea {
 }
 
 .footer-navigation-sitemap,
-.footer-navigation-socials,
-.footer-navigation-contacts {
+.footer-navigation-socials {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1513,30 +1483,74 @@ textarea {
 }
 
 .footer-nav-title {
-  width: max-content;
+  width: 100%;
   font-weight: 700;
-  padding: 4px 10px;
+  margin-bottom: 0.25rem;
 }
 
 .footer-nav-link {
   width: fit-content;
-  color: var(--black);
-  padding: 4px 10px;
+  color: inherit;
   border-radius: var(--rounded-xsm);
-  transition: color var(--default-transition),
-    background-color var(--default-transition);
+  margin-bottom: 0.25rem;
 }
 
-.footer-nav-link:hover {
+.footer-navigation-contacts {
+  flex: 2;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.125rem;
+}
+
+.footer-navigation-contacts a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: inherit;
   background-color: var(--primary);
+  padding: 1rem;
+  border-radius: var(--rounded-md);
+  transition: background-color var(--default-transition);
 }
 
-.footer-nav-link.dark {
-  color: var(--white);
-}
-
-.footer-nav-link.dark:hover {
+.footer.dark .footer-navigation-contacts a {
   background-color: var(--primary-dark);
+}
+
+.footer-navigation-contacts a:hover {
+  background-color: var(--secondary);
+}
+
+.footer.dark .footer-navigation-contacts a:hover {
+  background-color: var(--secondary-dark);
+}
+
+.footer-navigation-contacts a svg {
+  align-self: flex-end;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.footer-logo {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(2rem, 1.7359154929577465rem + 1.1267605633802815vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: inherit;
+}
+
+.footer-scroll-top {
+  font-size: 1rem;
+  padding: 12px 20px;
 }
 
 .footer-design-element {
@@ -1553,51 +1567,6 @@ textarea {
   transform: translate(-50%, -50%);
   z-index: -1;
   opacity: 0.1;
-}
-
-.footer-container:nth-of-type(2) {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  position: relative;
-}
-
-.footer-container:nth-of-type(2) > div {
-  max-width: 26rem;
-  font-size: clamp(
-    0.875rem,
-    0.8217821782178217rem + 0.19801980198019803vw,
-    1rem
-  );
-  text-wrap: pretty;
-}
-
-.footer-container:nth-of-type(2) > div > span {
-  font-weight: 700;
-}
-
-.footer-tools-link {
-  font-weight: 700;
-  transition: color var(--default-transition);
-}
-
-.footer-tools-link:hover {
-  color: var(--accent);
-}
-
-.footer-tools-link.dark {
-  color: var(--white);
-}
-
-.footer-tools-link.dark:hover {
-  color: var(--accent);
-}
-
-.footer-scroll-top {
-  font-size: 1rem;
-  padding: 12px 20px;
 }
 
 /*  ------------------------------- RESPONSIVE -------------------------------- */
@@ -1840,7 +1809,7 @@ textarea {
     gap: 1rem;
   }
   .footer-container:first-of-type {
-    gap: 2rem;
+    gap: 4rem;
   }
   .footer-navigation-wrapper {
     margin-bottom: 1rem;

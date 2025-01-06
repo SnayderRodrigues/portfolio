@@ -69,10 +69,6 @@ class DarkModeToggle {
       "contact-email",
       "contact-copy-button",
       "contact-socials-button",
-      "footer-logo-wrapper",
-      "footer-nav-link",
-      "footer-tools-link",
-      "footer-scroll-top",
     ];
 
     this.initializeDarkMode();

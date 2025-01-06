@@ -1303,22 +1303,22 @@ textarea {
 .contact-card-link-wrapper {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contact-email-wrapper {
-  display: flex;
   flex-direction: column;
 }
 
-.contact-email-wrapper > span {
+.contact-card-link-wrapper > span {
   font-size: 0.75rem;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
 
-.contact-email-wrapper > div {
+.contact-card-link-wrapper div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-email-wrapper {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1336,16 +1336,17 @@ textarea {
     0.8935643564356436rem + 0.39603960396039606vw,
     1.25rem
   );
-  color: var(--black);
-  transition: color var(--default-transition);
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  transition: border var(--default-transition);
 }
 
 .contact-email:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--black);
 }
 
-.contact-email.dark {
-  color: var(--white);
+.contact-section.dark .contact-email:hover {
+  border-bottom: 1px solid var(--white);
 }
 
 .contact-copy-button {
@@ -1355,8 +1356,8 @@ textarea {
   font-size: 0.75rem;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--white);
-  background-color: var(--accent);
+  color: inherit;
+  background-color: var(--secondary);
   padding: 0.5rem;
   border-radius: var(--rounded-xsm);
   transition: background-color var(--default-transition);
@@ -1365,11 +1366,34 @@ textarea {
 }
 
 .contact-copy-button:hover {
-  background-color: var(--accent-variant);
+  background-color: var(--light-purple);
 }
 
-.contact-copy-button.dark:hover {
+.contact-section.dark .contact-copy-button {
+  background-color: var(--secondary-dark);
+}
+
+.contact-section.dark .contact-copy-button:hover {
   background-color: var(--accent-variant-dark);
+}
+
+.contact-copy-button > svg {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: 999;
+  transform: translate(0.25rem, -50%);
+  background-color: var(--accent);
+  padding: 0.25rem;
+  border-radius: var(--rounded-xsm);
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--default-transition);
+}
+
+.contact-copy-button.click > svg {
+  opacity: 1;
 }
 
 .contact-socials-wrapper {
@@ -1384,31 +1408,32 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: var(--accent);
+  background-color: var(--secondary);
   padding: 0.5rem;
   border-radius: var(--rounded-xsm);
   position: relative;
   transition: background-color var(--default-transition);
 }
 
-.contact-socials-button:hover {
-  background-color: var(--accent-variant);
-}
-
-.contact-socials-button.dark:hover {
-  background-color: var(--accent-variant-dark);
+.contact-section.dark .contact-socials-button {
+  background-color: var(--secondary-dark);
 }
 
 .contact-socials-button svg path {
+  fill: var(--black);
+  transition: fill var(--default-transition);
+}
+
+.contact-section.dark .contact-socials-button svg path {
   fill: var(--white);
 }
 
 .contact-socials-button::after {
   width: max-content;
   gap: 0.25rem;
-  color: var(--white);
+  color: var(--black);
   font-size: 0.875rem;
-  background-color: var(--accent-variant);
+  background-color: var(--secondary);
   padding: 0.25rem 0.5rem;
   border-radius: var(--rounded-xsm);
   margin-top: 0.5rem;
@@ -1428,7 +1453,8 @@ textarea {
 }
 
 .contact-socials-button.dark::after {
-  background-color: var(--accent-variant-dark);
+  color: var(--white);
+  background-color: var(--secondary-dark);
 }
 
 .contact-socials-button:first-of-type::after {
@@ -1805,9 +1831,15 @@ textarea {
     display: none;
   }
   .contact-card-link-wrapper {
+    gap: 0.5rem;
+  }
+  .contact-card-link-wrapper > div {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    gap: 0.75rem;
+    align-items: start;
+  }
+  .contact-socials-wrapper {
+    order: -1;
   }
   .footer-navigation-wrapper {
     grid-template-columns: repeat(2, 1fr);

@@ -67,7 +67,6 @@ class DarkModeToggle {
       "projects-work-tags",
       "projects-work-image-wrapper",
       "contact-email",
-      "contact-copy-button",
       "contact-socials-button",
     ];
 
@@ -167,17 +166,21 @@ window.onscroll = () => {
 
 // COPY EMAIL FUNCTION  -------------------------------------------------//
 
-document
-  .querySelector(".contact-copy-button")
-  .addEventListener("click", function () {
-    const email = "snayderrodrigues@gmail.com";
+const copyButton = document.querySelector(".contact-copy-button");
 
-    const input = document.createElement("input");
-    input.value = email;
-    document.body.appendChild(input);
-    input.select();
-    document.execCommand("copy");
-    document.body.removeChild(input);
+copyButton.addEventListener("click", function () {
+  const email = "snayderrodrigues@gmail.com";
 
-    // alert("E-mail copiado para a área de transferência.");
-  });
+  const input = document.createElement("input");
+  input.value = email;
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand("copy");
+  document.body.removeChild(input);
+
+  copyButton.classList.add("click");
+
+  setTimeout(() => {
+    copyButton.classList.remove("click");
+  }, 2000);
+});

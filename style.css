@@ -5,8 +5,6 @@
 
   --primary: #f0f0fc;
   --primary-dark: hsl(242, 23%, 14%);
-  /* --primary: #dbdae6; */
-  /* --primary-dark: #2f2e49; */
 
   --secondary: rgb(219, 219, 239);
   --secondary-dark: #2f2e49;
@@ -123,64 +121,6 @@ body::before {
   cursor: none;
   position: absolute;
   pointer-events: none;
-}
-
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--black);
-  background-color: var(--background);
-  outline: 0.25rem solid var(--primary);
-  opacity: 0;
-  user-select: none;
-  pointer-events: none;
-}
-
-body.dark .preloader {
-  color: var(--white);
-  background-color: var(--background-dark);
-  outline: 0.25rem solid var(--primary-dark);
-}
-
-.preloader-animation {
-  animation: preloader-animation 1s ease-in-out;
-}
-
-@keyframes preloader-animation {
-  0% {
-    opacity: 1;
-    top: 0;
-    user-select: all;
-    pointer-events: all;
-  }
-  30% {
-    opacity: 1;
-    top: 0;
-    user-select: all;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 1;
-    top: -100%;
-    user-select: all;
-    pointer-events: all;
-  }
-}
-
-.preloader span {
-  color: var(--accent-variant-dark);
-}
-
-body.dark .preloader span {
-  color: var(--light-purple);
 }
 
 .visually-hidden {
@@ -351,41 +291,6 @@ textarea {
   transition: all var(--default-transition);
 }
 
-.link {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-/* -------------------------------- ANIMATIONS -------------------------------- */
-
-/* .scale-up {
-  animation: scale-up 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes scale-up {
-  0% {
-    scale: 0.5;
-  }
-  100% {
-    scale: 1;
-  }
-}
-
-@keyframes rotating {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(-53deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
-
-/*  ------------------------------- CONTAINER WRAPPER ------------------------- */
-
 .container {
   width: 100%;
   padding-left: 1rem;
@@ -396,8 +301,6 @@ textarea {
   width: min(100% - 64px, 1440px);
   margin-inline: auto;
 }
-
-/*  ---------------------------------- HEADER --------------------------------- */
 
 .header {
   display: flex;
@@ -681,8 +584,6 @@ textarea {
 .navbar-button.dark::after {
   background-color: var(--white);
 }
-
-/*  ------------------------------------ MAIN --------------------------------- */
 
 .hero-section {
   position: relative;
@@ -1088,7 +989,6 @@ textarea {
   gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
   background-color: var(--primary);
   padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
-  /* border: 2px solid var(--primary); */
   border-radius: var(--rounded-md);
   margin-bottom: 3rem;
   transition: background-color var(--default-transition),
@@ -1097,7 +997,6 @@ textarea {
 
 .projects-work.dark {
   background-color: var(--primary-dark);
-  /* border: 2px solid var(--primary-dark); */
 }
 
 .projects-work-description {
@@ -1213,12 +1112,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.projects-button-wrapper a img {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-top: 2px;
 }
 
 .contact-section {
@@ -1462,23 +1355,17 @@ textarea {
 }
 
 .contact-socials-button:nth-of-type(2)::after {
-  content: "GitHub";
-}
-
-.contact-socials-button:nth-of-type(3)::after {
   content: "Instagram";
 }
 
-.contact-socials-button:nth-of-type(4)::after {
-  content: "WhatsApp";
+.contact-socials-button:nth-of-type(3)::after {
+  content: "GitHub";
 }
 
 .contact-socials-button > svg {
   width: 1.5rem;
   height: 1.5rem;
 }
-
-/*  ---------------------------------- FOOTER --------------------------------- */
 
 .footer {
   position: relative;
@@ -1586,8 +1473,6 @@ textarea {
   font-size: 1rem;
   padding: 12px 20px;
 }
-
-/*  ------------------------------- RESPONSIVE -------------------------------- */
 
 @media (max-width: 1440px) {
   .container {

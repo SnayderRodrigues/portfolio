@@ -1086,7 +1086,7 @@ textarea {
 }
 
 .projects-work {
-  display: none;
+  display: flex;
   gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
   background-color: var(--background);
   padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
@@ -1100,10 +1100,6 @@ textarea {
 .projects-work.dark {
   background-color: var(--background-dark);
   border: 2px solid var(--primary-dark);
-}
-
-.projects-work:last-of-type {
-  margin-bottom: 0;
 }
 
 .projects-work-description {
@@ -1125,15 +1121,6 @@ textarea {
   font-weight: 600;
   line-height: 1.12;
   margin-bottom: 1.5rem;
-}
-
-.projects-work-title > span:first-of-type {
-  color: var(--gray);
-  transition: color var(--default-transition);
-}
-
-.projects-work-title.dark > span:first-of-type {
-  color: var(--light-gray);
 }
 
 .projects-work-tags {
@@ -1168,44 +1155,7 @@ textarea {
   background-color: var(--magenta);
 }
 
-.projects-work-subtitle {
-  line-height: 1.4;
-  max-width: 32rem;
-  font-size: clamp(
-    1.125rem,
-    0.9679802955665024rem + 0.5911330049261083vw,
-    1.5rem
-  );
-  font-weight: 600;
-  color: var(--gray);
-  margin-bottom: 2rem;
-  text-wrap: balance;
-  text-wrap: pretty;
-}
-
-.projects-work-subtitle.dark {
-  color: var(--light-gray);
-}
-
-.projects-work-subtitle-link {
-  color: var(--black);
-  font-weight: 700;
-  transition: color var(--default-transition);
-}
-
-.projects-work-subtitle-link:hover {
-  color: var(--accent);
-}
-
-.projects-work-subtitle-link.dark {
-  color: var(--white);
-}
-
-.projects-work-subtitle-link.dark:hover {
-  color: var(--accent);
-}
-
-.project-work-image-wrapper {
+.projects-work-image-wrapper {
   flex: 1;
   aspect-ratio: 8 / 5;
   position: relative;
@@ -1216,11 +1166,11 @@ textarea {
   overflow: hidden;
 }
 
-.project-work-image-wrapper.dark {
+.projects-work-image-wrapper.dark {
   background-color: var(--primary-dark);
 }
 
-.project-work-image-wrapper::before {
+.projects-work-image-wrapper::before {
   content: "";
   display: block;
   width: 0.5rem;
@@ -1233,7 +1183,7 @@ textarea {
   transition: background-color var(--default-transition);
 }
 
-.project-work-image-wrapper::after {
+.projects-work-image-wrapper::after {
   content: "";
   display: block;
   width: 0.5rem;
@@ -1246,28 +1196,28 @@ textarea {
   transition: background-color var(--default-transition);
 }
 
-.project-work-image-wrapper.dark::before {
+.projects-work-image-wrapper.dark::before {
   background-color: var(--purple);
 }
 
-.project-work-image-wrapper.dark::after {
+.projects-work-image-wrapper.dark::after {
   background-color: var(--light-purple);
 }
 
-.project-work-image {
+.projects-work-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: var(--rounded-sm);
 }
 
-.project-button-wrapper {
+.projects-button-wrapper {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.project-button-wrapper a img {
+.projects-button-wrapper a img {
   width: 1.25rem;
   height: 1.25rem;
   margin-top: 2px;
@@ -1706,10 +1656,7 @@ textarea {
   .projects-work {
     flex-direction: column;
   }
-  .projects-work-subtitle {
-    margin-bottom: 3rem;
-  }
-  .project-work-image-wrapper {
+  .projects-work-image-wrapper {
     aspect-ratio: auto;
     order: -1;
   }
@@ -1866,27 +1813,20 @@ textarea {
   .services-wrapper {
     gap: 2rem;
   }
-  .projects-work:last-of-type {
-    margin-bottom: 0;
-  }
-  .projects-work-title,
-  .projects-work-subtitle {
+  .projects-work-title {
     max-width: max-content;
   }
-  .projects-work-subtitle {
-    margin-bottom: 2rem;
-  }
-  .project-work-image-wrapper {
+  .projects-work-image-wrapper {
     background-color: transparent;
     padding: 0;
     transition: background-color var(--default-transition);
     overflow: hidden;
   }
-  .projects-work.dark .project-work-image-wrapper {
+  .projects-work.dark .projects-work-image-wrapper {
     background-color: transparent;
   }
-  .project-work-image-wrapper::before,
-  .project-work-image-wrapper::after {
+  .projects-work-image-wrapper::before,
+  .projects-work-image-wrapper::after {
     display: none;
   }
   .contact-card-link-wrapper {
@@ -1943,16 +1883,16 @@ textarea {
   }
   .projects-work {
     gap: 1.5rem;
-    padding: 0;
-    border: unset;
   }
   .projects-work-title,
-  .projects-work-tags,
-  .projects-work-subtitle {
+  .projects-work-tags {
     margin-bottom: 1rem;
   }
-  .project-work-image-wrapper,
-  .project-work-image {
+  .projects-work-image-wrapper {
+    aspect-ratio: 8 / 5;
+    border-radius: var(--rounded-sm);
+  }
+  .projects-work-image {
     aspect-ratio: 8 / 5;
   }
   .contact-socials-button {

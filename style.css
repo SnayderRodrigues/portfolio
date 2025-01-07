@@ -617,6 +617,7 @@ textarea {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: var(--rounded-50);
+  object-fit: cover;
 }
 
 .hero-avatar div {
@@ -625,7 +626,7 @@ textarea {
   font-weight: 600;
   padding: 0.5rem 0.75rem 0.5rem 1.625rem;
   background-color: var(--primary);
-  border-radius: var(--rounded-full);
+  border-radius: var(--rounded-sm);
   transition: background-color var(--default-transition);
   cursor: default;
 }
@@ -679,35 +680,42 @@ textarea {
   cursor: default;
 }
 
-.hero-tags > span {
+.hero-tags > div {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   font-size: 0.875rem;
   font-weight: 600;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.625rem;
   border-radius: var(--rounded-xsm);
   transition: background-color var(--default-transition);
 }
 
-.hero-tags > span:first-of-type {
+.hero-tags > div > svg {
+  width: 1rem;
+}
+
+.hero-tags > div:first-of-type {
   background-color: var(--light-blue);
 }
 
-.hero-tags > span:nth-of-type(2) {
+.hero-tags > div:nth-of-type(2) {
   background-color: var(--light-purple);
 }
 
-.hero-tags > span:nth-of-type(3) {
+.hero-tags > div:nth-of-type(3) {
   background-color: var(--light-green);
 }
 
-.hero-tags.dark > span:first-of-type {
+.hero-tags.dark > div:first-of-type {
   background-color: var(--blue);
 }
 
-.hero-tags.dark > span:nth-of-type(2) {
+.hero-tags.dark > div:nth-of-type(2) {
   background-color: var(--magenta);
 }
 
-.hero-tags.dark > span:nth-of-type(3) {
+.hero-tags.dark > div:nth-of-type(3) {
   background-color: var(--green);
 }
 
@@ -790,9 +798,9 @@ textarea {
   flex: 1;
 }
 
-.author-photo {
-  aspect-ratio: 1 / 1;
-  max-height: 390px;
+.about-image {
+  /* aspect-ratio: 1 / 1; */
+  max-height: 590px;
   object-fit: cover;
   object-position: bottom;
   width: 100%;
@@ -1427,6 +1435,7 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
+  font-weight: 600;
   text-wrap: balance;
   color: inherit;
   background-color: var(--primary);
@@ -1521,7 +1530,7 @@ textarea {
     flex-direction: column;
     width: 100%;
   }
-  .author-photo {
+  .about-image {
     width: 65%;
   }
   .projects-work-title {
@@ -1758,7 +1767,7 @@ textarea {
   .hero-title {
     margin-bottom: 1.5rem;
   }
-  .author-photo {
+  .about-image {
     width: 100%;
   }
   .services-card {

@@ -3,10 +3,10 @@
   --accent-variant: #5133a3;
   --accent-variant-dark: #3f3675;
 
-  --primary: #f0f0fc;
-  --primary-dark: hsl(242, 23%, 14%);
+  --primary: #f0f0fa;
+  --primary-dark: #1c1b2c;
 
-  --secondary: rgb(219, 219, 239);
+  --secondary: #dbdbef;
   --secondary-dark: #2f2e49;
 
   --background: #f8f8fe;
@@ -666,8 +666,8 @@ textarea {
 
 .hero-title {
   width: 100%;
-  font-family: "Outfit", sans-serif;
-  max-width: 17ch;
+  font-family: "Outfit", Bahnschrift, "Franklin Gothic Medium", sans-serif;
+  max-width: 18ch;
   margin-bottom: 2rem;
 }
 
@@ -799,7 +799,7 @@ textarea {
 }
 
 .about-image {
-  /* aspect-ratio: 1 / 1; */
+  max-width: 480px;
   max-height: 590px;
   object-fit: cover;
   object-position: bottom;
@@ -1424,12 +1424,18 @@ textarea {
 
 .footer-navigation-contacts {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
   font-size: 1.125rem;
   grid-area: 1 / 7 / 2 / 13;
 }
 
-.footer-navigation-contacts a {
+.footer-navigation-contacts > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-navigation-contacts div a {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1444,19 +1450,19 @@ textarea {
   transition: background-color var(--default-transition);
 }
 
-.footer.dark .footer-navigation-contacts a {
+.footer.dark .footer-navigation-contacts div a {
   background-color: var(--primary-dark);
 }
 
-.footer-navigation-contacts a:hover {
+.footer-navigation-contacts div a:hover {
   background-color: var(--secondary);
 }
 
-.footer.dark .footer-navigation-contacts a:hover {
+.footer.dark .footer-navigation-contacts div a:hover {
   background-color: var(--secondary-dark);
 }
 
-.footer-navigation-contacts a svg {
+.footer-navigation-contacts div a svg {
   align-self: flex-end;
 }
 

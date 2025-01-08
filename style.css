@@ -1238,16 +1238,10 @@ textarea {
     1.25rem
   );
   color: inherit;
-  border-bottom: 1px solid transparent;
-  transition: border var(--default-transition);
 }
 
 .contact-email:hover {
-  border-bottom: 1px solid var(--black);
-}
-
-.contact-section.dark .contact-email:hover {
-  border-bottom: 1px solid var(--white);
+  text-decoration: underline;
 }
 
 .contact-copy-button {
@@ -1418,8 +1412,17 @@ textarea {
 
 .footer-nav-link {
   width: fit-content;
-  color: inherit;
+  font-weight: 500;
   border-radius: var(--rounded-xsm);
+  transition: color var(--default-transition);
+}
+
+.footer.dark .footer-nav-link {
+  color: var(--white);
+}
+
+.footer-nav-link:hover, .footer.dark .footer-nav-link:hover {
+  color: var(--purple);
 }
 
 .footer-navigation-contacts {

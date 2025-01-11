@@ -1,0 +1,177 @@
+.projects-section {
+  position: relative;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.projects-headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 0.5742574257425743rem + 1.5841584158415842vw, 2rem);
+}
+
+.projects-headline > svg {
+  flex-shrink: 0;
+  width: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  height: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  transform: rotate(180deg);
+}
+
+.projects-disclaimer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--primary);
+  padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
+  border-radius: var(--rounded-md);
+  transition: background-color var(--default-transition),
+    border var(--default-transition);
+}
+
+.projects-section.dark .projects-disclaimer {
+  background-color: var(--primary-dark);
+}
+
+.projects-disclaimer > p {
+  margin-bottom: 1rem;
+}
+
+.projects-disclaimer > a {
+  padding: 14px 24px;
+}
+
+.projects-work {
+  display: flex;
+  gap: clamp(2rem, -0.2921013412816693rem + 4.769001490312966vw, 4rem);
+  background-color: var(--primary);
+  padding: clamp(1.25rem, 0.5172413793103449rem + 2.7586206896551726vw, 3rem);
+  border-radius: var(--rounded-md);
+  margin-bottom: 3rem;
+  transition: background-color var(--default-transition),
+    border var(--default-transition);
+}
+
+.projects-work.dark {
+  background-color: var(--primary-dark);
+}
+
+.projects-work-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.projects-work-description > div:first-of-type {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-work-title {
+  max-width: 32rem;
+  font-size: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
+  font-weight: 600;
+  line-height: 1.12;
+  margin-bottom: 1.5rem;
+}
+
+.projects-work-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  cursor: default;
+}
+
+.projects-work-tags > span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--rounded-xsm);
+  transition: background-color var(--default-transition);
+}
+
+.projects-work-tags > span:first-of-type {
+  background-color: var(--light-blue);
+}
+
+.projects-work-tags > span:nth-of-type(2) {
+  background-color: var(--light-purple);
+}
+
+.projects-work-tags.dark > span:first-of-type {
+  background-color: var(--blue);
+}
+
+.projects-work-tags.dark > span:nth-of-type(2) {
+  background-color: var(--magenta);
+}
+
+.projects-work-image-wrapper {
+  flex: 1;
+  aspect-ratio: 8 / 5;
+  position: relative;
+  background-color: var(--secondary);
+  padding: 1.5rem 0.375rem 0.375rem 0.375rem;
+  border-radius: var(--rounded-md);
+  transition: background-color var(--default-transition);
+  overflow: hidden;
+}
+
+.projects-work-image-wrapper.dark {
+  background-color: var(--secondary-dark);
+}
+
+.projects-work-image-wrapper::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white);
+  border-radius: var(--rounded-50);
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  transition: background-color var(--default-transition);
+}
+
+.projects-work-image-wrapper::after {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--purple);
+  border-radius: var(--rounded-50);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  transition: background-color var(--default-transition);
+}
+
+.projects-work-image-wrapper.dark::before {
+  background-color: var(--purple);
+}
+
+.projects-work-image-wrapper.dark::after {
+  background-color: var(--light-purple);
+}
+
+.projects-work-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--rounded-sm);
+}
+
+.projects-button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,0 +1,280 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--background);
+  padding: 1rem 0;
+  transition: background-color var(--default-transition);
+}
+
+.header.dark {
+  background-color: var(--background-dark);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 0.6435643564356436rem + 0.39603960396039606vw, 1rem);
+  position: relative;
+  z-index: 999;
+  outline: 0;
+}
+
+.logo-image {
+  width: clamp(2.25rem, 2.1435643564356437rem + 0.39603960396039606vw, 2.5rem);
+  height: clamp(2.25rem, 2.1435643564356437rem + 0.39603960396039606vw, 2.5rem);
+  aspect-ratio: 1 / 1;
+  opacity: 1;
+  transition: transform 0.4s ease;
+}
+
+.logo:hover .logo-image {
+  transform: rotate(-90deg);
+}
+
+.author-name {
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(
+    1.25rem,
+    1.1590909090909092rem + 0.45454545454545453vw,
+    1.375rem
+  );
+  font-weight: 700;
+  line-height: 1;
+  color: var(--black);
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--default-transition);
+}
+
+.author-name.dark {
+  color: var(--white);
+}
+
+.header-ul {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  padding-inline-start: 0px;
+  margin: 0;
+}
+
+.header-li {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-link-header {
+  font-weight: 600;
+  color: var(--black);
+  padding: 4px 10px;
+  border-radius: var(--rounded-xsm);
+  transition: color var(--default-transition),
+    background-color var(--default-transition);
+}
+
+.nav-link-header.dark {
+  color: var(--white);
+}
+
+.nav-link-header:hover:not(.active) {
+  background-color: var(--primary);
+}
+
+.nav-link-header.dark:hover:not(.active) {
+  background-color: var(--primary-dark);
+}
+
+.active {
+  color: var(--white);
+  background-color: var(--accent);
+  transition: background-color var(--default-transition);
+}
+
+.active:hover {
+  background-color: var(--accent-variant);
+}
+
+.active.dark {
+  background-color: var(--accent);
+}
+
+.active.dark:hover {
+  background-color: var(--accent-variant-dark);
+}
+
+.dark-mode-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  width: 50px;
+  background-color: var(--primary);
+  border-radius: var(--rounded-full);
+  margin-left: 10px;
+  position: relative;
+  transition: background-color var(--default-transition);
+  cursor: pointer;
+}
+
+.dark-mode-button.dark {
+  background-color: var(--primary-dark);
+}
+
+.dark-mode-button::after {
+  content: "Dark Mode";
+  width: max-content;
+  font-size: 0.875rem;
+  background-color: var(--primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--rounded-xsm);
+  margin-top: 0.5rem;
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: background-color var(--default-transition),
+    opacity var(--default-transition);
+}
+
+.dark-mode-button:hover::after {
+  top: 100%;
+  left: 50%;
+  opacity: 1;
+}
+
+.dark-mode-button.dark::after {
+  background-color: var(--primary-dark);
+}
+
+.dark-mode-toggle {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.dark-mode-toggle-ball {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: var(--rounded-50);
+  position: absolute;
+  left: 3px;
+  height: 20px;
+  width: 20px;
+  transform: translateX(0px);
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle-ball svg {
+  width: 0.75rem;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill var(--default-transition), opacity var(--default-transition);
+}
+
+.dark-mode-toggle-ball svg:first-of-type {
+  fill: var(--primary-dark);
+  opacity: 1;
+}
+
+.dark-mode-toggle-ball svg:nth-of-type(2) {
+  opacity: 0;
+}
+
+.dark-mode-toggle:checked ~ .dark-mode-toggle-ball svg:first-of-type {
+  opacity: 0;
+}
+
+.dark-mode-toggle:checked ~ .dark-mode-toggle-ball svg:nth-of-type(2) {
+  opacity: 1;
+  fill: var(--primary-dark);
+}
+
+.dark-mode-toggle:checked ~ .dark-mode-toggle-ball {
+  transform: translateX(24px);
+}
+
+.dark-mode-span {
+  display: none;
+  width: fit-content;
+}
+
+.header-ul-infos {
+  display: none;
+}
+
+.navbuttons {
+  display: none;
+  position: relative;
+  z-index: 999;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.navbar-button {
+  width: 2rem;
+  height: 3px;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-button::before,
+.navbar-button::after {
+  content: "";
+  height: 3px;
+  background-color: var(--black);
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-button::before {
+  width: 2rem;
+  transform: translateY(-6px);
+}
+.navbar-button::after {
+  width: 1.5rem;
+  transform: translateY(6px);
+  right: 0;
+}
+
+.navbuttons.open-nav > .navbar-button::before {
+  transform: rotate(45deg);
+}
+.navbuttons.open-nav > .navbar-button::after {
+  transform: rotate(-45deg);
+  width: 2rem;
+}
+
+.navbar-button.dark::before,
+.navbar-button.dark::after {
+  background-color: var(--white);
+}

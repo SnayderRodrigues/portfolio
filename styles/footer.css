@@ -1,0 +1,140 @@
+.footer {
+  position: relative;
+  z-index: 998;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.footer-navigation-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+.footer-navigation-sitemap {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.footer-navigation-socials {
+  grid-area: 1 / 3 / 2 / 5;
+}
+
+.footer-navigation-sitemap,
+.footer-navigation-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.footer-nav-title {
+  width: 100%;
+  font-weight: 700;
+}
+
+.footer-nav-link {
+  width: fit-content;
+  font-weight: 500;
+  color: inherit;
+  position: relative;
+}
+
+.footer-nav-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.125rem;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--black);
+  border-radius: var(--rounded-full);
+  transform-origin: right;
+  transform: scaleX(0) scaleY(1);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color var(--default-transition);
+}
+
+.footer.dark .footer-nav-link::before {
+  background-color: var(--white);
+}
+
+.footer-nav-link:hover::before,
+.footer.dark .footer-nav-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1) scaleY(1);
+}
+
+.footer-navigation-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  grid-area: 1 / 7 / 2 / 13;
+}
+
+.footer-navigation-contacts > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-navigation-contacts div a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  font-weight: 600;
+  text-wrap: balance;
+  color: inherit;
+  background-color: var(--primary);
+  padding: 1rem;
+  border-radius: var(--rounded-md);
+  transition: background-color var(--default-transition);
+}
+
+.footer.dark .footer-navigation-contacts div a {
+  background-color: var(--primary-dark);
+}
+
+.footer-navigation-contacts div a:hover {
+  background-color: var(--secondary);
+}
+
+.footer.dark .footer-navigation-contacts div a:hover {
+  background-color: var(--secondary-dark);
+}
+
+.footer-navigation-contacts div a svg {
+  align-self: flex-end;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+}
+
+.footer-logo {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(2rem, 1.7359154929577465rem + 1.1267605633802815vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: inherit;
+}
+
+.footer-scroll-top {
+  font-size: 1rem;
+  padding: 12px 20px;
+}

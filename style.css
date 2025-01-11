@@ -61,6 +61,54 @@
   background: var(--selection);
 }
 
+@font-face {
+  font-display: swap;
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/hanken-grotesk-v8-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/hanken-grotesk-v8-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/hanken-grotesk-v8-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/hanken-grotesk-v8-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/outfit-v11-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/outfit-v11-latin-700.woff2') format('woff2');
+}
+
 html {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -757,12 +805,6 @@ textarea {
   flex-direction: column;
   padding-top: 6rem;
   padding-bottom: 6rem;
-}
-
-.services-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .services-card-wrapper {
@@ -1525,11 +1567,6 @@ textarea {
   }
 }
 @media (max-width: 900px) {
-  .services-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
   .services-card-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1835,7 +1872,6 @@ textarea {
   }
   .footer-content-wrapper {
     gap: 1rem;
-    padding-bottom: 1.25rem;
   }
   .footer-scroll-top {
     width: 100%;

@@ -183,7 +183,6 @@
   .footer-content-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
   }
 }
 @media (max-width: 480px) {

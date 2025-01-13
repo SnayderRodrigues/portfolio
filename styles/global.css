@@ -378,6 +378,7 @@ textarea {
     transform: translateX(0);
   }
   .button:hover span:nth-of-type(2) {
+    border-radius: var(--rounded-xxsm);
     transform: rotate(0deg);
     scale: 1;
     background-color: var(--purple);

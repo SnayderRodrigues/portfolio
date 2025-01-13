@@ -278,3 +278,112 @@
 .navbar-button.dark::after {
   background-color: var(--white);
 }
+
+@media (max-width: 768px) {
+  .header-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 6.5rem 2rem 2rem 2rem;
+    opacity: 0;
+    transition: opacity var(--default-transition),
+      background-color var(--default-transition);
+    user-select: none;
+    pointer-events: none;
+    transform-origin: top center;
+    z-index: 998;
+    overflow: hidden;
+  }
+  .header-ul.open-nav {
+    background-color: var(--background);
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+  .header-ul.open-nav.dark {
+    background-color: var(--background-dark);
+  }
+  .nav-link-header {
+    padding: 0;
+  }
+  .nav-link-header.active {
+    color: unset;
+    background-color: unset;
+  }
+  .dark-mode-button {
+    position: static;
+  }
+  .dark-mode-button::after {
+    display: none;
+  }
+  .dark-mode-toggle-ball {
+    left: calc(100% - 47px);
+  }
+  .dark-mode-span {
+    display: inline-block;
+    padding: 0px 4px 2px 0px;
+    font-weight: 600;
+  }
+  .header-ul-infos {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .header-ul-infos a {
+    color: inherit;
+  }
+  .header-ul-infos > span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+  .header-ul-email {
+    margin-bottom: 1.5rem;
+  }
+  .header-ul-infos > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .header-ul-link {
+    font-size: 1rem;
+    padding: 4px 10px;
+    border: 2px solid var(--primary);
+    border-radius: var(--rounded-xsm);
+    transition: border var(--default-transition);
+  }
+  .header-ul.dark .header-ul-link {
+    border: 2px solid var(--primary-dark);
+  }
+  .navbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-ul::after {
+    content: "";
+    width: 60vw;
+    max-width: 300px;
+    height: 60vw;
+    max-height: 300px;
+    border-radius: var(--rounded-50);
+    background: linear-gradient(25deg, #ebf2fd00, #8e8ffa11, #7752fe, #2e14af);
+    position: absolute;
+    top: 75%;
+    right: 0;
+    transform: translate(-2rem, -50%);
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+@media (max-width: 480px) {
+  .header-ul {
+    padding: 6.5rem 1.25rem 1.25rem 1.25rem;
+  }
+}

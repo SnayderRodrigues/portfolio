@@ -60,3 +60,43 @@
 .about-description-wrapper p:nth-of-type(2) {
   margin-bottom: 1rem;
 }
+
+@media (max-width: 900px) {
+  .about-container-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  .about-image-wrapper,
+  .about-description-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-image {
+    width: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .about-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .about-container-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-image-wrapper,
+  .about-description-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .about-image {
+    width: 100%;
+  }
+}

@@ -45,20 +45,16 @@
 }
 
 .about-description-wrapper {
+  flex: 2;
   display: flex;
   flex-direction: column;
-  flex: 2;
+  gap: 1rem;
   height: 100%;
 }
 
 .about-description-title {
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.about-description-wrapper p:nth-of-type(2) {
-  margin-bottom: 1rem;
 }
 
 @media (max-width: 900px) {

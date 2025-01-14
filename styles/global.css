@@ -63,50 +63,51 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'Hanken Grotesk';
+  font-family: "Hanken Grotesk";
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/hanken-grotesk-v8-latin-regular.woff2') format('woff2');
+  src: url("/assets/fonts/hanken-grotesk-v8-latin-regular.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Hanken Grotesk';
+  font-family: "Hanken Grotesk";
   font-style: normal;
   font-weight: 500;
-  src: url('/assets/fonts/hanken-grotesk-v8-latin-500.woff2') format('woff2');
+  src: url("/assets/fonts/hanken-grotesk-v8-latin-500.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Hanken Grotesk';
+  font-family: "Hanken Grotesk";
   font-style: normal;
   font-weight: 600;
-  src: url('/assets/fonts/hanken-grotesk-v8-latin-600.woff2') format('woff2');
+  src: url("/assets/fonts/hanken-grotesk-v8-latin-600.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Hanken Grotesk';
+  font-family: "Hanken Grotesk";
   font-style: normal;
   font-weight: 700;
-  src: url('/assets/fonts/hanken-grotesk-v8-latin-700.woff2') format('woff2');
+  src: url("/assets/fonts/hanken-grotesk-v8-latin-700.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 600;
-  src: url('/assets/fonts/outfit-v11-latin-600.woff2') format('woff2');
+  src: url("/assets/fonts/outfit-v11-latin-600.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
-  src: url('/assets/fonts/outfit-v11-latin-700.woff2') format('woff2');
+  src: url("/assets/fonts/outfit-v11-latin-700.woff2") format("woff2");
 }
 
 html {

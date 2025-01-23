@@ -121,21 +121,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 26px;
-  width: 50px;
   background-color: var(--primary);
+  padding: 1rem;
   border-radius: var(--rounded-full);
+  border-radius: var(--rounded-xsm);
   margin-left: 10px;
   position: relative;
   transition: background-color var(--default-transition);
   cursor: pointer;
 }
 
-.dark-mode-button.dark {
+.dark-mode-button:hover {
+  background-color: var(--secondary);
+}
+
+body.dark .dark-mode-button {
   background-color: var(--primary-dark);
 }
 
-.dark-mode-button::after {
+body.dark .dark-mode-button:hover {
+  background-color: var(--secondary-dark);
+}
+
+.dark-mode-button svg {
+  width: 1rem;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill var(--default-transition), opacity var(--default-transition);
+}
+
+.dark-mode-button svg:first-of-type {
+  opacity: 1;
+}
+
+.dark-mode-button svg:nth-of-type(2) {
+  opacity: 0;
+}
+
+.dark-mode-button.dark svg:first-of-type {
+  opacity: 0;
+}
+
+.dark-mode-button.dark svg:nth-of-type(2) {
+  opacity: 1;
+}
+
+/* .dark-mode-button::after {
   content: "Dark Mode";
   width: max-content;
   font-size: 0.875rem;
@@ -220,7 +254,7 @@
 
 .dark-mode-toggle:checked ~ .dark-mode-toggle-ball {
   transform: translateX(24px);
-}
+} */
 
 .dark-mode-span {
   display: none;

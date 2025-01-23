@@ -41,68 +41,74 @@ new App();
 
 // DARK MODE ---------------------------------------------------//
 
-class DarkModeToggle {
-  constructor(toggleElementId) {
-    this.toggleElement = document.getElementById(toggleElementId);
-    this.darkModeClasses = [
-      "button",
-      "header",
-      "author-name",
-      "header-ul",
-      "nav-link-header",
-      "dark-mode-button",
-      "navbar-button",
-      "hero-section",
-      "hero-avatar",
-      "hero-tags",
-      "about-section",
-      "author-photo",
-      "services-card",
-      "works-section",
-      "works-projects",
-      "works-projects-title",
-      "works-projects-tags",
-      "works-projects-image-wrapper",
-      "contact-section",
-      "contact-email",
-      "contact-socials-button",
-      "footer",
-    ];
+const darkMode = document.getElementById("dark-mode-button");
 
-    this.initializeDarkMode();
-    this.addToggleListener();
-  }
+darkMode.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+})
 
-  initializeDarkMode() {
-    const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
-    if (darkModeEnabled) {
-      this.toggleElement.checked = true;
-      this.applyDarkMode(true);
-    }
-  }
+// class DarkModeToggle {
+//   constructor(toggleElementId) {
+//     this.toggleElement = document.getElementById(toggleElementId);
+//     this.darkModeClasses = [
+//       "button",
+//       "header",
+//       "author-name",
+//       "header-ul",
+//       "nav-link-header",
+//       "dark-mode-button",
+//       "navbar-button",
+//       "hero-section",
+//       "hero-avatar",
+//       "hero-tags",
+//       "about-section",
+//       "author-photo",
+//       "services-card",
+//       "works-section",
+//       "works-projects",
+//       "works-projects-title",
+//       "works-projects-tags",
+//       "works-projects-image-wrapper",
+//       "contact-section",
+//       "contact-email",
+//       "contact-socials-button",
+//       "footer",
+//     ];
 
-  addToggleListener() {
-    this.toggleElement.addEventListener("change", () => {
-      const darkModeEnabled = this.toggleElement.checked;
-      this.applyDarkMode(darkModeEnabled);
-      localStorage.setItem(
-        "darkMode",
-        darkModeEnabled ? "enabled" : "disabled"
-      );
-    });
-  }
+//     this.initializeDarkMode();
+//     this.addToggleListener();
+//   }
 
-  applyDarkMode(enable) {
-    document.body.classList.toggle("dark", enable);
-    this.darkModeClasses.forEach((className) => {
-      document.querySelectorAll(`.${className}`).forEach((element) => {
-        element.classList.toggle("dark", enable);
-      });
-    });
-  }
-}
+//   initializeDarkMode() {
+//     const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
+//     if (darkModeEnabled) {
+//       this.toggleElement.checked = true;
+//       this.applyDarkMode(true);
+//     }
+//   }
 
-new DarkModeToggle("dark-mode-toggle");
+//   addToggleListener() {
+//     this.toggleElement.addEventListener("change", () => {
+//       const darkModeEnabled = this.toggleElement.checked;
+//       this.applyDarkMode(darkModeEnabled);
+//       localStorage.setItem(
+//         "darkMode",
+//         darkModeEnabled ? "enabled" : "disabled"
+//       );
+//     });
+//   }
+
+//   applyDarkMode(enable) {
+//     document.body.classList.toggle("dark", enable);
+//     this.darkModeClasses.forEach((className) => {
+//       document.querySelectorAll(`.${className}`).forEach((element) => {
+//         element.classList.toggle("dark", enable);
+//       });
+//     });
+//   }
+// }
+
+// new DarkModeToggle("dark-mode-toggle");
 
 // HIDDEN NAVBAR ---------------------------------------------------//
 

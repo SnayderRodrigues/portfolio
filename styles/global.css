@@ -284,11 +284,11 @@ textarea {
   background-color: var(--accent-variant);
 }
 
-.button.dark {
+body.dark .button {
   background-color: var(--accent);
 }
 
-.button.dark:hover {
+body.dark .button:hover {
   background-color: var(--accent-variant-dark);
 }
 
@@ -353,7 +353,7 @@ textarea {
   .button:focus-visible {
     background-color: var(--accent);
   }
-  .button.dark:hover {
+  body.dark .button:hover {
     background-color: var(--accent);
   }
   .button:hover span:first-of-type {

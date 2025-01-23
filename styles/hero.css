@@ -44,7 +44,7 @@
   cursor: default;
 }
 
-.hero-avatar.dark div {
+body.dark .hero-avatar div {
   background-color: var(--primary-dark);
 }
 
@@ -61,10 +61,6 @@
   z-index: 1;
   transform: translate(0.625rem, -50%);
   transition: background-color var(--default-transition);
-}
-
-.hero-avatar.dark div::before {
-  background-color: var(--purple);
 }
 
 .hero-text {
@@ -120,15 +116,15 @@
   background-color: var(--light-green);
 }
 
-.hero-tags.dark > div:first-of-type {
+body.dark .hero-tags > div:first-of-type {
   background-color: var(--blue);
 }
 
-.hero-tags.dark > div:nth-of-type(2) {
+body.dark .hero-tags > div:nth-of-type(2) {
   background-color: var(--magenta);
 }
 
-.hero-tags.dark > div:nth-of-type(3) {
+body.dark .hero-tags > div:nth-of-type(3) {
   background-color: var(--green);
 }
 

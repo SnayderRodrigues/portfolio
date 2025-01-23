@@ -40,7 +40,7 @@
   transition: background-color var(--default-transition);
 }
 
-.contact-section.dark .contact-card {
+body.dark .contact-section .contact-card {
   background-color: var(--primary-dark);
 }
 
@@ -123,12 +123,12 @@
     background-color var(--default-transition);
 }
 
-.contact-section.dark .contact-email::before {
+body.dark .contact-email::before {
   background-color: var(--white);
 }
 
 .contact-email:hover::before,
-.contact-section.dark .contact-email:hover::before {
+body.dark .contact-email:hover::before {
   transform-origin: left;
   transform: scaleX(1) scaleY(1);
 }
@@ -153,11 +153,11 @@
   background-color: var(--light-purple);
 }
 
-.contact-section.dark .contact-copy-button {
+body.dark .contact-copy-button {
   background-color: var(--secondary-dark);
 }
 
-.contact-section.dark .contact-copy-button:hover {
+body.dark .contact-copy-button:hover {
   background-color: var(--accent-variant-dark);
 }
 
@@ -192,6 +192,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  color: inherit;
   background-color: var(--secondary);
   padding: 0.5rem;
   border-radius: var(--rounded-xsm);
@@ -199,17 +200,8 @@
   transition: background-color var(--default-transition);
 }
 
-.contact-section.dark .contact-socials-button {
+body.dark .contact-socials-button {
   background-color: var(--secondary-dark);
-}
-
-.contact-socials-button svg path {
-  fill: var(--black);
-  transition: fill var(--default-transition);
-}
-
-.contact-section.dark .contact-socials-button svg path {
-  fill: var(--white);
 }
 
 .contact-socials-button::after {
@@ -236,7 +228,7 @@
   opacity: 1;
 }
 
-.contact-socials-button.dark::after {
+body.dark .contact-socials-button::after {
   color: var(--white);
   background-color: var(--secondary-dark);
 }
@@ -272,13 +264,13 @@
     align-items: start;
   }
   .contact-email:hover::before,
-  .contact-section.dark .contact-email:hover::before {
+  body.dark .contact-email:hover::before {
     transform: scaleX(0) scaleY(1);
   }
   .contact-copy-button:hover {
     background-color: var(--secondary);
   }
-  .contact-section.dark .contact-copy-button:hover {
+  body.dark .contact-copy-button:hover {
     background-color: var(--secondary-dark);
   }
   .contact-socials-wrapper {

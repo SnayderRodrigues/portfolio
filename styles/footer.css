@@ -63,12 +63,12 @@
     background-color var(--default-transition);
 }
 
-.footer.dark .footer-nav-link::before {
+body.dark .footer-nav-link::before {
   background-color: var(--white);
 }
 
 .footer-nav-link:hover::before,
-.footer.dark .footer-nav-link:hover::before {
+body.dark .footer-nav-link:hover::before {
   transform-origin: left;
   transform: scaleX(1) scaleY(1);
 }
@@ -101,7 +101,7 @@
   transition: background-color var(--default-transition);
 }
 
-.footer.dark .footer-navigation-contacts div a {
+body.dark .footer-navigation-contacts div a {
   background-color: var(--primary-dark);
 }
 
@@ -109,7 +109,7 @@
   background-color: var(--secondary);
 }
 
-.footer.dark .footer-navigation-contacts div a:hover {
+body.dark .footer-navigation-contacts div a:hover {
   background-color: var(--secondary-dark);
 }
 
@@ -168,7 +168,7 @@
     grid-area: 1 / 2 / 2 / 3;
   }
   .footer-nav-link:hover::before,
-  .footer.dark .footer-nav-link:hover::before {
+  body.dark .footer-nav-link:hover::before {
     transform: scaleX(0) scaleY(1);
   }
   .footer-navigation-contacts {
@@ -177,7 +177,7 @@
   .footer-navigation-contacts div a:hover {
     background-color: var(--primary);
   }
-  .footer.dark .footer-navigation-contacts div a:hover {
+  body.dark .footer-navigation-contacts div a:hover {
     background-color: var(--primary-dark);
   }
   .footer-content-wrapper {

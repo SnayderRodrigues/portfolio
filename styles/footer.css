@@ -186,6 +186,9 @@ body.dark .footer-navigation-contacts div a:hover {
   }
 }
 @media (max-width: 480px) {
+  .footer-container {
+    padding-bottom: 1.25rem;
+  }
   .footer-navigation-contacts {
     gap: 0.75rem;
   }

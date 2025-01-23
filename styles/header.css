@@ -80,15 +80,10 @@ body.dark .author-name {
 
 .nav-link-header {
   font-weight: 600;
-  color: var(--black);
+  color: inherit;
   padding: 4px 10px;
   border-radius: var(--rounded-xsm);
-  transition: color var(--default-transition),
-    background-color var(--default-transition);
-}
-
-body.dark .nav-link-header {
-  color: var(--white);
+  transition: background-color var(--default-transition);
 }
 
 .nav-link-header:hover:not(.active) {
@@ -107,10 +102,6 @@ body.dark .nav-link-header:hover:not(.active) {
 
 .active:hover {
   background-color: var(--accent-variant);
-}
-
-body.dark .active {
-  background-color: var(--accent);
 }
 
 body.dark .active:hover {
@@ -262,19 +253,21 @@ body.dark .navbar-button::after {
     color: unset;
     background-color: unset;
   }
+  .active:hover {
+    background-color: unset;
+  }
+  body.dark .active:hover {
+    background-color: unset;
+  }
   .dark-mode-button {
-    position: static;
+    padding: 1.25rem;
+    margin-left: 0;
   }
-  .dark-mode-button::after {
-    display: none;
+  .dark-mode-button:hover {
+    background-color: var(--primary);
   }
-  .dark-mode-toggle-ball {
-    left: calc(100% - 47px);
-  }
-  .dark-mode-span {
-    display: inline-block;
-    padding: 0px 4px 2px 0px;
-    font-weight: 600;
+  body.dark .dark-mode-button:hover {
+    background-color: var(--primary-dark);
   }
   .header-ul-infos {
     flex-grow: 1;

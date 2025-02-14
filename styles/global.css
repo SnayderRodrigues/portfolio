@@ -191,7 +191,7 @@ h1 {
     letter-spacing: -1px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   h1 {
     font-size: 2rem;
   }
@@ -199,7 +199,8 @@ h1 {
 
 h2 {
   font-family: "Outfit", sans-serif;
-  font-size: clamp(2.25rem, 1.292079207920792rem + 3.564356435643565vw, 4.5rem);
+  /* font-size: clamp(2.25rem, 1.292079207920792rem + 3.564356435643565vw, 4.5rem); */
+  font-size: clamp(2rem, 1.3613861386138613rem + 2.376237623762376vw, 3.5rem);
   line-height: 55px;
   font-weight: 600;
   letter-spacing: -1px;

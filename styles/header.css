@@ -114,7 +114,6 @@ body.dark .active:hover {
   justify-content: center;
   background-color: var(--primary);
   padding: 1rem;
-  border-radius: var(--rounded-full);
   border-radius: var(--rounded-xsm);
   margin-left: 10px;
   position: relative;
@@ -132,6 +131,35 @@ body.dark .dark-mode-button {
 
 body.dark .dark-mode-button:hover {
   background-color: var(--secondary-dark);
+}
+
+.dark-mode-button::after {
+  content: "Tema: Claro";
+  width: max-content;
+  color: inherit;
+  font-size: 0.875rem;
+  background-color: var(--secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--rounded-xsm);
+  margin-top: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: background-color var(--default-transition),
+    opacity var(--default-transition);
+}
+
+body.dark .dark-mode-button::after {
+  content: "Tema: Escuro";
+  background-color: var(--secondary-dark);
+}
+
+.dark-mode-button:hover::after {
+  opacity: 1;
 }
 
 .dark-mode-button svg {
@@ -300,6 +328,9 @@ body.dark .navbar-button::after {
   }
   body.dark .header-ul .header-ul-link {
     border: 2px solid var(--primary-dark);
+  }
+  .dark-mode-button::after {
+    display: none;
   }
   .navbuttons {
     display: flex;

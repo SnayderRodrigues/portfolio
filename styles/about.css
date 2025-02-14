@@ -20,8 +20,8 @@
 
 .about-headline > svg {
   flex-shrink: 0;
-  width: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
-  height: clamp(2.5rem, 1.5909090909090908rem + 4.545454545454546vw, 5rem);
+  width: clamp(2rem, 1.3613861386138613rem + 2.376237623762376vw, 3.5rem);
+  height: clamp(2rem, 1.3613861386138613rem + 2.376237623762376vw, 3.5rem);
   transform: rotate(180deg);
 }
 
@@ -94,5 +94,6 @@
 @media (max-width: 480px) {
   .about-image {
     width: 100%;
+    max-height: 490px;
   }
 }
